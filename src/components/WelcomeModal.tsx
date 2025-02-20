@@ -6,11 +6,19 @@ export const WelcomeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 10000);
+    const lastShown = localStorage.getItem('welcomeModalLastShown');
+    const now = new Date().getTime();
+    const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
 
-    return () => clearTimeout(timer);
+    // Show modal if it's never been shown or if it's been more than 7 days
+    if (!lastShown || (now - Number(lastShown)) > sevenDaysInMs) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        localStorage.setItem('welcomeModalLastShown', now.toString());
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   if (!isOpen) return null;
