@@ -24,7 +24,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="font-serif text-xl font-medium">
-            Author Name
+            François Domain
           </Link>
 
           {/* Desktop Navigation */}
