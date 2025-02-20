@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const [isBooksOpen, setIsBooksOpen] = useState(false);
 
   const languages = [
     { code: "en", name: "English" },
@@ -36,20 +35,18 @@ export const Navigation = () => {
             {/* Books Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setIsBooksOpen(!isBooksOpen)}
                 className="flex items-center space-x-2 hover:text-warm-gray-800 transition-colors"
               >
                 <span>Books</span>
                 <ChevronDown size={16} className="group-hover:transform group-hover:-rotate-180 transition-transform" />
               </button>
               
-              <div className={`absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-48 border transform transition-all duration-200 ${isBooksOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+              <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-48 border transform transition-all duration-200 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
                 {books.map((book) => (
                   <Link
                     key={book.id}
                     to={book.path}
                     className="block w-full text-left px-4 py-2 hover:bg-cream-100 transition-colors"
-                    onClick={() => setIsBooksOpen(false)}
                   >
                     {book.title}
                   </Link>
@@ -58,7 +55,6 @@ export const Navigation = () => {
                 <Link
                   to="/books"
                   className="block w-full text-left px-4 py-2 hover:bg-cream-100 transition-colors text-warm-gray-600"
-                  onClick={() => setIsBooksOpen(false)}
                 >
                   View All Books
                 </Link>
