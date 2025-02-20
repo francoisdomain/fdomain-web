@@ -72,7 +72,7 @@ export const Navigation = () => {
                 className="flex items-center space-x-2 hover:text-warm-gray-800 transition-colors"
               >
                 <Globe size={20} />
-                <span>Language</span>
+                <span>Location</span>
               </button>
               
               {isLangOpen && (
