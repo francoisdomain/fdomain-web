@@ -1,5 +1,5 @@
-
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Book } from "lucide-react";
 import { useParams } from "react-router-dom";
 
@@ -89,6 +89,8 @@ const BookDetail = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

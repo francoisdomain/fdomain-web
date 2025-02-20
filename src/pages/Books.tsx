@@ -1,5 +1,5 @@
-
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Book } from "lucide-react";
 
 const Books = () => {
@@ -64,6 +64,8 @@ const Books = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
