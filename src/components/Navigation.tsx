@@ -8,15 +8,16 @@ export const Navigation = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   const languages = [
-    { code: "en", name: "English" },
-    { code: "es", name: "Español" },
-    { code: "fr", name: "Français" },
+    { code: "en-US", name: "English (UK)" },
+    { code: "en-UK", name: "English (US)" },
+    { code: "en-US", name: "English (CA)" },
+    { code: "fr-FR", name: "Français (FR)" },
   ];
 
   const books = [
-    { id: 1, title: "The Silent Echo", path: "/books/silent-echo" },
-    { id: 2, title: "Midnight's Tale", path: "/books/midnights-tale" },
-    { id: 3, title: "The Last Chapter", path: "/books/last-chapter" },
+    { id: 1, title: "Close Enough", path: "/books/close-enough" },
+    { id: 2, title: "Above the Waterline", path: "/books/above-waterline" },
+    { id: 3, title: "---coming soon---", path: "/books/coming-soon" },
   ];
 
   return (
