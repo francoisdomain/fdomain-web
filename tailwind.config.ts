@@ -63,7 +63,7 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["Petrona", "serif"],
+        serif: ["Cabinet Grotesk", "sans-serif"],
         sans: ["Inter", "sans-serif"],
       },
       borderRadius: {

@@ -1,16 +1,23 @@
 
 import { useState } from "react";
-import { Menu, Globe, X } from "lucide-react";
+import { Menu, Globe, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isBooksOpen, setIsBooksOpen] = useState(false);
 
   const languages = [
     { code: "en", name: "English" },
     { code: "es", name: "Español" },
     { code: "fr", name: "Français" },
+  ];
+
+  const books = [
+    { id: 1, title: "The Silent Echo", path: "/books/silent-echo" },
+    { id: 2, title: "Midnight's Tale", path: "/books/midnights-tale" },
+    { id: 3, title: "The Last Chapter", path: "/books/last-chapter" },
   ];
 
   return (
@@ -26,9 +33,37 @@ export const Navigation = () => {
             <Link to="/about" className="hover:text-warm-gray-800 transition-colors">
               About
             </Link>
-            <Link to="/books" className="hover:text-warm-gray-800 transition-colors">
-              Books
-            </Link>
+            {/* Books Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={() => setIsBooksOpen(!isBooksOpen)}
+                className="flex items-center space-x-2 hover:text-warm-gray-800 transition-colors"
+              >
+                <span>Books</span>
+                <ChevronDown size={16} className="group-hover:transform group-hover:-rotate-180 transition-transform" />
+              </button>
+              
+              <div className={`absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-48 border transform transition-all duration-200 ${isBooksOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+                {books.map((book) => (
+                  <Link
+                    key={book.id}
+                    to={book.path}
+                    className="block w-full text-left px-4 py-2 hover:bg-cream-100 transition-colors"
+                    onClick={() => setIsBooksOpen(false)}
+                  >
+                    {book.title}
+                  </Link>
+                ))}
+                <div className="border-t my-2"></div>
+                <Link
+                  to="/books"
+                  className="block w-full text-left px-4 py-2 hover:bg-cream-100 transition-colors text-warm-gray-600"
+                  onClick={() => setIsBooksOpen(false)}
+                >
+                  View All Books
+                </Link>
+              </div>
+            </div>
             <Link to="/contact" className="hover:text-warm-gray-800 transition-colors">
               Contact
             </Link>
@@ -80,13 +115,22 @@ export const Navigation = () => {
             >
               About
             </Link>
-            <Link
-              to="/books"
-              className="block hover:text-warm-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Books
-            </Link>
+            {/* Mobile Books Menu */}
+            <div className="space-y-2">
+              <p className="font-medium">Books</p>
+              <div className="pl-4 space-y-2">
+                {books.map((book) => (
+                  <Link
+                    key={book.id}
+                    to={book.path}
+                    className="block hover:text-warm-gray-800 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {book.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link
               to="/contact"
               className="block hover:text-warm-gray-800 transition-colors"
