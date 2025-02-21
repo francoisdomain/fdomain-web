@@ -8,11 +8,12 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBookOpen, setIsBookOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { locale, setLocale, t } = useLanguage();
 
-  const languages = [
-    { code: "en", name: "English" },
-    { code: "fr", name: "Français" },
+  const locales = [
+    { code: "en-US", name: "English (US)" },
+    { code: "en-UK", name: "English (UK)" },
+    { code: "fr-FR", name: "Français" },
   ];
 
   const books = [
@@ -71,7 +72,7 @@ export const Navigation = () => {
               {t("nav.contact")}
             </Link>
             
-            {/* Language Selector */}
+            {/* Language/Locale Selector */}
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
@@ -82,17 +83,17 @@ export const Navigation = () => {
               </button>
               
               {isLangOpen && (
-                <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-40 border">
-                  {languages.map((lang) => (
+                <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-48 border">
+                  {locales.map((loc) => (
                     <button
-                      key={lang.code}
+                      key={loc.code}
                       className="block w-full text-left px-4 py-2 hover:bg-cream-100 transition-colors"
                       onClick={() => {
-                        setLanguage(lang.code as "en" | "fr");
+                        setLocale(loc.code as "en-US" | "en-UK" | "fr-FR");
                         setIsLangOpen(false);
                       }}
                     >
-                      {lang.name}
+                      {loc.name}
                     </button>
                   ))}
                 </div>
@@ -145,19 +146,19 @@ export const Navigation = () => {
               {t("nav.contact")}
             </Link>
             
-            {/* Mobile Language Selector */}
+            {/* Mobile Language/Locale Selector */}
             <div className="border-t pt-4">
               <p className="text-sm text-warm-gray-200 mb-2">{t("nav.language")}</p>
-              {languages.map((lang) => (
+              {locales.map((loc) => (
                 <button
-                  key={lang.code}
+                  key={loc.code}
                   className="block w-full text-left py-2 hover:text-warm-gray-800 transition-colors"
                   onClick={() => {
-                    setLanguage(lang.code as "en" | "fr");
+                    setLocale(loc.code as "en-US" | "en-UK" | "fr-FR");
                     setIsMenuOpen(false);
                   }}
                 >
-                  {lang.name}
+                  {loc.name}
                 </button>
               ))}
             </div>
