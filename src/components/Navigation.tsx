@@ -26,8 +26,13 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-serif text-xl font-medium">
-            François Domain
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src="/photo-1486312338219-ce68d2c6f44d"
+              alt="FD Logo"
+              className="w-8 h-8 object-contain rounded"
+            />
+            <span className="font-serif text-xl font-medium">François Domain</span>
           </Link>
 
           {/* Desktop Navigation */}
