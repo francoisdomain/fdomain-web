@@ -4,8 +4,11 @@ import { Footer } from "@/components/Footer";
 import { WelcomeModal } from "@/components/WelcomeModal";
 import { Book } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -16,10 +19,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6">
-              Crafting Stories That Stay With You
+              {t("hero.title")}
             </h1>
             <p className="text-lg md:text-xl text-warm-gray-800 mb-8">
-              Award-winning author of contemporary fiction exploring the depths of human connection.
+              {t("hero.subtitle")}
             </p>
           </div>
         </div>
@@ -29,7 +32,7 @@ const Index = () => {
       <section className="py-16 bg-cream-50 page-transition">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Featured Books
+            {t("sections.featuredBooks")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[1, 2, 3].map((book) => (
@@ -56,15 +59,15 @@ const Index = () => {
       <section className="py-16 page-transition">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">About the Author</h2>
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">{t("sections.aboutTitle")}</h2>
             <p className="text-lg text-warm-gray-800 mb-8">
-              With over a decade of storytelling experience, crafting narratives that resonate with readers worldwide.
+              {t("sections.aboutText")}
             </p>
             <Link
               to="/about"
               className="inline-block px-6 py-3 bg-warm-gray-900 text-white rounded-lg hover:bg-warm-gray-800 transition-colors"
             >
-              Learn More
+              {t("buttons.learnMore")}
             </Link>
           </div>
         </div>
@@ -74,15 +77,15 @@ const Index = () => {
       <section className="py-16 bg-cream-50 page-transition">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">{t("sections.contactTitle")}</h2>
             <p className="text-lg text-warm-gray-800 mb-8">
-              For speaking engagements, book signings, or just to say hello.
+              {t("sections.contactText")}
             </p>
             <Link
               to="/contact"
               className="inline-block px-6 py-3 border-2 border-warm-gray-900 text-warm-gray-900 rounded-lg hover:bg-warm-gray-900 hover:text-white transition-colors"
             >
-              Contact Me
+              {t("buttons.contactMe")}
             </Link>
           </div>
         </div>
