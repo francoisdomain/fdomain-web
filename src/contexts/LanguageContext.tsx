@@ -1,6 +1,7 @@
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { translations } from '@/utils/translations';
+import Cookies from 'js-cookie';
 
 type Language = "en" | "fr";
 
@@ -10,10 +11,44 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+// Helper function to get base language from locale
+const getBaseLanguage = (locale: string): Language => {
+  const lang = locale.split('-')[0];
+  return lang === 'fr' ? 'fr' : 'en';
+};
+
+// Helper to get user's preferred language
+const getPreferredLanguage = (): Language => {
+  // Check cookie first
+  const cookieLang = Cookies.get('preferred-language');
+  if (cookieLang === 'en' || cookieLang === 'fr') {
+    return cookieLang;
+  }
+
+  // Check browser language
+  const browserLang = navigator.language || (navigator as any).userLanguage;
+  if (browserLang) {
+    return getBaseLanguage(browserLang);
+  }
+
+  // Default to en
+  return 'en';
+};
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>(() => getPreferredLanguage());
+
+  useEffect(() => {
+    // Set initial language based on cookie or browser preference
+    const initialLang = getPreferredLanguage();
+    setLanguage(initialLang);
+  }, []);
+
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    // Store in cookie with 1 year expiry
+    Cookies.set('preferred-language', lang, { expires: 365 });
+  };
 
   const t = (path: string) => {
     const keys = path.split('.');
@@ -28,11 +63,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
 }
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
