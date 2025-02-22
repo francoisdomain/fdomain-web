@@ -30,11 +30,7 @@ export type BookData = {
 
 export const books: Record<string, BookData> = {
   "close-enough": {
-    title: {
-      "en-US": "Close Enough",
-      "en-UK": "Close Enough",
-      "fr-FR": "Presque Vrai"
-    },
+    title: "Close Enough",
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
@@ -62,11 +58,7 @@ export const books: Record<string, BookData> = {
 
       La lettre gisait, non ouverte sur son bureau, son enveloppe couleur crème portant le cachet d'une ville à laquelle elle avait juré de ne plus jamais penser. Mais le destin, semblait-il, en avait décidé autrement...`
     },
-    isbn:  {
-      "en-US": "978-1-0685758-0-8",
-      "en-UK": "978-1-0685758-0-8",
-      "fr-FR": "978-1-0685758-2-2"
-    },
+    isbn:  "978-1-0685758-0-8",
     pages: 342,
     publisher: "François Domain",
     slug: "close-enough"
@@ -243,11 +235,7 @@ export const books: Record<string, BookData> = {
       Il fait chaud, aujourd’hui.
       Il y a du vent, mais il fait chaud.`
     },
-    isbn: {
-      "en-US": "978-1-0685758-1-5",
-      "en-UK": "978-1-0685758-1-5",
-      "fr-FR": "978-1-0685758-3-9"
-    },
+    isbn: "978-1-0685758-1-5",
     pages: 342,
     publisher: "François Domain",
     slug: "above-waterline"
@@ -276,11 +264,7 @@ export const books: Record<string, BookData> = {
       "en-UK": `Coming soon`,
       "fr-FR": `Bientôt...`
     },
-    isbn: {
-      "en-US": "",
-      "en-UK": "",
-      "fr-FR": ""
-    },
+    isbn: "123",
     pages: 450,
     publisher: "François Domain",
     slug: "coming-soon"
