@@ -1,7 +1,7 @@
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Book } from "lucide-react";
+import { Book, ShoppingCart } from "lucide-react";
 import { useParams, Navigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
@@ -57,6 +57,18 @@ const BookDetail = () => {
                   <div className="prose prose-lg">
                     <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
                     <p className="text-warm-gray-800">{book.summary[locale]}</p>
+                  </div>
+
+                  <div>
+                    <a
+                      href={book.amazonLink[locale]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-3 bg-[#FF9900] hover:bg-[#FF9900]/90 text-white rounded-lg transition-colors"
+                    >
+                      <ShoppingCart className="w-5 h-5 mr-2" />
+                      Buy on Amazon
+                    </a>
                   </div>
                   
                   <div className="text-sm text-warm-gray-600">

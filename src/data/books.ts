@@ -6,6 +6,11 @@ export type BookData = {
     "en-UK": string;
     "fr-FR": string;
   };
+  amazonLink: {
+    "en-US": string;
+    "en-UK": string;
+    "fr-FR": string;
+  };
   year: string;
   summary: {
     "en-US": string;
@@ -29,7 +34,12 @@ export const books: Record<string, BookData> = {
     coverImage: {
       "en-US": "/photo-1472396961693-142e6e269027",
       "en-UK": "/photo-1472396961693-142e6e269027",
-      "fr-FR": "/photo-1472396961693-142e6e269027" // Different images per locale
+      "fr-FR": "/photo-1472396961693-142e6e269027"
+    },
+    amazonLink: {
+      "en-US": "https://www.amazon.com/dp/example-isbn",
+      "en-UK": "https://www.amazon.co.uk/dp/example-isbn",
+      "fr-FR": "https://www.amazon.fr/dp/example-isbn"
     },
     year: "2023",
     summary: {
