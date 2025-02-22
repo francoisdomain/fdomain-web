@@ -20,6 +20,7 @@ export const Navigation = () => {
     { id: 1, title: "Close Enough", path: "/books/close-enough" },
     { id: 2, title: "The Silent Echo", path: "/books/silent-echo" },
     { id: 3, title: "The Last Chapter", path: "/books/last-chapter" },
+    { id: 4, title: "Coming Soon", path: "/books/coming-soon" },
   ];
 
   return (
