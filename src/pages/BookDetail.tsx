@@ -72,7 +72,7 @@ const BookDetail = () => {
                   </div>
                   
                   <div className="text-sm text-warm-gray-600">
-                    ISBN: {book.isbn}
+                    ISBN: {book.isbn[locale]}
                   </div>
                 </div>
               </div>
