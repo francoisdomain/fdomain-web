@@ -1,12 +1,14 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,6 +17,17 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the reCAPTCHA verification.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -23,7 +36,10 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          "g-recaptcha-response": recaptchaValue,
+        }),
       });
 
       if (response.ok) {
@@ -31,8 +47,9 @@ const Contact = () => {
           title: "Message Sent",
           description: "Thank you for your message. I'll get back to you soon!",
         });
-        // Reset form
+        // Reset form and reCAPTCHA
         setFormData({ name: "", email: "", message: "" });
+        recaptchaRef.current?.reset();
       } else {
         throw new Error("Failed to send message");
       }
@@ -117,6 +134,14 @@ const Contact = () => {
                   placeholder="Your message..."
                   required
                 ></textarea>
+              </div>
+
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                  theme="light"
+                />
               </div>
               
               <div>
