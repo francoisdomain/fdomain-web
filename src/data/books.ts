@@ -76,8 +76,8 @@ export const books: Record<string, BookData> = {
     "fr-FR": "La Glissade"
   },
     coverImage: {
-      "en-US": "../src/img/Above_the_waterline.png",
-      "en-UK": "../src/img/Above_the_waterline.png",
+      "en-US": "../src/img/Above-the-waterline-cover.png",
+      "en-UK": "../src/img/Above-the-waterline-cover.png",
       "fr-FR": "/photo-1472396961693-142e6e269027"
     },
     amazonLink: {
