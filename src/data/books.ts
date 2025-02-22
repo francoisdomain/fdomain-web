@@ -34,7 +34,7 @@ export const books: Record<string, BookData> = {
     "en-US": "Close Enough",
     "en-UK": "Close Enough",
     "fr-FR": "Presque Vrai"
-  },
+    },
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
@@ -74,7 +74,7 @@ export const books: Record<string, BookData> = {
     "en-US": "Above the Waterline",
     "en-UK": "Above the Waterline",
     "fr-FR": "La Glissade"
-  },
+    },
     coverImage: {
       "en-US": "../src/img/Above-the-waterline-cover.png",
       "en-UK": "../src/img/Above-the-waterline-cover.png",
