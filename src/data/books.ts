@@ -62,7 +62,11 @@ export const books: Record<string, BookData> = {
 
       La lettre gisait, non ouverte sur son bureau, son enveloppe couleur crème portant le cachet d'une ville à laquelle elle avait juré de ne plus jamais penser. Mais le destin, semblait-il, en avait décidé autrement...`
     },
-    isbn:  "978-1-0685758-0-8",
+    isbn:  {
+      "en-US": "978-1-0685758-0-8",
+      "en-UK": "978-1-0685758-0-8",
+      "fr-FR": "978-1-0685758-2-2"
+    },
     pages: 342,
     publisher: "François Domain",
     slug: "close-enough"
@@ -243,7 +247,11 @@ export const books: Record<string, BookData> = {
       Il fait chaud, aujourd’hui.
       Il y a du vent, mais il fait chaud.`
     },
-    isbn: "978-1-0685758-1-5",
+    isbn: {
+      "en-US": "978-1-0685758-1-5",
+      "en-UK": "978-1-0685758-1-5",
+      "fr-FR": "978-1-0685758-3-9"
+    },
     pages: 342,
     publisher: "François Domain",
     slug: "above-waterline"
