@@ -29,7 +29,7 @@ const BookDetail = () => {
                 {book.coverImage[locale] ? (
                   <img
                     src={book.coverImage[locale]}
-                    alt={book.title}
+                    alt={book.title[locale]}
                     className="w-full h-full object-cover"
                   />
                 ) : (
