@@ -42,7 +42,7 @@ const BookDetail = () => {
               {/* Book Info */}
               <div>
                 <h1 className="text-4xl md:text-5xl font-serif font-medium mb-4">
-                  {book.title}
+                  {book.title[locale]}
                 </h1>
                 
                 <div className="space-y-6">
