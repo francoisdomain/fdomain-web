@@ -1,24 +1,20 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book } from "lucide-react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { books } from "@/data/books";
 
 const BookDetail = () => {
   const { slug } = useParams();
+  const { locale } = useLanguage();
   
-  // This would typically come from an API or database
-  const book = {
-    title: "The Silent Echo",
-    coverImage: null, // Replace with actual image path
-    year: "2023",
-    summary: "In the misty shores of Nova Scotia, where the Atlantic winds carry whispers of untold stories, Claire McKenna discovers an old diary that threatens to unravel not just her family's past, but the entire town's carefully guarded secrets. As she delves deeper into its pages, she realizes that some echoes of the past are better left unheard.",
-    prologue: `The old lighthouse stood sentinel against the gathering storm, its beam cutting through the darkness like a blade. Sarah watched from her window as the rain began to fall, each drop carrying with it a memory she'd tried so hard to forget. Thirty years had passed since that night, yet time had done little to dull the edges of her guilt.
-
-    The letter lay unopened on her desk, its cream-colored envelope bearing a postmark from a town she'd sworn never to think of again. But fate, it seemed, had other plans...`,
-    isbn: "978-1234567890",
-    pages: 342,
-    publisher: "Moonlight Press",
-  };
+  const book = slug ? books[slug] : null;
+  
+  if (!book) {
+    return <Navigate to="/books" replace />;
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,9 +26,9 @@ const BookDetail = () => {
             <div className="grid md:grid-cols-2 gap-12">
               {/* Book Cover */}
               <div className="aspect-[2/3] bg-cream-100 rounded-xl overflow-hidden shadow-xl">
-                {book.coverImage ? (
+                {book.coverImage[locale] ? (
                   <img
-                    src={book.coverImage}
+                    src={book.coverImage[locale]}
                     alt={book.title}
                     className="w-full h-full object-cover"
                   />
@@ -60,7 +56,7 @@ const BookDetail = () => {
                   
                   <div className="prose prose-lg">
                     <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                    <p className="text-warm-gray-800">{book.summary}</p>
+                    <p className="text-warm-gray-800">{book.summary[locale]}</p>
                   </div>
                   
                   <div className="text-sm text-warm-gray-600">
@@ -80,7 +76,7 @@ const BookDetail = () => {
                 <div className="prose prose-lg mx-auto">
                   <div className="bg-cream-50 p-8 rounded-xl">
                     <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line">
-                      {book.prologue}
+                      {book.prologue[locale]}
                     </p>
                   </div>
                 </div>
