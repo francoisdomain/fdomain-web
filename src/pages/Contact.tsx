@@ -139,7 +139,7 @@ const Contact = () => {
               <div className="flex justify-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6Ldent8qAAAAAFRGilla_6bjxjXA__VpQ5_S9_ax"
+                  sitekey="6Ldent8qAAAAAN61QkOIwzIcQTrZqnE7TVMh6iVi"
                   theme="light"
                 />
               </div>
