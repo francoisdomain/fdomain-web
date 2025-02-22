@@ -29,11 +29,11 @@ export type BookData = {
 };
 
 export const books: Record<string, BookData> = {
-  "silent-echo": {
-    title: "The Silent Echo",
+  "close-enough": {
+    title: "Close Enough",
     coverImage: {
-      "en-US": "/photo-1472396961693-142e6e269027",
-      "en-UK": "/photo-1472396961693-142e6e269027",
+      "en-US": "/src/img/CloseEnough_PaperbackCover_website.png",
+      "en-UK": "/src/img/CloseEnough_PaperbackCover_website.png",
       "fr-FR": "/photo-1472396961693-142e6e269027"
     },
     amazonLink: {
@@ -65,11 +65,11 @@ export const books: Record<string, BookData> = {
   },
   // Add more books here following the same structure
 
-"close-enough": {
-    title: "Close Enough",
+"above-waterline": {
+    title: "Above the Waterline",
     coverImage: {
-      "en-US": "/photo-1472396961693-142e6e269027",
-      "en-UK": "/photo-1472396961693-142e6e269027",
+      "en-US": "/src/img/Above the waterline cover website.png",
+      "en-UK": "/src/img/Above the waterline cover website.png",
       "fr-FR": "/photo-1472396961693-142e6e269027"
     },
     amazonLink: {
