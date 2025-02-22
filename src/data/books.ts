@@ -30,7 +30,11 @@ export type BookData = {
 
 export const books: Record<string, BookData> = {
   "close-enough": {
-    title: "Close Enough",
+    title: {
+    "en-US": "Close Enough",
+    "en-UK": "Close Enough",
+    "fr-FR": "Presque Vrai"
+  },
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
@@ -66,7 +70,11 @@ export const books: Record<string, BookData> = {
   // Add more books here following the same structure
 
 "above-waterline": {
-    title: "Above the Waterline",
+    title: {
+    "en-US": "Above the Waterline",
+    "en-UK": "Above the Waterline",
+    "fr-FR": "La Glissade"
+  },
     coverImage: {
       "en-US": "../src/img/Above the waterline cover website.png",
       "en-UK": "../src/img/Above the waterline cover website.png",
@@ -242,7 +250,11 @@ export const books: Record<string, BookData> = {
   },
 
 "coming-soon": {
-    title: "Coming Soon",
+    title: {
+    "en-US": "Coming Soon",
+    "en-UK": "Coming Soon",
+    "fr-FR": "Bientot"
+  },
     coverImage: {
       "en-US": "/photo-1472396961693-142e6e269027",
       "en-UK": "/photo-1472396961693-142e6e269027",
