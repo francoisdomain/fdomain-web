@@ -31,7 +31,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/francois@francoisdomain.com", {
+      const response = await fetch("https://formspree.io/f/mpwqnnlo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const Contact = () => {
       if (response.ok) {
         toast({
           title: "Message Sent",
-          description: "Thank you for your message. I'll get back to you soon!",
+          description: "Thank you for your message. We'll get back to you soon!",
         });
         // Reset form and reCAPTCHA
         setFormData({ name: "", email: "", message: "" });
