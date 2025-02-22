@@ -34,7 +34,7 @@ export const books: Record<string, BookData> = {
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
-      "fr-FR": "../src/img/PresqueVrai_2025_Website.png7"
+      "fr-FR": "../src/img/PresqueVrai_2025_Website.png"
     },
     amazonLink: {
       "en-US": "https://www.amazon.com/dp/example-isbn",
