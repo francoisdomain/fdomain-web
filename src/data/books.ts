@@ -32,8 +32,8 @@ export const books: Record<string, BookData> = {
   "close-enough": {
     title: "Close Enough",
     coverImage: {
-      "en-US": "/src/img/CloseEnough_PaperbackCover_website.png",
-      "en-UK": "/src/img/CloseEnough_PaperbackCover_website.png",
+      "en-US": "/img/CloseEnough_PaperbackCover_website.png",
+      "en-UK": "/img/CloseEnough_PaperbackCover_website.png",
       "fr-FR": "/photo-1472396961693-142e6e269027"
     },
     amazonLink: {
