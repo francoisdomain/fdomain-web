@@ -30,6 +30,7 @@ export type BookData = {
 
 export const books: Record<string, BookData> = {
   "close-enough": {
+    id: 1,
     title: {
     "en-US": "Close Enough",
     "en-UK": "Close Enough",
@@ -166,6 +167,7 @@ export const books: Record<string, BookData> = {
   // Add more books here following the same structure
 
 "above-waterline": {
+    id: 2,
     title: {
     "en-US": "Above the Waterline",
     "en-UK": "Above the Waterline",
@@ -350,6 +352,7 @@ export const books: Record<string, BookData> = {
   },
 
 "coming-soon": {
+    id: 3,
     title: {
     "en-US": "Coming Soon",
     "en-UK": "Coming Soon",
