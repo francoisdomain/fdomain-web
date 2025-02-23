@@ -2,20 +2,20 @@
 export const translations = {
   "en": {
     "hero": {
-      "title": "Crafting Stories That Stay With You",
-      "subtitle": "Award-winning author of contemporary fiction exploring the depths of human connection."
+      "title": "Blurring the lines that define us.",
+      "subtitle": "François Domain crafts psychological tales where love fractures, identities shift, and every thread leads to unsettling truths."
     },
     "nav": {
-      "about": "About",
+      "about": "The Author",
       "books": "Books",
       "contact": "Contact",
-      "language": "Language",
-      "viewAllBooks": "View All Books"
+      "language": "Location",
+      "viewAllBooks": "All Books"
     },
     "sections": {
       "featuredBooks": "Featured Books",
       "aboutTitle": "About the Author",
-      "aboutText": "With over a decade of storytelling experience, crafting narratives that resonate with readers worldwide.",
+      "aboutText": "François Domain delves into the fragility of human relationships, dissecting the inner turmoil of love in collapse.",
       "contactTitle": "Get in Touch",
       "contactText": "For speaking engagements, book signings, or just to say hello."
     },
@@ -26,26 +26,26 @@ export const translations = {
   },
   "fr": {
     "hero": {
-      "title": "Écrire des histoires qui restent longtemps avec vous",
-      "subtitle": "Auteur primé de fiction contemporaine explorant les profondeurs des relations humaines."
+      "title": "Et faire de l'autre un inconnu.",
+      "subtitle": "François Domain navigue les mots qui desemparent, dénude les âmes et incendie les miroirs qui réconfortent."
     },
     "nav": {
-      "about": "À propos",
+      "about": "L'Auteur",
       "books": "Livres",
       "contact": "Contact",
-      "language": "Langue",
-      "viewAllBooks": "Voir tous les livres"
+      "language": "Localisation",
+      "viewAllBooks": "Tous les livres"
     },
     "sections": {
-      "featuredBooks": "Livres en vedette",
-      "aboutTitle": "À propos de l'auteur",
-      "aboutText": "Avec plus d'une décennie d'expérience dans l'écriture, créant des récits qui résonnent avec les lecteurs du monde entier.",
-      "contactTitle": "Contactez-moi",
-      "contactText": "Pour des conférences, des séances de dédicaces ou simplement pour dire bonjour."
+      "featuredBooks": "En vedette",
+      "aboutTitle": "L'auteur",
+      "aboutText": "François Domain fragilité des relations humaines, disséquant les tourments intérieurs de l’amour qui s'épuise.",
+      "contactTitle": "Contacter François Domain",
+      "contactText": "Pour plus d'information, séances de dédicaces ou simplement pour dire bonjour."
     },
     "buttons": {
       "learnMore": "En savoir plus",
-      "contactMe": "Me contacter"
+      "contactMe": "Contacter François"
     }
   }
 };
