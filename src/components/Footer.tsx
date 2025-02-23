@@ -73,12 +73,9 @@ export const Footer = () => {
             <p className="text-warm-gray-600 mb-4">
               Stay updated with new releases and author events.
             </p>
-            <a
-              href="mailto:contact@author.com"
-              className="text-warm-gray-900 hover:text-warm-gray-600"
-            >
-              contact@author.com
-            </a>
+            <Link to="/contact" className="text-warm-gray-600 hover:text-warm-gray-900">
+                  Contact
+                </Link>
           </div>
         </div>
         
