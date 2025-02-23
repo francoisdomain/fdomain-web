@@ -383,7 +383,7 @@ export const books: Record<string, BookData> = {
     "en-US": "Memory, and the lies it tells us.",
     "en-UK": "Memory, and the lies it tells us.",
     "fr-FR": "La mémoire, et les mensonges qu'elle nous raconte."
-  },
+    },
     coverImage: {
       "en-US": "/photo-1472396961693-142e6e269027",
       "en-UK": "/photo-1472396961693-142e6e269027",
@@ -402,16 +402,16 @@ export const books: Record<string, BookData> = {
     },
     prologue: {
       "en-US": "Coming soon",
-      "en-UK": `Coming soon",
+      "en-UK": "Coming soon",
       "fr-FR": "Bientôt..."
     },
     isbn: {
       "en-US": "",
       "en-UK": "",
       "fr-FR": ""
-    }
+    },
     pages: 450,
     publisher: "François Domain",
     slug: "coming-soon"
-  },
+  }
 };
