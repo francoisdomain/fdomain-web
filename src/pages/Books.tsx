@@ -1,21 +1,34 @@
-import { useNavigate } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { WelcomeModal } from "@/components/WelcomeModal";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { books } from "@/data/books";
+import { Book } from "lucide-react";
 
-export default function Index() {
-  const navigate = useNavigate();
-  const { locale } = useLanguage();
-  
-  // Sort books by id in ascending order and take the last 3
-  const recentBooks = Object.entries(books)
-    .map(([slug, book]) => ({ ...book, slug }))
-    .sort((a, b) => (a.id || 0) - (b.id || 0))
-    .slice(-3);
+const Books = () => {
+  const books = [
+    {
+      id: 1,
+      title: "The Silent Echo",
+      description: "A haunting tale of love and loss in a small coastal town, where secrets echo through generations.",
+      year: "2023",
+      cover: null,
+    },
+    {
+      id: 2,
+      title: "Midnight's Tale",
+      description: "When darkness falls, some stories come alive. A mystery that unfolds in the heart of an ancient city.",
+      year: "2022",
+      cover: null,
+    },
+    {
+      id: 3,
+      title: "The Last Chapter",
+      description: "Every ending is a new beginning. A story of redemption and second chances.",
+      year: "2021",
+      cover: null,
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col" bg-background>
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-32 pb-16">
@@ -23,42 +36,32 @@ export default function Index() {
           <h1 className="text-4xl md:text-5xl font-serif font-medium mb-12 text-center">
             Books
           </h1>
-
-                <main className="flex-grow container mx-auto px-4 py-8">
-        <section className="mb-16">
-          <h2 className="text-3xl font-serif text-center mb-12">Latest Books</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {recentBooks.map((book) => (
-              <div 
-                key={book.slug}
-                className="group cursor-pointer"
-                onClick={() => navigate(`/books/${book.slug}`)}
-              >
-                <div className="relative aspect-[2/3] mb-4 overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105">
-                  <img
-                    src={book.coverImage[locale]}
-                    alt={book.title[locale]}
-                    className="w-full h-full object-cover"
-                  />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {books.map((book) => (
+              <div key={book.id} className="group">
+                <div className="aspect-[2/3] bg-cream-100 rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow duration-300">
+                  {book.cover ? (
+                    <img
+                      src={book.cover}
+                      alt={book.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Book size={48} className="text-warm-gray-200" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="font-serif text-xl mb-2 group-hover:text-warm-gray-800 transition-colors">
-                  {book.title[locale]}
-                </h3>
-                <p className="text-warm-gray-600 text-sm">
-                  {book.tagline[locale]}
-                </p>
+                
+                <h2 className="text-2xl font-serif mb-3 group-hover:text-warm-gray-800 transition-colors">
+                  {book.title}
+                </h2>
+                <p className="text-warm-gray-600 mb-2">{book.year}</p>
+                <p className="text-warm-gray-800">{book.description}</p>
               </div>
             ))}
           </div>
-        </section>
-
-
-
-
-
-
-          
-
         </div>
       </div>
 
