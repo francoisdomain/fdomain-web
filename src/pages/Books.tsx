@@ -1,31 +1,21 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { books } from "@/data/books";
+import { Link } from "react-router-dom";
 
 const Books = () => {
-  const books = [
-    {
-      id: 1,
-      title: "The Silent Echo",
-      description: "A haunting tale of love and loss in a small coastal town, where secrets echo through generations.",
-      year: "2023",
-      cover: null,
-    },
-    {
-      id: 2,
-      title: "Midnight's Tale",
-      description: "When darkness falls, some stories come alive. A mystery that unfolds in the heart of an ancient city.",
-      year: "2022",
-      cover: null,
-    },
-    {
-      id: 3,
-      title: "The Last Chapter",
-      description: "Every ending is a new beginning. A story of redemption and second chances.",
-      year: "2021",
-      cover: null,
-    },
-  ];
+  const { locale } = useLanguage();
+
+  // Convert books object to array and sort by id
+  const booksList = Object.entries(books)
+    .map(([slug, book]) => ({
+      ...book,
+      slug
+    }))
+    .sort((a, b) => a.id - b.id);
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,13 +28,13 @@ const Books = () => {
           </h1>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            {books.map((book) => (
-              <div key={book.id} className="group">
+            {booksList.map((book) => (
+              <Link to={`/books/${book.slug}`} key={book.id} className="group">
                 <div className="aspect-[2/3] bg-cream-100 rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow duration-300">
-                  {book.cover ? (
+                  {book.coverImage[locale] ? (
                     <img
-                      src={book.cover}
-                      alt={book.title}
+                      src={book.coverImage[locale]}
+                      alt={book.title[locale]}
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -55,11 +45,11 @@ const Books = () => {
                 </div>
                 
                 <h2 className="text-2xl font-serif mb-3 group-hover:text-warm-gray-800 transition-colors">
-                  {book.title}
+                  {book.title[locale]}
                 </h2>
                 <p className="text-warm-gray-600 mb-2">{book.year}</p>
-                <p className="text-warm-gray-800">{book.description}</p>
-              </div>
+                <p className="text-warm-gray-800">{book.tagline[locale]}</p>
+              </Link>
             ))}
           </div>
         </div>
