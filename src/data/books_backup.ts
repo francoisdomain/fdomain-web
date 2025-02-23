@@ -30,18 +30,11 @@ export type BookData = {
 
 export const books: Record<string, BookData> = {
   "close-enough": {
-    id: 1,
     title: {
-    "en-US": "Close Enough",
-    "en-UK": "Close Enough",
-    "fr-FR": "Presque Vrai"
+      "en-US": "Close Enough",
+      "en-UK": "Close Enough",
+      "fr-FR": "Presque Vrai"
     },
-    tagline: {
-    "en-US": "A friendship desguised in love story – or the other way around",
-    "en-UK": "A friendship desguised in love story – or the other way around",
-    "fr-FR": "Une amitié déguisée en histoire d'amour – ou l'inverse."
-    },
-
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
@@ -54,139 +47,37 @@ export const books: Record<string, BookData> = {
     },
     year: "2025",
     summary: {
-      "en-US": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
-      "en-UK": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
-      "fr-FR": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
+      "en-US": "In the misty shores of Nova Scotia, where the Atlantic winds carry whispers of untold stories, Claire McKenna discovers an old diary that threatens to unravel not just her family's past, but the entire town's carefully guarded secrets. As she delves deeper into its pages, she realizes that some echoes of the past are better left unheard.",
+      "en-UK": "In the misty shores of Nova Scotia, where the Atlantic winds carry whispers of untold stories, Claire McKenna discovers an old diary that threatens to unravel not just her family's past, but the entire town's carefully guarded secrets. As she delves deeper into its pages, she realizes that some echoes of the past are better left unheard.",
+      "fr-FR": "Sur les rives brumeuses de la Nouvelle-Écosse, où les vents de l'Atlantique portent les murmures d'histoires inédites, Claire McKenna découvre un vieux journal qui menace de démêler non seulement le passé de sa famille, mais aussi les secrets soigneusement gardés de toute la ville. En plongeant plus profondément dans ses pages, elle réalise que certains échos du passé feraient mieux de rester inaudibles."
     },
     prologue: {
-      "en-US": `When I finally knocked on the glass door, hoping someone inside would bother letting me in, it was he who turned around.
-      The look he gave me wasn’t just a glance—it was high-voltage, a sucker punch to the gut. Before I knew it, my face was burning, an unexpected flush creeping up my neck, and for a split second, I swear the whole damn door nearly blew up.
-      The door held.
-      I didn’t.
-      
-      I stood there, frozen, arms dangling like dead weight at my sides, a dumb grin plastered on my face. He gave me a quick chin lift, the kind of look a tired waiter gives when you snap your fingers for attention: Yeah, I saw you, but I’m kinda busy right now.
-      Footsteps approached and someone was suddenly beside me. She looked mid-twenties, curly hair pulled into a too-tight ponytail, her suit just as tight. She gave two sharp knocks on the glass door before I had a chance to stop her.
-      “Don’t have a pass either?”
-      I shook my head. “Nope.“
-      “First day. I’m Lydia,” she said, holding out her hand. 
-      “François.” I added a blasé “Nice to meet you,” for good measure.
-      She had that unmistakable French look—the pout, the slight sneer—and a truly awful English accent, painfully reminding me of my own. She stepped back, giving me an exaggerated once-over.
-      “T’es français, toi aussi.”
-      It wasn’t a question, so I didn’t bother answering.
-      Out of the corner of my eye, I saw the tall blond finally decide we’d waited long enough. With an overdone sigh and two long strides, he hit the door release. Lydia didn’t hesitate, shoving past me and giving our makeshift doorman a solid hip check as she went in. He barely noticed, too busy ogling her rear. 
-      “Sorry,” I muttered, stepping into his line of sight. “For the trouble, I mean. We don’t have a—”
-      “Yeah, no pass. I got it. Don’t sweat it. Ever since Management stuck me on this side of the floor, I’ve felt more like a bouncer than a call center supervisor.” He paused, squinting at me. “You’re with someone, right? No one gets in alone.”
-      He burst out laughing. A German trying to crack jokes at a freshly landed French guy in London? Guaranteed fail. I forced a polite smile, just in case.
-      “You new?” he asked, heading back to his desk.
-      “Yeah. Training starts today.”
-      “You’re an agent for France, right?”
-      “Supervisor, actually. But yeah, for France. How’d you guess…” 
-      “Your accent.”
-      No shit. 
-      That was supposed to be a joke, mate. I laugh at your bad jokes, you laugh at mine—that’s how this works.
-      “I’m Marvin, by the way,” he said, gripping my hand in a vise-like handshake. “I handle Germany. And half the other countries too, since this place is full of wankers who can’t do much besides suck dicks. If you want to know how to run a call center, I’m your guy—not the morons who spend their time jerking off in the middle of the floor.”
-      Another belly laugh from him, this time loud enough to draw several annoyed glances our way. I took the chance to slip off and follow Lydia.
-      “Hey, Frenchie!” he shouted. “What’s your name?”
-      Half the call center was glaring at us now.
-      “François.”
-      “Welcome to Lyberta, Fran-sawa!”`,
-      "en-UK": `When I finally knocked on the glass door, hoping someone inside would bother letting me in, it was he who turned around.
-      The look he gave me wasn’t just a glance—it was high-voltage, a sucker punch to the gut. Before I knew it, my face was burning, an unexpected flush creeping up my neck, and for a split second, I swear the whole damn door nearly blew up.
-      The door held.
-      I didn’t.
-      
-      I stood there, frozen, arms dangling like dead weight at my sides, a dumb grin plastered on my face. He gave me a quick chin lift, the kind of look a tired waiter gives when you snap your fingers for attention: Yeah, I saw you, but I’m kinda busy right now.
-      Footsteps approached and someone was suddenly beside me. She looked mid-twenties, curly hair pulled into a too-tight ponytail, her suit just as tight. She gave two sharp knocks on the glass door before I had a chance to stop her.
-      “Don’t have a pass either?”
-      I shook my head. “Nope.“
-      “First day. I’m Lydia,” she said, holding out her hand. 
-      “François.” I added a blasé “Nice to meet you,” for good measure.
-      She had that unmistakable French look—the pout, the slight sneer—and a truly awful English accent, painfully reminding me of my own. She stepped back, giving me an exaggerated once-over.
-      “T’es français, toi aussi.”
-      It wasn’t a question, so I didn’t bother answering.
-      Out of the corner of my eye, I saw the tall blond finally decide we’d waited long enough. With an overdone sigh and two long strides, he hit the door release. Lydia didn’t hesitate, shoving past me and giving our makeshift doorman a solid hip check as she went in. He barely noticed, too busy ogling her rear. 
-      “Sorry,” I muttered, stepping into his line of sight. “For the trouble, I mean. We don’t have a—”
-      “Yeah, no pass. I got it. Don’t sweat it. Ever since Management stuck me on this side of the floor, I’ve felt more like a bouncer than a call center supervisor.” He paused, squinting at me. “You’re with someone, right? No one gets in alone.”
-      He burst out laughing. A German trying to crack jokes at a freshly landed French guy in London? Guaranteed fail. I forced a polite smile, just in case.
-      “You new?” he asked, heading back to his desk.
-      “Yeah. Training starts today.”
-      “You’re an agent for France, right?”
-      “Supervisor, actually. But yeah, for France. How’d you guess…” 
-      “Your accent.”
-      No shit. 
-      That was supposed to be a joke, mate. I laugh at your bad jokes, you laugh at mine—that’s how this works.
-      “I’m Marvin, by the way,” he said, gripping my hand in a vise-like handshake. “I handle Germany. And half the other countries too, since this place is full of wankers who can’t do much besides suck dicks. If you want to know how to run a call center, I’m your guy—not the morons who spend their time jerking off in the middle of the floor.”
-      Another belly laugh from him, this time loud enough to draw several annoyed glances our way. I took the chance to slip off and follow Lydia.
-      “Hey, Frenchie!” he shouted. “What’s your name?”
-      Half the call center was glaring at us now.
-      “François.”
-      “Welcome to Lyberta, Fran-sawa!”`,
-      "fr-FR": `Quand je me suis résolu à toquer à la porte en verre pour qu’on daigne venir m’ouvrir, c’est lui qui s’est retourné.
-      Ce regard qu’il m’a lancé – c’était comme saisir une ligne à haute tension à mains nues. J’ai reculé sous le choc, et pendant une seconde, j’ai bien cru que la porte en verre allait voler en éclats. 
-      La porte a tenu bon.
-      C’est moi qui ai volé en miettes.
-      
-      Je suis resté planté là, immobile, les bras ballants, le souffle coupé. Il m’a lancé un coup de menton, comme un serveur qui en a assez que l’on claque des doigts pour attirer son attention, C’est bon, je t’ai vu, mais je suis occupé, là.
-      Derrière moi, des pas feutrés se sont approchés. Une silhouette s’est arrêtée à ma hauteur ; la vingtaine, cheveux bouclés, queue-de-cheval, un tailleur un peu trop près du corps. Elle a mis deux coups secs de phalanges sur la porte en verre avant que je n’aie le temps de l’arrêter.  
-      « Tu n’as pas de pass non plus ? »
-      J’ai fait non de la tête.  
-      « C’est mon premier jour. Je m’appelle Lydia.
-      — François, » je me suis présenté en serrant sa main tendue.
-      Petite moue hautaine, un air suffisant, et un accent anglais qui me rappelait douloureusement le mien. Elle a reculé pour me toiser de la tête aux pieds. 
-      « Tu es français, toi aussi. »
-      Ce n’était pas une question ; je n’ai pas répondu.
-      De l’autre côté de la porte, le grand blond a semblé décider qu’il nous avait assez fait patienter.  Un soupir théâtral, deux enjambées, et il frappait du plat de la main le bouton d’ouverture de la porte principale. Un clic discret nous a invités à entrer. Lydia m’est passée devant, dégageant d’un coup de croupe notre portier improvisé hors de son chemin sans un regard ni un merci. 
-      « Désolé, » j’ai murmuré en me glissant dans son champ de vision. « Pour le dérangement, je veux dire. On n’a pas de…  
-      — Ouais, pas de pass, je me doute, » il m’a répondu, s’arrachant avec bien du mal aux va-et-viens de la croupe en question. « T’inquiète, depuis qu’ils m’ont fait déménager ici, j’ai plus l’impression d’être videur qu’un superviseur de centre d’appels. D’ailleurs, t’es accompagné ? Parce qu’ici, c’est comme en boîte, tu ne rentres pas si t’es pas accompagné. »
-      Il est parti d’un rire gras. 
-      Un Allemand qui blague en anglais avec un Français tout juste sorti de l’Eurostar ? Flop assuré. J’ai souri. Par politesse.
-      « T’es nouveau ? »  il m’a demandé en avançant vers son bureau.  
-      « Oui. On commence tout juste le training.  
-      — T’es un agent pour la France, j’imagine ?  
-      — Superviseur. Mais pour la France, oui. Comment tu as deviné.  
-      — Ton accent. »
-      Oui, merci, je me doute. 
-      Il m’a tendu une main deux fois plus grosse que la mienne.
-      « Je m’appelle Marvin. Je m’occupe de l’Allemagne. Et de la moitié des autres pays, puisque c’est bourré d’incapables qui ne savent que sucer de la bite, ici. Si tu veux savoir comment on fait tourner un call-center, c’est à moi qu’il faut demander, pas aux branquignols qui se paluchent au milieu. »
-      Il a lancé un nouvel éclat de rire qui nous a attiré quelques regards agacés. Je l’ai remercié d’un geste, et j’en ai profité pour avancer discrètement dans la direction que Lydia avait prise, espérant qu’elle savait mieux que moi où elle allait.   
-      « Hey ! Hey, Frenchie, tu t’appelles comment, au fait ? »
-      Une autre tournée de regards noirs se sont posés sur nous.
-      « François. »
-      Il a hoché la tête, pensif, comme s’il avait son mot à dire à ce sujet.
-      « Bienvenue chez Lyberta, Franssoua ! »`
+      "en-US": `The old lighthouse stood sentinel against the gathering storm, its beam cutting through the darkness like a blade. Sarah watched from her window as the rain began to fall, each drop carrying with it a memory she'd tried so hard to forget. Thirty years had passed since that night, yet time had done little to dull the edges of her guilt.
+
+      The letter lay unopened on her desk, its cream-colored envelope bearing a postmark from a town she'd sworn never to think of again. But fate, it seemed, had other plans...`,
+      "en-UK": `The old lighthouse stood sentinel against the gathering storm, its beam cutting through the darkness like a blade. Sarah watched from her window as the rain began to fall, each drop carrying with it a memory she'd tried so hard to forget. Thirty years had passed since that night, yet time had done little to dull the edges of her guilt.
+
+      The letter lay unopened on her desk, its cream-coloured envelope bearing a postmark from a town she'd sworn never to think of again. But fate, it seemed, had other plans...`,
+      "fr-FR": `Le vieux phare montait la garde contre la tempête qui s'amoncelait, son faisceau perçant l'obscurité comme une lame. Sarah regardait par sa fenêtre la pluie commencer à tomber, chaque goutte portant avec elle un souvenir qu'elle avait tant essayé d'oublier. Trente ans s'étaient écoulés depuis cette nuit-là, pourtant le temps n'avait guère atténué les contours de sa culpabilité.
+
+      La lettre gisait, non ouverte sur son bureau, son enveloppe couleur crème portant le cachet d'une ville à laquelle elle avait juré de ne plus jamais penser. Mais le destin, semblait-il, en avait décidé autrement...`
     },
     isbn:  {
       "en-US": "978-1-0685758-0-8",
       "en-UK": "978-1-0685758-0-8",
       "fr-FR": "978-1-0685758-2-2"
     },
-    pages: 280,
+    pages: 342,
     publisher: "François Domain",
     slug: "close-enough"
   },
   // Add more books here following the same structure
 
 "above-waterline": {
-    id: 2,
-    title: {
-    "en-US": "Above the Waterline",
-    "en-UK": "Above the Waterline",
-    "fr-FR": "La Glissade"
-    },
-    tagline: {
-    "en-US": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us,",
-    "en-UK": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us.",
-    "fr-FR": "Narrée dans une prose coupante comme du verre, La Glissade est l'histoire de la violence silenceise de la quarantaine, les illusions auxquelles on se raccroche et ces moments qui nous redefinisse."
-    },
+    title: "Above the Waterline",
     coverImage: {
-      "en-US": "../src/img/above-waterline-cover-website.jpg",
-      "en-UK": "../src/img/above-waterline-cover-website.jpg",
+      "en-US": "../src/img/Above the waterline cover website.png",
+      "en-UK": "../src/img/Above the waterline cover website.png",
       "fr-FR": "/photo-1472396961693-142e6e269027"
     },
     amazonLink: {
@@ -363,17 +254,7 @@ export const books: Record<string, BookData> = {
   },
 
 "coming-soon": {
-    id: 3,
-    title: {
-    "en-US": "Coming Soon",
-    "en-UK": "Coming Soon",
-    "fr-FR": "Bientot"
-    },
-    tagline: {
-    "en-US": "Memory, and the lies it tells us.",
-    "en-UK": "Memory, and the lies it tells us.",
-    "fr-FR": "La mémoire, et les mensonges qu'elle nous raconte."
-  },
+    title: "Coming Soon",
     coverImage: {
       "en-US": "/photo-1472396961693-142e6e269027",
       "en-UK": "/photo-1472396961693-142e6e269027",
@@ -395,9 +276,15 @@ export const books: Record<string, BookData> = {
       "en-UK": `Coming soon`,
       "fr-FR": `Bientôt...`
     },
-    isbn: "123",
+    isbn: {
+      "en-US": "",
+      "en-UK": "",
+      "fr-FR": ""
+    },
     pages: 450,
     publisher: "François Domain",
     slug: "coming-soon"
   },
+
+  
 };
