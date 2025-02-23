@@ -1,6 +1,16 @@
 
 export type BookData = {
-  title: string;
+  id: number;
+  title: {
+    "en-US": string;
+    "en-UK": string;
+    "fr-FR": string;
+  };
+  tagline: {
+    "en-US": string;
+    "en-UK": string;
+    "fr-FR": string;
+  };
   coverImage: {
     "en-US": string;
     "en-UK": string;
@@ -391,11 +401,15 @@ export const books: Record<string, BookData> = {
       "fr-FR": "Rejoingnez la mailing list pour être les premiers informés !"
     },
     prologue: {
-      "en-US": `Coming soon`,
-      "en-UK": `Coming soon`,
-      "fr-FR": `Bientôt...`
+      "en-US": "Coming soon",
+      "en-UK": `Coming soon",
+      "fr-FR": "Bientôt..."
     },
-    isbn: "123",
+    isbn: {
+      "en-US": "",
+      "en-UK": "",
+      "fr-FR": ""
+    }
     pages: 450,
     publisher: "François Domain",
     slug: "coming-soon"
