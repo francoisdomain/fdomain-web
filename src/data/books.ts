@@ -409,7 +409,11 @@ export const books: Record<string, BookData> = {
       "en-UK": `Coming soon`,
       "fr-FR": `Bientôt...`
     },
-    isbn: "123",
+    isbn: {
+      "en-US": "",
+      "en-UK": "",
+      "fr-FR": ""
+    },
     pages: 450,
     publisher: "François Domain",
     slug: "coming-soon"
