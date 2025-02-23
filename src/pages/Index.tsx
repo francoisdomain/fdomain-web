@@ -5,9 +5,16 @@ import { WelcomeModal } from "@/components/WelcomeModal";
 import { Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { books } from "@/data/books";
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+
+  // Get the latest 3 books, sorted by ID
+  const latestBooks = Object.entries(books)
+    .map(([slug, book]) => ({ ...book, slug }))
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,18 +42,26 @@ const Index = () => {
             {t("sections.featuredBooks")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[1, 2, 3].map((book) => (
+            {latestBooks.map((book) => (
               <div
-                key={book}
+                key={book.slug}
                 className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
               >
                 <div className="aspect-[2/3] bg-cream-100 flex items-center justify-center">
-                  <Book size={48} className="text-warm-gray-200" />
+                  {book.coverImage[locale] ? (
+                    <img 
+                      src={book.coverImage[locale]} 
+                      alt={book.title[locale]}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Book size={48} className="text-warm-gray-200" />
+                  )}
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl mb-2">Book Title {book}</h3>
+                  <h3 className="font-serif text-xl mb-2">{book.title[locale]}</h3>
                   <p className="text-warm-gray-800">
-                    A compelling story about love, loss, and redemption.
+                    {book.tagline[locale]}
                   </p>
                 </div>
               </div>
