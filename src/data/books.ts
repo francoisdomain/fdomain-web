@@ -372,46 +372,5 @@ export const books: Record<string, BookData> = {
     slug: "above-waterline"
   },
 
-"coming-soon": {
-    id: 3,
-    title: {
-    "en-US": "Coming Soon",
-    "en-UK": "Coming Soon",
-    "fr-FR": "Bientot"
-    },
-    tagline: {
-    "en-US": "Memory, and the lies it tells us.",
-    "en-UK": "Memory, and the lies it tells us.",
-    "fr-FR": "La mémoire, et les mensonges qu'elle nous raconte."
-    },
-    coverImage: {
-      "en-US": "/photo-1472396961693-142e6e269027",
-      "en-UK": "/photo-1472396961693-142e6e269027",
-      "fr-FR": "/photo-1472396961693-142e6e269027"
-    },
-    amazonLink: {
-      "en-US": "https://www.amazon.com/dp/example-isbn",
-      "en-UK": "https://www.amazon.co.uk/dp/example-isbn",
-      "fr-FR": "https://www.amazon.fr/dp/example-isbn"
-    },
-    year: "2026",
-    summary: {
-      "en-US": "Join the mailing list to hear about the new novel by François Domain.",
-      "en-UK": "Join the mailing list to hear about the new novel by François Domain.",
-      "fr-FR": "Rejoingnez la mailing list pour être les premiers informés !"
-    },
-    prologue: {
-      "en-US": "Coming soon",
-      "en-UK": "Coming soon",
-      "fr-FR": "Bientôt..."
-    },
-    isbn: {
-      "en-US": "",
-      "en-UK": "",
-      "fr-FR": ""
-    },
-    pages: 450,
-    publisher: "François Domain",
-    slug: "coming-soon"
-  }
+
 };
