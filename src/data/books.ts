@@ -36,6 +36,12 @@ export const books: Record<string, BookData> = {
     "en-UK": "Close Enough",
     "fr-FR": "Presque Vrai"
     },
+    tagline: {
+    "en-US": "A friendship desguised in love story – or the other way around",
+    "en-UK": "A friendship desguised in love story – or the other way around",
+    "fr-FR": "Une amitié déguisée en histoire d'amour – ou l'inverse."
+    },
+
     coverImage: {
       "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
       "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
@@ -172,6 +178,11 @@ export const books: Record<string, BookData> = {
     "en-US": "Above the Waterline",
     "en-UK": "Above the Waterline",
     "fr-FR": "La Glissade"
+    },
+    tagline: {
+    "en-US": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us,",
+    "en-UK": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us.",
+    "fr-FR": "Narrée dans une prose coupante comme du verre, La Glissade est l'histoire de la violence silenceise de la quarantaine, les illusions auxquelles on se raccroche et ces moments qui nous redefinisse."
     },
     coverImage: {
       "en-US": "../src/img/above-waterline-cover-website.jpg",
@@ -357,6 +368,11 @@ export const books: Record<string, BookData> = {
     "en-US": "Coming Soon",
     "en-UK": "Coming Soon",
     "fr-FR": "Bientot"
+    },
+    tagline: {
+    "en-US": "Memory, and the lies it tells us.",
+    "en-UK": "Memory, and the lies it tells us.",
+    "fr-FR": "La mémoire, et les mensonges qu'elle nous raconte."
   },
     coverImage: {
       "en-US": "/photo-1472396961693-142e6e269027",
@@ -384,6 +400,4 @@ export const books: Record<string, BookData> = {
     publisher: "François Domain",
     slug: "coming-soon"
   },
-
-  
 };
