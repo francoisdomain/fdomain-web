@@ -10,28 +10,18 @@ export default function Index() {
   const navigate = useNavigate();
   const { locale } = useLanguage();
   
-  // Sort books by id in descending order and take the first 3
+  // Sort books by id in ascending order and take the last 3
   const recentBooks = Object.entries(books)
     .map(([slug, book]) => ({ ...book, slug }))
-    .sort((a, b) => (b.id || 0) - (a.id || 0))
-    .slice(0, 3);
+    .sort((a, b) => (a.id || 0) - (b.id || 0))
+    .slice(-3);
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <WelcomeModal />
       
-      <main className="flex-grow container mx-auto px-4 py-24">
-        <section className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-medium mb-6">
-            François Domain
-          </h1>
-          <p className="text-xl md:text-2xl text-warm-gray-600 max-w-2xl mx-auto">
-            Author of literary fiction that explores the complexities of human relationships 
-            and the quiet moments that define our lives.
-          </p>
-        </section>
-
+      <main className="flex-grow container mx-auto px-4 py-8">
         <section className="mb-16">
           <h2 className="text-3xl font-serif text-center mb-12">Latest Books</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
