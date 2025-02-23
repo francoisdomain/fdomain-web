@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, Globe, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { books } from "@/data/books";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,11 +17,14 @@ export const Navigation = () => {
     { code: "fr-FR", name: "Français" },
   ];
 
-  const books = [
-    { id: 1, title: "Close Enough", path: "/books/close-enough" },
-    { id: 2, title: "Above the Waterline", path: "/books/above-waterline" },
-    { id: 3, title: "Coming Soon", path: "/books/coming-soon" },
-  ];
+  // Convert books object to array and sort by id
+  const booksList = Object.entries(books)
+    .map(([slug, book]) => ({
+      id: book.id,
+      title: book.title[locale],
+      path: `/books/${slug}`
+    }))
+    .sort((a, b) => a.id - b.id);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
@@ -52,7 +56,7 @@ export const Navigation = () => {
               
               {isBookOpen && (
                 <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 w-48 border">
-                  {books.map((book) => (
+                  {booksList.map((book) => (
                     <Link
                       key={book.id}
                       to={book.path}
@@ -131,7 +135,7 @@ export const Navigation = () => {
             <div className="space-y-2">
               <p className="font-medium">{t("nav.books")}</p>
               <div className="pl-4 space-y-2">
-                {books.map((book) => (
+                {booksList.map((book) => (
                   <Link
                     key={book.id}
                     to={book.path}
