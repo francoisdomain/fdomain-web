@@ -43,6 +43,19 @@ export const translations = {
       "message": "Thank you for visiting. Here you'll find all my latest books and updates. Feel free to explore and get in touch!",
       "buttonText": "Got it, thanks!",
       "enabledLocales": ["en-US", "en-UK"]
+    },
+    "about": {
+      "pageTitle": "About the Author",
+      "intro": "With over a decade of storytelling experience, I've dedicated my life to crafting narratives that resonate with readers across the globe. My journey began in the quiet corners of local bookstores and has since evolved into an international adventure in storytelling.",
+      "mainText": "Each story I write is a reflection of the human experience, carefully woven with threads of emotion, mystery, and revelation. My work has been recognized by various literary institutions and has been translated into multiple languages.",
+      "awardsTitle": "Awards & Recognition",
+      "awards": [
+        "International Literary Award, 2023",
+        "Best Contemporary Fiction, 2022",
+        "Author of the Year, Writers Guild, 2021"
+      ],
+      "philosophyTitle": "Writing Philosophy",
+      "philosophy": "I believe in the power of stories to connect, heal, and transform. Every book is an invitation to explore new perspectives and discover universal truths that bind us together as human beings."
     }
   },
   "fr": {
@@ -89,6 +102,19 @@ export const translations = {
       "message": "Merci de votre visite. Vous trouverez ici tous mes derniers livres et actualités. N'hésitez pas à explorer et à me contacter!",
       "buttonText": "J'ai compris, merci!",
       "enabledLocales": []
+    },
+    "about": {
+      "pageTitle": "L'Auteur",
+      "intro": "Avec plus d'une décennie d'expérience dans l'écriture, j'ai consacré ma vie à créer des récits qui résonnent avec les lecteurs du monde entier. Mon parcours a commencé dans les coins tranquilles des librairies locales et s'est depuis transformé en une aventure internationale.",
+      "mainText": "Chaque histoire que j'écris est un reflet de l'expérience humaine, soigneusement tissée avec des fils d'émotion, de mystère et de révélation. Mon travail a été reconnu par diverses institutions littéraires et a été traduit en plusieurs langues.",
+      "awardsTitle": "Prix et Reconnaissances",
+      "awards": [
+        "Prix Littéraire International, 2023",
+        "Meilleure Fiction Contemporaine, 2022",
+        "Auteur de l'Année, Guilde des Écrivains, 2021"
+      ],
+      "philosophyTitle": "Philosophie d'Écriture",
+      "philosophy": "Je crois au pouvoir des histoires pour connecter, guérir et transformer. Chaque livre est une invitation à explorer de nouvelles perspectives et à découvrir des vérités universelles qui nous lient en tant qu'êtres humains."
     }
   }
 };
