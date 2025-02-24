@@ -3,10 +3,12 @@ import { useState, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
@@ -21,8 +23,8 @@ const Contact = () => {
     const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
       toast({
-        title: "Verification Required",
-        description: "Please complete the reCAPTCHA verification.",
+        title: t("contact.errorTitle"),
+        description: t("contact.verificationRequired"),
         variant: "destructive",
       });
       return;
@@ -44,10 +46,9 @@ const Contact = () => {
 
       if (response.ok) {
         toast({
-          title: "Message Sent",
-          description: "Thank you for your message. We'll get back to you soon!",
+          title: t("contact.successTitle"),
+          description: t("contact.successMessage"),
         });
-        // Reset form and reCAPTCHA
         setFormData({ name: "", email: "", message: "" });
         recaptchaRef.current?.reset();
       } else {
@@ -55,8 +56,8 @@ const Contact = () => {
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Sorry, there was a problem sending your message. Please try again later.",
+        title: t("contact.errorTitle"),
+        description: t("contact.errorMessage"),
         variant: "destructive",
       });
     } finally {
@@ -80,17 +81,17 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-serif font-medium mb-8 text-center">
-              Get in Touch
+              {t("contact.title")}
             </h1>
             
             <p className="text-lg text-warm-gray-800 text-center mb-12">
-              For speaking engagements, book signings, or just to share your thoughts about my books.
+              {t("contact.subtitle")}
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-warm-gray-800 mb-2">
-                  Name
+                  {t("contact.nameLabel")}
                 </label>
                 <input
                   type="text"
@@ -99,14 +100,14 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-warm-gray-200 focus:ring-2 focus:ring-warm-gray-900 focus:border-transparent transition-colors"
-                  placeholder="Your name"
+                  placeholder={t("contact.namePlaceholder")}
                   required
                 />
               </div>
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-warm-gray-800 mb-2">
-                  Email
+                  {t("contact.emailLabel")}
                 </label>
                 <input
                   type="email"
@@ -115,14 +116,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-warm-gray-200 focus:ring-2 focus:ring-warm-gray-900 focus:border-transparent transition-colors"
-                  placeholder="your@email.com"
+                  placeholder={t("contact.emailPlaceholder")}
                   required
                 />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-warm-gray-800 mb-2">
-                  Message
+                  {t("contact.messageLabel")}
                 </label>
                 <textarea
                   id="message"
@@ -131,7 +132,7 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={6}
                   className="w-full px-4 py-3 rounded-lg border border-warm-gray-200 focus:ring-2 focus:ring-warm-gray-900 focus:border-transparent transition-colors"
-                  placeholder="Your message..."
+                  placeholder={t("contact.messagePlaceholder")}
                   required
                 ></textarea>
               </div>
@@ -150,7 +151,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="w-full px-6 py-3 bg-warm-gray-900 text-white rounded-lg hover:bg-warm-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? t("contact.sendingButton") : t("contact.sendButton")}
                 </button>
               </div>
             </form>

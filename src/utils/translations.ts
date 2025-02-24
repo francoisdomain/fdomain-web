@@ -1,4 +1,3 @@
-
 type TranslationType = {
   [key: string]: {
     hero: {
@@ -53,6 +52,23 @@ type TranslationType = {
       awards: string[];
       philosophyTitle: string;
       philosophy: string;
+    };
+    contact: {
+      title: string;
+      subtitle: string;
+      nameLabel: string;
+      namePlaceholder: string;
+      emailLabel: string;
+      emailPlaceholder: string;
+      messageLabel: string;
+      messagePlaceholder: string;
+      sendButton: string;
+      sendingButton: string;
+      successTitle: string;
+      successMessage: string;
+      errorTitle: string;
+      errorMessage: string;
+      verificationRequired: string;
     };
   };
 };
@@ -115,6 +131,23 @@ export const translations: TranslationType = {
       ],
       "philosophyTitle": "Writing Philosophy",
       "philosophy": "I believe in the power of stories to connect, heal, and transform. Every book is an invitation to explore new perspectives and discover universal truths that bind us together as human beings."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "For speaking engagements, book signings, or just to share your thoughts about my books.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message...",
+      "sendButton": "Send Message",
+      "sendingButton": "Sending...",
+      "successTitle": "Message Sent",
+      "successMessage": "Thank you for your message. We'll get back to you soon!",
+      "errorTitle": "Error",
+      "errorMessage": "Sorry, there was a problem sending your message. Please try again later.",
+      "verificationRequired": "Please complete the reCAPTCHA verification."
     }
   },
   "fr": {
@@ -174,6 +207,23 @@ export const translations: TranslationType = {
       ],
       "philosophyTitle": "Philosophie d'Écriture",
       "philosophy": "Je crois au pouvoir des histoires pour connecter, guérir et transformer. Chaque livre est une invitation à explorer de nouvelles perspectives et à découvrir des vérités universelles qui nous lient en tant qu'êtres humains."
+    },
+    "contact": {
+      "title": "Contacter François Domain",
+      "subtitle": "Pour les conférences, les séances de dédicaces, ou simplement pour partager vos impressions sur mes livres.",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Votre message...",
+      "sendButton": "Envoyer",
+      "sendingButton": "Envoi en cours...",
+      "successTitle": "Message Envoyé",
+      "successMessage": "Merci pour votre message. Nous vous répondrons bientôt !",
+      "errorTitle": "Erreur",
+      "errorMessage": "Désolé, il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+      "verificationRequired": "Veuillez compléter la vérification reCAPTCHA."
     }
   }
 };
