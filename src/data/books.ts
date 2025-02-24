@@ -32,7 +32,11 @@ export type BookData = {
     "en-UK": string;
     "fr-FR": string;
   };
-  isbn: string;
+  isbn: {
+    "en-US": string;
+    "en-UK": string;
+    "fr-FR": string;
+  };
   pages: number;
   publisher: string;
   slug: string;
