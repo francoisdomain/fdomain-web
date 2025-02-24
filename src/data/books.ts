@@ -1,4 +1,4 @@
-
+<lov-code>
 export type BookData = {
   id: number;
   title: {
@@ -270,53 +270,6 @@ export const books: Record<string, BookData> = {
       
       It’s hot today.  
       There’s a breeze, but it’s hot. `,
-      "en-UK": `So, this is how it ends.  
-      A quick chat at the corner of the kitchen table, wedged between the main and dessert, like we were just discussing Aunt Adelaide’s cataract surgery. Only this time, it was my guts getting sliced open.  
-      At least you spared me the old “It’s not you, it’s me” cliché. That’s not your style. You’re more the type to say it’s always my fault. On principle. If you could, you’d probably pin Aunt Adelaide’s cataracts on me, too.  
-      We made it past seven years—everyone told us that was the tough one.  
-      We made it past ten—everyone told us that was the tough one.  
-      We made it past fifteen, and by then, no one said anything because they’d all been divorced for years. 
-      We almost made it to twenty. Funny thing is, we still might. Divorce doesn’t happen overnight. It takes time. Can you imagine? Us signing the papers on our twentieth anniversary. “Happy anniversary, Mathilda. So, which table are you keeping—the living room or the dining set?”  
-      
-      I had a good run, didn’t I? All those efforts to keep my head low, tighten my belt—I mean, it shows I’ve got willpower, like I needed any more proof. But what’s the point, when you’ve been living my midlife crisis behind my back, pedal to the metal?
-      So I sat there, fists clenched under the table, listening to you say it was “for the best,” that we “had good times,” but somehow we “lost each other along the way”—and you didn’t even have the decency to look me in the eye. All I could think was how stupid I was for not driving that intern from accounting all the way home.
-      The clock on the wall coughs up seconds, one by one. Too loud, but not loud enough to drown out your words.  
-      “You’re not saying anything...”
-      What do you expect me to say, Mathilda? What do you possibly expect me to say? That we can fix this? That we just need to try harder, see a therapist, or take up couples’ yoga? I know you too well. Once you’ve made up your mind—even on the dumbest of ideas—there’s no turning back. You used to go on sex strikes to get your way. Lately, you’ve resorted to monosyllabic answers and long silences. How long has it been since we last touched each other? Five months? Six?  
-      I used to keep track, back in winter.  
-      Sure, not everything revolves around sex, but when it stops altogether—what’s left?  
-      And I can’t even blame you, not really. It’s partly my fault. No—it’s entirely my fault. After years of being the one to initiate, I got tired of begging for your attention. Once a week, every Sunday, like some pathetic ritual. So I decided to strike back. Not because I didn’t want you—God, I wanted you—but because I wanted you to want me. I thought I’d give you time, let the desire build up.  
-      And then, of course, Netflix became more engaging than I ever could. “Take your time,” I’d say. “Finish your show.” And you took it literally. If I went to bed early, you’d slip in later. And later. Until eventually I just turned off the light. I gave up in my own way, too. Stopped being hurt when I woke up alone. Stopped caring when breakfast was just silence and coffee.  
-      Fine. I’ll take the blame. Not like it matters now.  
-      
-      “Are you okay, Edward?”
-      I gripped the edge of the table like a lifeline, swallowing down words I’d never say. Since when did I become Edward to you? I’ve been Eddie since the day we met. I tried to remember when that changed. Like everything else, I guess it just slipped away.  
-      “I’m fine. I... I’m fine.”
-      I barely recognized my own voice. Maybe it was Edward’s voice. Not Eddie’s.  
-      You were already halfway down a list of practicalities I hadn’t even thought about—the joint account, who’d keep the cat (you hate the cat anyway), moving into Arnold’s room until we sorted out what to do with the house.  
-      “Wait... What? ”
-      You stiffened, pinching your lips.  
-      “Yes, Edward. We’ll have to talk about the house. You know how involved I am in the community. You’re always holed up in your office—what difference does it make to you if you’re here or somewhere else?”
-      I almost laughed. “Involved in the community.” Unreal. If throwing Tupperware parties twice a month qualifies as community service, I should be glad you never took on climate change or world peace.  
-      Looking back, I want to believe you were just clinging to logistics to keep from falling apart emotionally. If so, you were doing a damn good job of it, way better than me.  
-      You wanted the car. For the kids. The eldest already has one, and the youngest—he’s eighteen now, when did that happen?—is across the country, living it up. What does he care about the car? You wanted everything and nothing at once. Played your cards like a master magician, flipping hearts into spades so fast I couldn’t keep up. All I could do was sit there, breathless, groping for answers to questions I hadn’t even grasped.  
-      
-      Under the table, my left leg started bouncing. First softly, then harder. It’s my pressure valve. Always has been. I tried to hold it down with my elbow, but it was no use. After two decades, you should’ve known that. You could’ve let me change into my running gear. Running’s the only thing that calms me down. You know that. But in Mathilda’s world, there’s only Mathilda.  
-      “You should see someone,” you said. “I mean, physically. Emotionally.”
-      Like ordering a pizza. With any luck, DoorDash would drop off the love of my life on the landing, still warm.
-      “I’m not there yet, Mathilda.”
-      You didn’t reply.  
-      
-      Of course we should cancel dinner at Mike and Mary-Ann’s. I couldn’t bear another night pretending everything was fine. Or worse, having Mary-Ann play therapist because she read something in Good Housekeeping.  
-      Cynical? No, I’m not cynical. I’m just about to implode. My leg’s doing a tap dance under the table, and my nails are carving trenches into my thighs. What do you say, Mathilda? Should we take a break?  
-      “For god’s sake, Edward, say something!”
-      Believe me, it’s better if I don’t. Because what I’ve got on the tip of my tongue is everything you never wanted to hear. Not today, not ever. But especially not today.  
-      You gave me that condescending glare of yours. You should’ve been a teacher—the kind kids hate.  
-      “I’m going for a run.”
-      You mumbled something, but I didn’t bother asking what. I went upstairs to change, almost calm, almost peaceful.  
-      
-      It’s hot today.  
-      There’s a breeze, but it’s hot. `,
       "fr-FR": `Alors, c’est comme ça que ça commence. Une conversation rapide au coin de la table de cuisine, entre le fromage et le dessert, comme on parlerait de l’opération de la cataracte de tante Adélaïde, sauf que là, c’étaient mes tripes que le scalpel s’amusait à taillader.
       Tu as eu la délicatesse de m’épargner le bon vieux cliché du c’est pas toi, c’est moi. Ce n’est pas ton style. Toi, tu es plutôt du genre à me dire que tout est ma faute, tout le temps. Par principe. À t’écouter, la cataracte de tante Adélaïde, ça aussi, ça pourrait bien être ma faute.
       On a passé le cap des sept ans. Tout le monde nous a dit que c’était le plus difficile.
@@ -340,41 +293,4 @@ export const books: Record<string, BookData> = {
       Depuis quand tu m’appelais Édouard ? J’avais toujours été Eddie, pour toi, depuis le premier jour. J’ai beau chercher, je n’arrive plus à retrouver le moment où je suis devenu Édouard. C’est sûrement arrivé progressivement. Comme tout le reste.
       — Ça… ça va, ça va.
       J’avais du mal à reconnaître la voix qui sortait de ma gorge. Celle d’Edouard, sûrement. Pas celle d’Eddie.
-      Tu en étais déjà à passer en revue toute une liste de détails qui ne m’avaient même pas encore effleuré l’esprit : le compte joint, qui garderait le chat – tu n’aimes pas les chats de toute façon – la chambre d’Arnaud dans laquelle tu t’installerais en attendant qu’on prenne une décision pour la maison.
-      — Pardon ?
-      Tu t’es redressée en pinçant les lèvres. 
-      — Oui, Édouard. Il va bien falloir que l’on parle de la maison. Ce n’est pas aussi simple qu’il y paraît. Tu sais à quel point je suis impliquée dans la communauté. Toi, tu es toujours enfermé dans ton bureau, que tu sois ici ou ailleurs, ça ne fait pas grande différence, n’est-ce pas ?
-      Heureusement que tu as enchaîné sur les mensualités de la police d’assurance que tu acceptais avec toute la grandeur d’âme qui te caractérise que je continue à payer, sinon je t’aurais ri au nez. Impliquée dans la communauté. On aura tout entendu. Si t’impliquer dans la communauté, c’est organiser des soirées Tupperware deux fois par mois, c’est sûrement une bonne chose que tu n’aies pas pris à cœur de t’impliquer dans les conflits au Moyen-Orient ou le réchauffement climatique.
-      Avec le recul, je veux essayer de me faire croire que si tu t’attardais tant sur le matériel, c’était pour éviter l’émotionnel. Si c’est ça, alors tu avais une sacrée longueur d’avance sur moi.
-      Tu voulais la voiture. Pour les enfants. Le grand conduit et a la sienne. Quant au petit – il a dix-huit ans, il faut que j’arrête de l’appeler le petit – il est de l’autre côté de la Manche, bien happy dans son underground et n’a aucune envie de revenir ne serait-ce que pour le week-end, encore moins pour les vacances alors, la voiture, qu’est-ce qu’il doit bien s’en foutre.
-      
-      Sous la table, ma jambe gauche trouvait que j’avais fait preuve d’assez de patience et que le moment était venu de t’envoyer bouler. Elle a commencé à taper du talon, doucement d’abord, et puis en y mettant plus d’entrain. C’est ma soupape de sécurité. Le signal du coup d’envoi. Je pouvais bien essayer de la maîtriser, poser mon coude sur ma cuisse pour tenter d’arrêter ce sautillement insupportable, la bataille était perdue d’avance. Et si on se connaît aussi bien qu’on veut le prétendre après toutes ces années de mariage, tu aurais dû le savoir, tu aurais dû me laisser aller enfiler un short, des baskets, et aller courir. Il n’y a que ça qui me calme. Ce n’est pas nouveau, ce n’est pas compliqué à comprendre. Mais non, dans le monde de Mathilda, il n’y a que Mathilda qui existe.
-      — Tu devrais voir quelqu’un. Physiquement, je veux dire. Sentimentalement.
-      À t’écouter, trouver la nouvelle femme de sa vie c’était aussi facile que de commander une pizza. Avec un peu de chance, Deliveroo te la dépose directement sur le palier, encore toute chaude.
-      — Je n’en suis pas encore là, Mathilda.
-      Tu n’as rien dit – je n’ai pas insisté.
-      
-      Bien sûr qu’on annulerait le diner chez Michel et Anne-Marie, je ne me voyais pas passer une soirée de plus avec tes amis à prétendre que tout va bien ou, pire, à laisser Anne-Marie nous faire une psychothérapie express en suivant les bons conseils trouvés dans un vieux Femme Actuelle. 
-      Cynique ? Non, je ne suis pas cynique, je suis juste à deux doigts d’imploser. J’ai la jambe qui fait des sauts périlleux dignes des Jeux olympiques, mes ongles sont en train de creuser les tranchées de la guerre 14 dans mes cuisses, qu’est-ce que tu en dis, on se fait un petit break, là ?
-      — Parle, Édouard, enfin ! Dis quelque chose.
-      Crois-moi, Mathilda, il valait mieux que je me taise. Ce qui pendait au bout de mes lèvres, là, c’est tout ce que tu ne voulais pas entendre, ni ce jour-là, ni jamais – mais surtout pas ce jour-là.
-      Tu as accueilli mon silence de ton air le plus condescendant.
-      Tu aurais dû faire maîtresse d’école. De celles que les gosses n’aiment pas.
-      — Je vais aller courir.
-      Tu as grommelé quelque chose que je ne t’ai pas demandé de répéter. Je suis monté me changer, presque calmement, presque tranquillement.
-      
-      Il fait chaud, aujourd’hui.
-      Il y a du vent, mais il fait chaud.`
-    },
-    isbn: {
-      "en-US": "978-1-0685758-1-5",
-      "en-UK": "978-1-0685758-1-5",
-      "fr-FR": "978-1-0685758-3-9"
-    },
-    pages: 342,
-    publisher: "François Domain",
-    slug: "above-waterline"
-  },
-
-
-};
+      Tu en étais déjà à passer en revue toute une liste de
