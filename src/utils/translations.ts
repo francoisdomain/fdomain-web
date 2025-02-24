@@ -1,4 +1,3 @@
-
 export const translations = {
   "en": {
     "hero": {
@@ -22,6 +21,22 @@ export const translations = {
     "buttons": {
       "learnMore": "Learn More",
       "contactMe": "Contact Me"
+    },
+    "footer": {
+      "books": "Books",
+      "quickLinks": "Quick Links",
+      "legal": "Legal",
+      "connect": "Connect",
+      "stayUpdated": "Stay updated with new releases and author events.",
+      "newsletter": "Newsletter",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "allRightsReserved": "All rights reserved.",
+      "subscribeNewsletter": "Subscribe to Newsletter",
+      "subscribeMessage": "Join my mailing list for updates on new releases, events, and exclusive content.",
+      "emailPlaceholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "closeModal": "Close"
     }
   },
   "fr": {
@@ -46,6 +61,22 @@ export const translations = {
     "buttons": {
       "learnMore": "En savoir plus",
       "contactMe": "Contacter François"
+    },
+    "footer": {
+      "books": "Livres",
+      "quickLinks": "Liens Rapides",
+      "legal": "Mentions Légales",
+      "connect": "Contact",
+      "stayUpdated": "Restez informé des nouvelles sorties et des événements.",
+      "newsletter": "Newsletter",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions d'Utilisation",
+      "allRightsReserved": "Tous droits réservés.",
+      "subscribeNewsletter": "S'inscrire à la Newsletter",
+      "subscribeMessage": "Rejoignez ma liste de diffusion pour être informé des nouvelles sorties, des événements et du contenu exclusif.",
+      "emailPlaceholder": "Votre email",
+      "subscribe": "S'inscrire",
+      "closeModal": "Fermer"
     }
   }
 };
