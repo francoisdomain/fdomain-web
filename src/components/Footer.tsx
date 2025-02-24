@@ -126,7 +126,7 @@ export const Footer = () => {
             <Button 
               className="w-full"
               onClick={() => {
-                // TODO: Implement MailerLite integration
+                // TODO: Implement Mailchimp integration
                 setIsNewsletterOpen(false);
               }}
             >
