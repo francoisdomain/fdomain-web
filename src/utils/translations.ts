@@ -37,6 +37,12 @@ export const translations = {
       "emailPlaceholder": "Enter your email",
       "subscribe": "Subscribe",
       "closeModal": "Close"
+    },
+    "welcomeModal": {
+      "title": "Welcome to my website!",
+      "message": "Thank you for visiting. Here you'll find all my latest books and updates. Feel free to explore and get in touch!",
+      "buttonText": "Got it, thanks!",
+      "enabledLocales": ["en-US", "en-UK"]
     }
   },
   "fr": {
@@ -77,6 +83,12 @@ export const translations = {
       "emailPlaceholder": "Votre email",
       "subscribe": "S'inscrire",
       "closeModal": "Fermer"
+    },
+    "welcomeModal": {
+      "title": "Bienvenue sur mon site!",
+      "message": "Merci de votre visite. Vous trouverez ici tous mes derniers livres et actualités. N'hésitez pas à explorer et à me contacter!",
+      "buttonText": "J'ai compris, merci!",
+      "enabledLocales": []
     }
   }
 };
