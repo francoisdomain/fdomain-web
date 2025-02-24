@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
   const { t } = useLanguage();
+  const awards = t("about.awards") as string[];
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,7 +31,7 @@ const About = () => {
                 {t("about.awardsTitle")}
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-warm-gray-800">
-                {t("about.awards").map((award: string, index: number) => (
+                {awards.map((award: string, index: number) => (
                   <li key={index}>{award}</li>
                 ))}
               </ul>

@@ -1,4 +1,63 @@
-export const translations = {
+
+type TranslationType = {
+  [key: string]: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    nav: {
+      about: string;
+      books: string;
+      contact: string;
+      language: string;
+      viewAllBooks: string;
+    };
+    sections: {
+      featuredBooks: string;
+      aboutTitle: string;
+      aboutText: string;
+      contactTitle: string;
+      contactText: string;
+    };
+    buttons: {
+      learnMore: string;
+      contactMe: string;
+    };
+    footer: {
+      books: string;
+      quickLinks: string;
+      legal: string;
+      connect: string;
+      stayUpdated: string;
+      newsletter: string;
+      privacyPolicy: string;
+      termsOfService: string;
+      allRightsReserved: string;
+      subscribeNewsletter: string;
+      subscribeMessage: string;
+      emailPlaceholder: string;
+      subscribe: string;
+      closeModal: string;
+    };
+    welcomeModal: {
+      title: string;
+      message: string;
+      buttonText: string;
+      enabledLocales: string[];
+    };
+    about: {
+      pageTitle: string;
+      intro: string;
+      mainText: string;
+      awardsTitle: string;
+      awards: string[];
+      philosophyTitle: string;
+      philosophy: string;
+    };
+  };
+};
+
+export const translations: TranslationType = {
   "en": {
     "hero": {
       "title": "Blurring the lines that define us.",
