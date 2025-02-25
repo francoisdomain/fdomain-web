@@ -6,7 +6,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 
 export const Footer = () => {
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
@@ -19,6 +18,36 @@ export const Footer = () => {
       slug
     }))
     .sort((a, b) => books[a.slug].id - books[b.slug].id);
+
+  // Get the appropriate MailerLite form based on locale
+  const getMailerLiteForm = () => {
+    switch (locale) {
+      case 'fr-FR':
+        return (
+          <iframe
+            src="https://embedded-form.mailerlite.fr/form-here-fr"  // Replace with actual French form URL
+            style={{width: "100%", height: "400px", border: "none"}}
+            title="Newsletter Signup Form - French"
+          ></iframe>
+        );
+      case 'en-UK':
+        return (
+          <iframe
+            src="https://embedded-form.mailerlite.fr/form-here-uk"  // Replace with actual UK form URL
+            style={{width: "100%", height: "400px", border: "none"}}
+            title="Newsletter Signup Form - UK"
+          ></iframe>
+        );
+      default: // en-US
+        return (
+          <iframe
+            src="https://embedded-form.mailerlite.fr/form-here-us"  // Replace with actual US form URL
+            style={{width: "100%", height: "400px", border: "none"}}
+            title="Newsletter Signup Form - US"
+          ></iframe>
+        );
+    }
+  };
 
   return (
     <>
@@ -111,27 +140,15 @@ export const Footer = () => {
       </footer>
 
       <Dialog open={isNewsletterOpen} onOpenChange={setIsNewsletterOpen}>
-        <DialogContent>
+        <DialogContent className="sm:max-w-[600px]">
           <DialogHeader>
             <DialogTitle>{t("footer.subscribeNewsletter")}</DialogTitle>
             <DialogDescription>
               {t("footer.subscribeMessage")}
             </DialogDescription>
           </DialogHeader>
-          <div className="space-y-4 py-4">
-            <Input 
-              type="email" 
-              placeholder={t("footer.emailPlaceholder")}
-            />
-            <Button 
-              className="w-full"
-              onClick={() => {
-                // TODO: Implement Mailchimp integration
-                setIsNewsletterOpen(false);
-              }}
-            >
-              {t("footer.subscribe")}
-            </Button>
+          <div className="py-4">
+            {getMailerLiteForm()}
           </div>
         </DialogContent>
       </Dialog>
