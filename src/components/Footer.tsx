@@ -19,34 +19,24 @@ export const Footer = () => {
     }))
     .sort((a, b) => books[a.slug].id - books[b.slug].id);
 
-  // Get the appropriate MailerLite form based on locale
+  // Get the appropriate MailerLite form with group parameter based on locale
   const getMailerLiteForm = () => {
-    switch (locale) {
-      case 'fr-FR':
-        return (
-          <iframe
-            src="https://embedded-form.mailerlite.fr/form-here-fr"  // Replace with actual French form URL
-            style={{width: "100%", height: "400px", border: "none"}}
-            title="Newsletter Signup Form - French"
-          ></iframe>
-        );
-      case 'en-UK':
-        return (
-          <iframe
-            src="https://embedded-form.mailerlite.fr/form-here-uk"  // Replace with actual UK form URL
-            style={{width: "100%", height: "400px", border: "none"}}
-            title="Newsletter Signup Form - UK"
-          ></iframe>
-        );
-      default: // en-US
-        return (
-          <iframe
-            src="https://embedded-form.mailerlite.fr/form-here-us"  // Replace with actual US form URL
-            style={{width: "100%", height: "400px", border: "none"}}
-            title="Newsletter Signup Form - US"
-          ></iframe>
-        );
-    }
+    // Map locales to group IDs - replace these with your actual MailerLite group IDs
+    const groupIds = {
+      'fr-FR': 'french-readers',
+      'en-UK': 'uk-readers',
+      'en-US': 'us-readers'
+    };
+
+    const groupId = groupIds[locale];
+    
+    return (
+      <iframe
+        src={`https://embedded-form.mailerlite.fr/general-form?ml_groups=${groupId}`} // Replace with your actual base form URL
+        style={{width: "100%", height: "400px", border: "none"}}
+        title={`Newsletter Signup Form - ${locale}`}
+      ></iframe>
+    );
   };
 
   return (
