@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
   const { t } = useLanguage();
-  const awards = t("about.awards") as string[];
+  const awards = (t("about.awards") as unknown) as string[];
 
   return (
     <div className="min-h-screen bg-background">
