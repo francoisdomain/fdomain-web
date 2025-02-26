@@ -2,6 +2,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
   const { t } = useLanguage();
@@ -9,6 +10,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={t("about.pageTitle")}
+        description="Learn more about François Domain, an accomplished author exploring the depths of human psychology through contemporary fiction."
+        pathname="/about"
+      />
       <Navigation />
       
       <div className="pt-32 pb-16">

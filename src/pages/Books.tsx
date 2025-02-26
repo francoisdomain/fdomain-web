@@ -5,6 +5,7 @@ import { Book } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const Books = () => {
   const { locale } = useLanguage();
@@ -19,6 +20,11 @@ const Books = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Books"
+        description="Explore François Domain's collection of contemporary fiction books, delving into the complexities of human relationships and psychological intrigue."
+        pathname="/books"
+      />
       <Navigation />
       
       <div className="pt-32 pb-16">

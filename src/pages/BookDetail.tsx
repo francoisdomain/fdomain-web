@@ -5,6 +5,7 @@ import { Book, ShoppingCart } from "lucide-react";
 import { useParams, Navigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
+import { SEO } from "@/components/SEO";
 
 const BookDetail = () => {
   const { slug } = useParams();
@@ -18,6 +19,13 @@ const BookDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={book.title[locale]}
+        description={book.tagline[locale]}
+        image={book.coverImage[locale]}
+        article={true}
+        pathname={`/books/${slug}`}
+      />
       <Navigation />
       
       <div className="pt-32 pb-16">

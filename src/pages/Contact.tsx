@@ -1,10 +1,10 @@
-
 import { useState, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ReCAPTCHA from "react-google-recaptcha";
+import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -75,6 +75,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact"
+        description="Get in touch with François Domain for speaking engagements, book signings, or to share your thoughts about his books."
+        pathname="/contact"
+      />
       <Navigation />
       
       <div className="pt-32 pb-16">

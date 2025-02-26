@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -32,6 +33,11 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="404 - Page Not Found"
+        description="Sorry, the page you are looking for does not exist. You will be redirected to the homepage."
+        pathname={location.pathname}
+      />
       <Navigation />
       
       <div className="container mx-auto px-4 pt-32 pb-16">
