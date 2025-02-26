@@ -17,6 +17,32 @@ const BookDetail = () => {
     return <Navigate to="/books" replace />;
   }
 
+  const bookJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: book.title[locale],
+    description: book.tagline[locale],
+    image: book.coverImage[locale],
+    isbn: book.isbn[locale],
+    author: {
+      "@type": "Person",
+      name: "François Domain",
+      url: "https://francoisdomain.com/about"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: book.publisher
+    },
+    datePublished: book.year,
+    inLanguage: locale,
+    numberOfPages: book.pages,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: book.amazonLink[locale]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -25,6 +51,7 @@ const BookDetail = () => {
         image={book.coverImage[locale]}
         article={true}
         pathname={`/books/${slug}`}
+        jsonLd={bookJsonLd}
       />
       <Navigation />
       

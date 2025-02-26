@@ -8,12 +8,30 @@ const About = () => {
   const { t } = useLanguage();
   const awards = (t("about.awards") as unknown) as string[];
 
+  const authorJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://francoisdomain.com/#identity",
+    name: "François Domain",
+    url: "https://francoisdomain.com",
+    sameAs: [
+      // Add your social media profiles here
+      // "https://twitter.com/francoisdomain",
+      // "https://www.instagram.com/francoisdomain"
+    ],
+    jobTitle: "Author",
+    description: "Contemporary fiction author exploring human nature through compelling storytelling",
+    image: "/path-to-author-image.jpg", // Add your author image path
+    award: awards
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
         title={t("about.pageTitle")}
         description="Learn more about François Domain, an accomplished author exploring the depths of human psychology through contemporary fiction."
         pathname="/about"
+        jsonLd={authorJsonLd}
       />
       <Navigation />
       

@@ -8,6 +8,7 @@ interface SEOProps {
   image?: string;
   article?: boolean;
   pathname?: string;
+  jsonLd?: Record<string, any>;
 }
 
 export const SEO = ({
@@ -16,6 +17,7 @@ export const SEO = ({
   image = "/og-image.png",
   article = false,
   pathname = "",
+  jsonLd,
 }: SEOProps) => {
   const { locale } = useLanguage();
   const defaultTitle = "François Domain - Author";
@@ -27,6 +29,16 @@ export const SEO = ({
     description: description || defaultDescription,
     image: image.startsWith("http") ? image : `${siteUrl}${image}`,
     url: `${siteUrl}${pathname}`,
+  };
+
+  // Default website schema
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: defaultTitle,
+    url: siteUrl,
+    description: defaultDescription,
+    inLanguage: locale,
   };
 
   return (
@@ -55,6 +67,16 @@ export const SEO = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={seo.url} />
+
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      )}
     </Helmet>
   )
 };
