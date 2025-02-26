@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -43,6 +42,12 @@ const BookDetail = () => {
     }
   };
 
+  const breadcrumbs = [
+    { name: "Home", item: "/" },
+    { name: "Books", item: "/books" },
+    { name: book.title[locale], item: `/books/${slug}` }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -52,6 +57,7 @@ const BookDetail = () => {
         article={true}
         pathname={`/books/${slug}`}
         jsonLd={bookJsonLd}
+        breadcrumbs={breadcrumbs}
       />
       <Navigation />
       

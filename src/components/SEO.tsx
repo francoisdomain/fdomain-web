@@ -9,6 +9,7 @@ interface SEOProps {
   article?: boolean;
   pathname?: string;
   jsonLd?: Record<string, any>;
+  breadcrumbs?: Array<{ name: string; item: string }>;
 }
 
 export const SEO = ({
@@ -18,11 +19,12 @@ export const SEO = ({
   article = false,
   pathname = "",
   jsonLd,
+  breadcrumbs,
 }: SEOProps) => {
   const { locale } = useLanguage();
   const defaultTitle = "François Domain - Author";
   const defaultDescription = "Discover the literary works of François Domain - contemporary fiction author exploring human nature through compelling storytelling.";
-  const siteUrl = "https://francoisdomain.com"; // Replace with your actual domain
+  const siteUrl = "https://francoisdomain.com";
 
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
@@ -40,6 +42,18 @@ export const SEO = ({
     description: defaultDescription,
     inLanguage: locale,
   };
+
+  // Breadcrumb schema
+  const breadcrumbSchema = breadcrumbs ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteUrl}${item.item}`,
+    })),
+  } : null;
 
   return (
     <Helmet>
@@ -72,6 +86,11 @@ export const SEO = ({
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>
+      {breadcrumbSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      )}
       {jsonLd && (
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
@@ -80,3 +99,4 @@ export const SEO = ({
     </Helmet>
   )
 };
+
