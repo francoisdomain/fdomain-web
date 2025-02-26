@@ -1,7 +1,7 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { WelcomeModal } from "@/components/WelcomeModal";
+import { SEO } from "@/components/SEO";
 import { Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -18,6 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO />
       <Navigation />
       <WelcomeModal />
       
