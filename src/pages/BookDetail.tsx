@@ -6,10 +6,14 @@ import { useParams, Navigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
 import { SEO } from "@/components/SEO";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useState } from "react";
 
 const BookDetail = () => {
   const { slug } = useParams();
   const { locale } = useLanguage();
+  const [imageLoaded, setImageLoaded] = useState(false);
   
   const book = slug ? books[slug] : null;
   
@@ -49,6 +53,10 @@ const BookDetail = () => {
     { name: book.title[locale], item: `/books/${slug}` }
   ];
 
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -67,18 +75,32 @@ const BookDetail = () => {
           <div className="max-w-6xl mx-auto">
             <article className="grid md:grid-cols-2 gap-12">
               {/* Book Cover */}
-              <figure className="aspect-[2/3] bg-cream-100 rounded-xl overflow-hidden shadow-xl">
-                {book.coverImage[locale] ? (
-                  <img
-                    src={book.coverImage[locale]}
-                    alt={`Cover of ${book.title[locale]}`}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Book size={96} className="text-warm-gray-200" />
-                  </div>
-                )}
+              <figure className="relative bg-cream-100 rounded-xl overflow-hidden shadow-xl">
+                <AspectRatio ratio={2/3} className="w-full">
+                  {book.coverImage[locale] ? (
+                    <>
+                      <Skeleton 
+                        className={`absolute inset-0 ${imageLoaded ? 'hidden' : 'block'}`} 
+                      />
+                      <img
+                        src={book.coverImage[locale]}
+                        alt={`Cover of ${book.title[locale]}`}
+                        className={`w-full h-full object-cover transition-opacity duration-300 ${
+                          imageLoaded ? 'opacity-100' : 'opacity-0'
+                        }`}
+                        loading="eager"
+                        onLoad={handleImageLoad}
+                        width={800}
+                        height={1200}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Book size={96} className="text-warm-gray-200" />
+                    </div>
+                  )}
+                </AspectRatio>
               </figure>
               
               {/* Book Info */}
