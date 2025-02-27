@@ -201,7 +201,7 @@ export const books: Record<string, BookData> = {
     coverImage: {
       "en-US": "../src/img/above-waterline-cover-website.jpg",
       "en-UK": "../src/img/above-waterline-cover-website.jpg",
-      "fr-FR": "../src/img/LaGlissade_2025_Cover.png"
+      "fr-FR": "../src/img/LaGlissade_Cover.webp"
     },
     amazonLink: {
       "en-US": "https://www.amazon.com/dp/example-isbn",
