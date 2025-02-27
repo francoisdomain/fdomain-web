@@ -8,18 +8,44 @@ import { books } from "@/data/books";
 import { SEO } from "@/components/SEO";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BookDetail = () => {
   const { slug } = useParams();
   const { locale } = useLanguage();
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [supportsWebP, setSupportsWebP] = useState(false);
   
   const book = slug ? books[slug] : null;
   
+  useEffect(() => {
+    // Check WebP support
+    const checkWebP = async () => {
+      const webP = new Image();
+      webP.src = 'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==';
+      webP.onload = () => setSupportsWebP(true);
+      webP.onerror = () => setSupportsWebP(false);
+    };
+    checkWebP();
+  }, []);
+
   if (!book) {
     return <Navigate to="/books" replace />;
   }
+
+  const getOptimizedImageUrl = (url: string) => {
+    if (!url) return '';
+    
+    // Extract the base path without extension
+    const basePath = url.replace(/\.[^/.]+$/, '');
+    
+    if (supportsWebP) {
+      return `${basePath}.webp`;
+    }
+    
+    // Fallback to original format
+    return url;
+  };
 
   const bookJsonLd = {
     "@context": "https://schema.org",
@@ -82,18 +108,26 @@ const BookDetail = () => {
                       <Skeleton 
                         className={`absolute inset-0 ${imageLoaded ? 'hidden' : 'block'}`} 
                       />
-                      <img
-                        src={book.coverImage[locale]}
-                        alt={`Cover of ${book.title[locale]}`}
-                        className={`w-full h-full object-cover transition-opacity duration-300 ${
-                          imageLoaded ? 'opacity-100' : 'opacity-0'
-                        }`}
-                        loading="eager"
-                        onLoad={handleImageLoad}
-                        width={800}
-                        height={1200}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcSet={getOptimizedImageUrl(book.coverImage[locale])}
+                        />
+                        <img
+                          src={book.coverImage[locale]}
+                          alt={`Cover of ${book.title[locale]}`}
+                          className={`w-full h-full object-cover transition-opacity duration-300 ${
+                            imageLoaded ? 'opacity-100' : 'opacity-0'
+                          }`}
+                          loading="eager"
+                          onLoad={handleImageLoad}
+                          width={800}
+                          height={1200}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          decoding="async"
+                          fetchPriority="high"
+                        />
+                      </picture>
                     </>
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
