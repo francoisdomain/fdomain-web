@@ -23,9 +23,9 @@ export const Footer = () => {
   const getMailerLiteForm = () => {
     // Map locales to group IDs - replace these with your actual MailerLite group IDs
     const groupIds = {
-      'fr-FR': 'french-readers',
-      'en-UK': 'uk-readers',
-      'en-US': 'us-readers'
+      'fr-FR': 'fr-FR',
+      'en-UK': 'en-GB',
+      'en-US': 'en-US'
     };
 
     const groupId = groupIds[locale];
