@@ -57,9 +57,9 @@ export const books: Record<string, BookData> = {
     },
 
     coverImage: {
-      "en-US": "../src/img/CloseEnough_PaperbackCover_website.png",
-      "en-UK": "../src/img/CloseEnough_PaperbackCover_website.png",
-      "fr-FR": "../src/img/PresqueVrai_2025_Website.png"
+      "en-US": "../src/img/CloseEnough_2025_cover.webp",
+      "en-UK": "../src/img/CloseEnough_2025_cover.webp",
+      "fr-FR": "../src/img/PresqueVrai_2025_cover.webp"
     },
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/CloseEnough",
@@ -199,8 +199,8 @@ export const books: Record<string, BookData> = {
     "fr-FR": "Narrée dans une prose coupante comme du verre, La Glissade est l'histoire de la violence silenceise de la quarantaine, les illusions auxquelles on se raccroche et ces moments qui nous redefinisse."
     },
     coverImage: {
-      "en-US": "../src/img/above-waterline-cover-website.jpg",
-      "en-UK": "../src/img/above-waterline-cover-website.jpg",
+      "en-US": "../src/img/Above_2025_cover.webp",
+      "en-UK": "../src/img/Above_2025_cover.webp",
       "fr-FR": "../src/img/LaGlissade_Cover.webp"
     },
     amazonLink: {
