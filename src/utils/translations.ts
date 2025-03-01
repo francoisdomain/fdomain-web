@@ -165,7 +165,7 @@ export const translations: TranslationType = {
     "sections": {
       "featuredBooks": "En vedette",
       "aboutTitle": "L'auteur",
-      "aboutText": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi.",
+      "aboutText": "Dans des textes à fleur de peau, Domain ausculte et questionne ces miroirs sans tain à travers lesquels on se construit, ces frontières hypothétiques derrière lesqueles on s'isole de notre plein gré. Sans filtre et sans concession, les romans de François Domain dépouillent l'âme de son vernis et l'exposent, nue et vulnérable.",
       "contactTitle": "Contacter François Domain",
       "contactText": "Pour plus d'information, séances de dédicaces ou simplement pour dire bonjour."
     },
