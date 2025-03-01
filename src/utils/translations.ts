@@ -152,8 +152,8 @@ export const translations: TranslationType = {
   },
   "fr": {
     "hero": {
-      "title": "Et faire de l'autre un inconnu.",
-      "subtitle": "François Domain navigue les mots qui desemparent, dénude les âmes et incendie les miroirs qui réconfortent."
+      "title": "Redessiner ces lignes qui nous définissent.",
+      "subtitle": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi"
     },
     "nav": {
       "about": "L'Auteur",
@@ -165,7 +165,7 @@ export const translations: TranslationType = {
     "sections": {
       "featuredBooks": "En vedette",
       "aboutTitle": "L'auteur",
-      "aboutText": "François Domain fragilité des relations humaines, disséquant les tourments intérieurs de l’amour qui s'épuise.",
+      "aboutText": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi.",
       "contactTitle": "Contacter François Domain",
       "contactText": "Pour plus d'information, séances de dédicaces ou simplement pour dire bonjour."
     },
