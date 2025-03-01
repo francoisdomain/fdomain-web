@@ -165,7 +165,7 @@ export const translations: TranslationType = {
     "sections": {
       "featuredBooks": "En vedette",
       "aboutTitle": "L'auteur",
-      "aboutText": "Dans des textes à fleur de peau, Domain ausculte et questionne ces miroirs sans tain à travers lesquels on se construit, ces frontières hypothétiques où l'on s'abrite. Sans filtre et sans concession, les romans de François Domain traquent l'ambiguité, questionnent l'identité, dissèquent les relations humaines — en particulier celle de l'homme face à lui-même.",
+      "aboutText": "Dans des textes à fleur de peau, Domain ausculte et navigue ces miroirs sans tain à travers lesquels on se construit, ces frontières hypothétiques où l'on s'abrite. Sans filtre et sans concession, les romans de François Domain traquent l'ambiguité, questionnent l'identité, dissèquent les relations humaines — en particulier celle de l'homme face à lui-même.",
       "contactTitle": "Contacter François Domain",
       "contactText": "Pour plus d'information, séances de dédicaces ou simplement pour dire bonjour."
     },
