@@ -77,7 +77,7 @@ export const translations: TranslationType = {
   "en": {
     "hero": {
       "title": "Blurring the lines that define us.",
-      "subtitle": "François Domain crafts psychological tales where love fractures, identities shift, and every thread leads to unsettling truths."
+      "subtitle": "Beyond the lies that reassure and the truths we ignore, the shadow of the self lingers."
     },
     "nav": {
       "about": "The Author",
@@ -89,7 +89,7 @@ export const translations: TranslationType = {
     "sections": {
       "featuredBooks": "Featured Books",
       "aboutTitle": "About the Author",
-      "aboutText": "François Domain delves into the fragility of human relationships, dissecting the inner turmoil of love in collapse.",
+      "aboutText": "Raw and visceral, Domain’s body of work navigates the two-way mirrors through which we shape ourselves and the intangible borders where we seek refuge. He explores ambiguous connections, challenges identity, certainties, and illusions—ultimately confronting the most complex human relationship of all: the one with oneself.",
       "contactTitle": "Get in Touch",
       "contactText": "For speaking engagements, book signings, or just to say hello."
     },
