@@ -50,7 +50,7 @@ const About = () => {
               <p className="text-lg text-warm-gray-800 mb-6">
                 {t("about.mainText")}
               </p>
-              <div id="awards" display="none">
+              <div id="awards" style="display: none">
               <h2 className="text-2xl font-serif font-medium mt-12 mb-6">
                 {t("about.awardsTitle")}
               </h2>
