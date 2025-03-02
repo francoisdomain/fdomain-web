@@ -21,6 +21,11 @@ export type BookData = {
     "en-UK": string;
     "fr-FR": string;
   };
+  amazonLinkText: {
+    "en-US": string;
+    "en-UK": string;
+    "fr-FR": string;
+  };
   year: string;
   summary: {
     "en-US": string;
@@ -51,9 +56,9 @@ export const books: Record<string, BookData> = {
     "fr-FR": "Presque Vrai"
     },
     tagline: {
-    "en-US": "A friendship desguised in love story – or the other way around",
-    "en-UK": "A friendship desguised in love story – or the other way around",
-    "fr-FR": "Une amitié déguisée en histoire d'amour – ou l'inverse."
+    "en-US": "Friendships should be easy. But the ones that matter never are.",
+    "en-UK": "Friendships should be easy. But the ones that matter never are.",
+    "fr-FR": "L'amitié n'a rien de compliqué. Sauf celles qui comptent."
     },
 
     coverImage: {
@@ -64,7 +69,12 @@ export const books: Record<string, BookData> = {
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/CloseEnough",
       "en-UK": "https://urlgeni.us/amazon/CloseEnoughUK",
-      "fr-FR": "https://www.amazon.fr/dp/example-isbn"
+      "fr-FR": "#"
+    },
+    amazonLinkText: {
+      "en-US": "Available now on Amazon",
+      "en-UK": "Available now on Amazon",
+      "fr-FR": "Nouvelle édition Juin 2025"
     },
     year: "2025",
     summary: {
@@ -74,9 +84,9 @@ export const books: Record<string, BookData> = {
       "en-UK": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
       Everyone assumes they’re more than friends. 
       Even they aren’t always sure.`,
-      "fr-FR": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
+      "fr-FR": `Rencontrez François et Marvin — inséparables, imprévisibles, tour à tout le chat puis la souris d'une course poursuite qui n'en finit pas. L’un ne vit que pour le chaos, l’autre s'accroche à des illusions, mais aucun des deux n'arrive à s’éloigner. Proches, trop proches, mais sans jamais se percuter, leur amitié navigue entre les bureaux de la City et les bars de Shoreditch, où les limites n'attendent que d'être franchies.
+      Tout le monde est persuadé qu’ils sont plus que des amis.
+      Même eux n'en sont pas toujours sûrs.`,
     },
     prologue: {
       "en-US": `When I finally knocked on the glass door, hoping someone inside would bother letting me in, it was he who turned around.
@@ -194,9 +204,9 @@ export const books: Record<string, BookData> = {
     "fr-FR": "La Glissade"
     },
     tagline: {
-    "en-US": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us,",
-    "en-UK": "With prose that cuts like glass and humor that smolders beneath the heartbreak, Above the Waterline is a story about the quiet violence of midlife, the illusions we cling to, and the moments that redefine us.",
-    "fr-FR": "Narrée dans une prose coupante comme du verre, La Glissade est l'histoire de la violence silenceise de la quarantaine, les illusions auxquelles on se raccroche et ces moments qui nous redefinisse."
+    "en-US": "The story of a man at war with himself.",
+    "en-UK": "The story of a man at war with himself.",
+    "fr-FR": "Le vrai combat est celui contre soi-même."
     },
     coverImage: {
       "en-US": "../src/img/Above_2025_cover.webp",
@@ -204,11 +214,16 @@ export const books: Record<string, BookData> = {
       "fr-FR": "../src/img/LaGlissade_Cover.webp"
     },
     amazonLink: {
-      "en-US": "https://www.amazon.com/dp/example-isbn",
-      "en-UK": "https://www.amazon.co.uk/dp/example-isbn",
-      "fr-FR": "https://www.amazon.fr/dp/example-isbn"
+      "en-US": "https://urlgeni.us/amazon/Waterline_PO_W",
+      "en-UK": "https://urlgeni.us/amazon/AWT_wb_UK",
+      "fr-FR": "#"
     },
-    year: "2023",
+    amazonLinkText: {
+      "en-US": "Preorder on Amazon",
+      "en-UK": "Preorder on Amazon",
+      "fr-FR": "Nouvelle édition Juin 2025"
+    },
+    year: "2025",
     summary: {
       "en-US": `Edward’s life has been quietly unraveling for years—a midlife crisis he can’t quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he’s been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
       
