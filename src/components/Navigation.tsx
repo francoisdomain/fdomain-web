@@ -32,7 +32,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="../src/img/FD_LOGO small.png"
+              src="./src/img/FD_LOGO small.png"
               alt="FD Logo"
               className="w-8 h-8 object-contain rounded"
             />

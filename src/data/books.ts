@@ -1,4 +1,3 @@
-
 export type BookData = {
   id: number;
   title: {
@@ -62,9 +61,9 @@ export const books: Record<string, BookData> = {
     },
 
     coverImage: {
-      "en-US": "../src/img/CloseEnough_2025_cover.webp",
-      "en-UK": "../src/img/CloseEnough_2025_cover.webp",
-      "fr-FR": "../src/img/PresqueVrai_2025_cover.webp"
+      "en-US": "./src/img/CloseEnough_2025_cover.webp",
+      "en-UK": "./src/img/CloseEnough_2025_cover.webp",
+      "fr-FR": "./src/img/PresqueVrai_2025_cover.webp"
     },
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/CloseEnough",
@@ -78,14 +77,14 @@ export const books: Record<string, BookData> = {
     },
     year: "2025",
     summary: {
-      "en-US": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
-      "en-UK": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other’s orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they’re more than friends. 
-      Even they aren’t always sure.`,
-      "fr-FR": `Rencontrez François et Marvin — inséparables, imprévisibles, tour à tout le chat puis la souris d'une course poursuite qui n'en finit pas. L’un ne vit que pour le chaos, l’autre s'accroche à des illusions, mais aucun des deux n'arrive à s’éloigner. Proches, trop proches, mais sans jamais se percuter, leur amitié navigue entre les bureaux de la City et les bars de Shoreditch, où les limites n'attendent que d'être franchies.
-      Tout le monde est persuadé qu’ils sont plus que des amis.
+      "en-US": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other's orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
+      Everyone assumes they're more than friends. 
+      Even they aren't always sure.`,
+      "en-UK": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other's orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
+      Everyone assumes they're more than friends. 
+      Even they aren't always sure.`,
+      "fr-FR": `Rencontrez François et Marvin — inséparables, imprévisibles, tour à tout le chat puis la souris d'une course poursuite qui n'en finit pas. L'un ne vit que pour le chaos, l'autre s'accroche à des illusions, mais aucun des deux n'arrive à s'éloigner. Proches, trop proches, mais sans jamais se percuter, leur amitié navigue entre les bureaux de la City et les bars de Shoreditch, où les limites n'attendent que d'être franchies.
+      Tout le monde est persuadé qu'ils sont plus que des amis.
       Même eux n'en sont pas toujours sûrs.`,
     },
     prologue: {
@@ -194,7 +193,6 @@ export const books: Record<string, BookData> = {
     publisher: "François Domain",
     slug: "close-enough"
   },
-  // Add more books here following the same structure
 
 "above-waterline": {
     id: 2,
@@ -209,9 +207,9 @@ export const books: Record<string, BookData> = {
     "fr-FR": "Le vrai combat est celui contre soi-même."
     },
     coverImage: {
-      "en-US": "../src/img/Above_2025_cover.webp",
-      "en-UK": "../src/img/Above_2025_cover.webp",
-      "fr-FR": "../src/img/LaGlissade_Cover.webp"
+      "en-US": "./src/img/Above_2025_cover.webp",
+      "en-UK": "./src/img/Above_2025_cover.webp",
+      "fr-FR": "./src/img/LaGlissade_Cover.webp"
     },
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/Waterline_PO_W",
@@ -225,15 +223,15 @@ export const books: Record<string, BookData> = {
     },
     year: "2025",
     summary: {
-      "en-US": `Edward’s life has been quietly unraveling for years—a midlife crisis he can’t quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he’s been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+      "en-US": `Edward's life has been quietly unraveling for years—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
       
-      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he’s buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he’s been running from isn’t someone he left behind—it’s the man he’s become.`,
-      "en-UK": `Edward’s life has been quietly unraveling for years—a midlife crisis he can’t quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he’s been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—it's the man he's become.`,
+      "en-UK": `Edward's life has been quietly unraveling for years—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
       
-      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he’s buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he’s been running from isn’t someone he left behind—it’s the man he’s become.`,
-      "fr-FR": `Après vingt ans, le mariage d’Édouard a peu à peu glissé vers la rancœur et l’indifférence. Prisonnier d’un monde d’habitudes, il a préféré fermer les yeux. Jusqu’à ce que Mathilda, sa femme, demande le divorce.
+      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—it's the man he's become.`,
+      "fr-FR": `Après vingt ans, le mariage d'Édouard a peu à peu glissé vers la rancœur et l'indifférence. Prisonnier d'un monde d'habitudes, il a préféré fermer les yeux. Jusqu'à ce que Mathilda, sa femme, demande le divorce.
       
-      Encore sous le choc, Édouard décide de s’éloigner quelques jours. De rencontres en moments de solitude, il profite de cette parenthèse pour explorer les raisons de son échec familial. Pourtant, la distance complique la communication avec Mathilda, et sa relation avec leur fils Arnaud s’enfonce dans le conflit. Est-il trop tard pour se retrouver ?
+      Encore sous le choc, Édouard décide de s'éloigner quelques jours. De rencontres en moments de solitude, il profite de cette parenthèse pour explorer les raisons de son échec familial. Pourtant, la distance complique la communication avec Mathilda, et sa relation avec leur fils Arnaud s'enfonce dans le conflit. Est-il trop tard pour se retrouver ?
       
       Avec "La Glissade", François Romain nous offre un récit tour à tour léger et déchirant, qui navigue les tourments d'une vie qui s'effiloche.`
     },
@@ -322,74 +320,4 @@ export const books: Record<string, BookData> = {
       “I’m not there yet, Mathilda.”
       You didn’t reply.  
       
-      Of course we should cancel dinner at Mike and Mary-Ann’s. I couldn’t bear another night pretending everything was fine. Or worse, having Mary-Ann play therapist because she read something in Good Housekeeping.  
-      Cynical? No, I’m not cynical. I’m just about to implode. My leg’s doing a tap dance under the table, and my nails are carving trenches into my thighs. What do you say, Mathilda? Should we take a break?  
-      “For god’s sake, Edward, say something!”
-      Believe me, it’s better if I don’t. Because what I’ve got on the tip of my tongue is everything you never wanted to hear. Not today, not ever. But especially not today.  
-      You gave me that condescending glare of yours. You should’ve been a teacher—the kind kids hate.  
-      “I’m going for a run.”
-      You mumbled something, but I didn’t bother asking what. I went upstairs to change, almost calm, almost peaceful.  
-      
-      It’s hot today.  
-      There’s a breeze, but it’s hot. `,
-      "fr-FR": `Alors, c’est comme ça que ça commence. Une conversation rapide au coin de la table de cuisine, entre le fromage et le dessert, comme on parlerait de l’opération de la cataracte de tante Adélaïde, sauf que là, c’étaient mes tripes que le scalpel s’amusait à taillader.
-      Tu as eu la délicatesse de m’épargner le bon vieux cliché du c’est pas toi, c’est moi. Ce n’est pas ton style. Toi, tu es plutôt du genre à me dire que tout est ma faute, tout le temps. Par principe. À t’écouter, la cataracte de tante Adélaïde, ça aussi, ça pourrait bien être ma faute.
-      On a passé le cap des sept ans. Tout le monde nous a dit que c’était le plus difficile.
-      On a passé les dix ans, tout le monde nous a dit que c’était le plus difficile.
-      On a passé les quinze ans sans que plus personne ne nous dise quoi que ce soit puisqu’ils avaient déjà tous divorcé, et on a bien failli passer les vingt ans. Le comble, c’est qu’on pourrait bien les passer quand même, les vingt ans, malgré tout ça. Ça n’arrive pas dans un claquement de doigts, un divorce, ça prend du temps. Trop de temps. Tu imagines ? Se retrouver à signer les documents de nos avocats respectifs le jour de nos vingt ans de mariage, ce serait un comble. Bon anniversaire ! Tu gardes la table de salon, ou celle du séjour ?
-      
-      Je m’en serais presque bien tiré, tu ne crois pas ? Tous ces efforts, ces serrages de ceinture – c’est bien, ça me prouve que j’ai de la volonté. Comme si j’avais besoin de ça pour m’en rendre compte. Et puis ça me fait une belle jambe, tiens, si c’est pour que toi, par-derrière, ce soit toi qui la fasses, ma crise de la quarantaine. Et pas juste un petit dérapage, hein, pas un petit coup d’un soir avec le mécano du coin, non, on y va à fond, là, le tigre dans le moteur, le pied sur le champignon et direction les piliers du pont de l’Alma, histoire de ne pas se louper. Et c’est moi qui suis sur le siège passager.
-      Dire que je suis resté assis là, les poings serrés sous la table, à t’écouter me raconter que c’est mieux comme ça, qu’on a vécu de bons moments mais qu’à trop se donner d’espace on a fini par se perdre sans même avoir la décence de me regarder droit dans les yeux. Tout ce à quoi je pensais, c’est que j’avais été bien con de ne pas la raccompagner jusque chez elle, la petite stagiaire de la compta.
-      
-      L’horloge s’est mise à cracher une seconde tous les jamais. Bruyamment. Tellement bruyamment que je n’arrivais même plus à me concentrer sur ce que tu déblatérais, depuis le fin fond du bout de ta table.
-      — Tu ne dis rien…
-      Et qu’est-ce que tu voulais que je dise ? Que l’orage va passer, qu’on est plus forts que ça, qu’on a les enfants, qu’on s’aime et qu’il faut savoir rebondir, repartir du bon pied, qu’on allait se parler, aller voir un conseiller conjugal et se mettre au sexe tantrique pour reconnecter nos énergies, comme ils disent dans tes magazines ? Je te connais trop bien pour ça, Mathilda. Quand tu as une idée en tête… Il n’y a pas si longtemps, tu brandissais encore la grève du sexe, en dernier recours. Maintenant, tu te contentes de me faire la gueule et de me faire grâce de réponses monosyllabiques, au mieux. Même plus besoin de grève ou de préavis. Parce que ça fait combien, cinq, six mois qu’on n’a pas fait l’amour ? Je ne sais même plus ; j’ai arrêté de compter à la fin de l’hiver.
-      D’accord, tout ne tourne pas autour du sexe, mais quand on ne partage plus ces moments-là, quand il n’y a même plus cette connexion animale, instinctive, quand on ne se touche plus, quand on ne s’embrasse plus, qu’est-ce qui reste ?
-      Je ne peux pas te blâmer pour ça, c’est un peu ma faute. Non, c’est complètement ma faute. Après des années à toujours être celui qui doit faire le premier pas, le premier geste, j’en ai eu assez de quémander ton attention. Faire la manche dans son propre lit une fois par semaine, ça ne fait pas briller l’ego. J’ai décidé d’utiliser tes armes pour contrattaquer. Pas parce que je n’avais pas envie de toi, non, bien au contraire. Mais j’avais envie que tu aies envie de moi. J’allais te laisser le temps, te laisser t’impatienter, laisser le désir grandir au creux de tes reins jusqu’à ce que tu viennes poser une main sur mon torse, jouer avec mon oreille, ou me plaquer contre le mur. J’en frémissais rien qu’à l’idée.
-      Mais évidemment, tes soirées avec Netflix te captivaient plus que les draps de notre lit. Si moi je me couchais plus tôt, toi tu te glissais sous les couvertures de plus en plus tard. Après que j’ai fini par capituler et éteindre la lampe de chevet.
-      Moi aussi, j’ai baissé les bras. J’ai arrêté d’être déçu de m’endormir seul, me suis habitué à ne partager mon petit déjeuner qu’avec la télévision, sans le son, pour ne pas te déranger. Ne plus te déranger. 
-      Alors, oui. Tu peux me mettre ça sur le dos. Ça aussi. 
-      
-      — Ça va, Édouard ?
-      Ma main s’est agrippée à la table comme à une bouée. Pour me maintenir la tête hors de l’eau.
-      Depuis quand tu m’appelais Édouard ? J’avais toujours été Eddie, pour toi, depuis le premier jour. J’ai beau chercher, je n’arrive plus à retrouver le moment où je suis devenu Édouard. C’est sûrement arrivé progressivement. Comme tout le reste.
-      — Ça… ça va, ça va.
-      J’avais du mal à reconnaître la voix qui sortait de ma gorge. Celle d’Edouard, sûrement. Pas celle d’Eddie.
-      Tu en étais déjà à passer en revue toute une liste de détails qui ne m’avaient même pas encore effleuré l’esprit : le compte joint, qui garderait le chat – tu n’aimes pas les chats de toute façon – la chambre d’Arnaud dans laquelle tu t’installerais en attendant qu’on prenne une décision pour la maison.
-      — Pardon ?
-      Tu t’es redressée en pinçant les lèvres. 
-      — Oui, Édouard. Il va bien falloir que l’on parle de la maison. Ce n’est pas aussi simple qu’il y paraît. Tu sais à quel point je suis impliquée dans la communauté. Toi, tu es toujours enfermé dans ton bureau, que tu sois ici ou ailleurs, ça ne fait pas grande différence, n’est-ce pas ?
-      Heureusement que tu as enchaîné sur les mensualités de la police d’assurance que tu acceptais avec toute la grandeur d’âme qui te caractérise que je continue à payer, sinon je t’aurais ri au nez. Impliquée dans la communauté. On aura tout entendu. Si t’impliquer dans la communauté, c’est organiser des soirées Tupperware deux fois par mois, c’est sûrement une bonne chose que tu n’aies pas pris à cœur de t’impliquer dans les conflits au Moyen-Orient ou le réchauffement climatique.
-      Avec le recul, je veux essayer de me faire croire que si tu t’attardais tant sur le matériel, c’était pour éviter l’émotionnel. Si c’est ça, alors tu avais une sacrée longueur d’avance sur moi.
-      Tu voulais la voiture. Pour les enfants. Le grand conduit et a la sienne. Quant au petit – il a dix-huit ans, il faut que j’arrête de l’appeler le petit – il est de l’autre côté de la Manche, bien happy dans son underground et n’a aucune envie de revenir ne serait-ce que pour le week-end, encore moins pour les vacances alors, la voiture, qu’est-ce qu’il doit bien s’en foutre.
-      
-      Sous la table, ma jambe gauche trouvait que j’avais fait preuve d’assez de patience et que le moment était venu de t’envoyer bouler. Elle a commencé à taper du talon, doucement d’abord, et puis en y mettant plus d’entrain. C’est ma soupape de sécurité. Le signal du coup d’envoi. Je pouvais bien essayer de la maîtriser, poser mon coude sur ma cuisse pour tenter d’arrêter ce sautillement insupportable, la bataille était perdue d’avance. Et si on se connaît aussi bien qu’on veut le prétendre après toutes ces années de mariage, tu aurais dû le savoir, tu aurais dû me laisser aller enfiler un short, des baskets, et aller courir. Il n’y a que ça qui me calme. Ce n’est pas nouveau, ce n’est pas compliqué à comprendre. Mais non, dans le monde de Mathilda, il n’y a que Mathilda qui existe.
-      — Tu devrais voir quelqu’un. Physiquement, je veux dire. Sentimentalement.
-      À t’écouter, trouver la nouvelle femme de sa vie c’était aussi facile que de commander une pizza. Avec un peu de chance, Deliveroo te la dépose directement sur le palier, encore toute chaude.
-      — Je n’en suis pas encore là, Mathilda.
-      Tu n’as rien dit – je n’ai pas insisté.
-      
-      Bien sûr qu’on annulerait le diner chez Michel et Anne-Marie, je ne me voyais pas passer une soirée de plus avec tes amis à prétendre que tout va bien ou, pire, à laisser Anne-Marie nous faire une psychothérapie express en suivant les bons conseils trouvés dans un vieux Femme Actuelle. 
-      Cynique ? Non, je ne suis pas cynique, je suis juste à deux doigts d’imploser. J’ai la jambe qui fait des sauts périlleux dignes des Jeux olympiques, mes ongles sont en train de creuser les tranchées de la guerre 14 dans mes cuisses, qu’est-ce que tu en dis, on se fait un petit break, là ?
-      — Parle, Édouard, enfin ! Dis quelque chose.
-      Crois-moi, Mathilda, il valait mieux que je me taise. Ce qui pendait au bout de mes lèvres, là, c’est tout ce que tu ne voulais pas entendre, ni ce jour-là, ni jamais – mais surtout pas ce jour-là.
-      Tu as accueilli mon silence de ton air le plus condescendant.
-      Tu aurais dû faire maîtresse d’école. De celles que les gosses n’aiment pas.
-      — Je vais aller courir.
-      Tu as grommelé quelque chose que je ne t’ai pas demandé de répéter. Je suis monté me changer, presque calmement, presque tranquillement.
-      
-      Il fait chaud, aujourd’hui.
-      Il y a du vent, mais il fait chaud.`
-    },
-    isbn: {
-      "en-US": "978-1-0685758-1-5",
-      "en-UK": "978-1-0685758-1-5",
-      "fr-FR": "978-1-0685758-3-9"
-    },
-    pages: 342,
-    publisher: "François Domain",
-    slug: "above-waterline"
-  },
-
-
-};
+      Of course we should cancel dinner at Mike and Mary-Ann’s. I couldn’t bear
