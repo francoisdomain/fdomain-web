@@ -50,7 +50,7 @@ const Books = () => {
                       alt={book.title[locale]}
                       className="w-full h-full object-cover"
                       loading="eager"
-                      fetchpriority="high"
+                      fetchPriority="high"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
