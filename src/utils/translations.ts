@@ -153,6 +153,11 @@ export const translations: TranslationType = {
       "errorTitle": "Error",
       "errorMessage": "Sorry, there was a problem sending your message. Please try again later.",
       "verificationRequired": "Please complete the reCAPTCHA verification."
+    },
+    "authorProfile": {
+      "en-US": "https://www.amazon.com/stores/author/B00AWHVO4C",
+      "en-UK": "https://www.amazon.co.uk/stores/author/B00AWHVO4C",
+      "fr-FR": "https://www.amazon.fr/stores/author/B00AWHVO4C"
     }
   },
   "fr": {
