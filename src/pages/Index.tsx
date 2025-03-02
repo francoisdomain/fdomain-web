@@ -71,6 +71,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Preview Section to Amazon */}
+      <section className="py-16 page-transition">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">{t("sections.aboutTitle")}</h2>
+            <p className="text-lg text-warm-gray-800 mb-8">
+              {t("sections.aboutText")}
+            </p>
+            <Link
+              to="{t("authorProfile.{lcoale}")}"
+              className="inline-block px-6 py-3 bg-warm-gray-900 text-white rounded-lg hover:bg-warm-gray-800 transition-colors"
+            >
+              {t("buttons.learnMore")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* About Preview Section */}
       <section className="py-16 page-transition">
         <div className="container mx-auto px-4">
