@@ -320,4 +320,23 @@ export const books: Record<string, BookData> = {
       “I’m not there yet, Mathilda.”
       You didn’t reply.  
       
-      Of course we should cancel dinner at Mike and Mary-Ann’s. I couldn’t bear
+      Of course we should cancel dinner at Mike and Mary-Ann’s. I couldn’t bear another night pretending everything was fine. Or worse, having Mary-Ann play therapist because she read something in Good Housekeeping.  
+      Cynical? No, I’m not cynical. I’m just about to implode. My leg’s doing a tap dance under the table, and my nails are carving trenches into my thighs. What do you say, Mathilda? Should we take a break?  
+      “For god’s sake, Edward, say something!”
+      Believe me, it’s better if I don’t. Because what I’ve got on the tip of my tongue is everything you never wanted to hear. Not today, not ever. But especially not today.  
+      You gave me that condescending glare of yours. You should’ve been a teacher—the kind kids hate.  
+      “I’m going for a run.”
+      You mumbled something, but I didn’t bother asking what. I went upstairs to change, almost calm, almost peaceful.  
+      
+      It’s hot today.  
+      There’s a breeze, but it’s hot. `
+    },
+    isbn:  {
+      "en-US": "978-1-0685758-1-5",
+      "en-UK": "978-1-0685758-1-5",
+      "fr-FR": "978-1-0685758-3-9"
+    },
+    pages: 324,
+    publisher: "François Domain",
+    slug: "above-waterline"
+  },
