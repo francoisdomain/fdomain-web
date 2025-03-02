@@ -9,6 +9,7 @@ interface LanguageContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
   t: (key: string) => string;
+  isInitialized: boolean;
 }
 
 // Helper function to get base language from locale for translations
@@ -39,11 +40,14 @@ const getPreferredLocale = (): Locale => {
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(() => getPreferredLocale());
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     // Set initial locale based on cookie or browser preference
     const initialLocale = getPreferredLocale();
     setLocale(initialLocale);
+    // Set initialized to true after first render
+    setIsInitialized(true);
   }, []);
 
   const handleSetLocale = (newLocale: Locale) => {
@@ -68,7 +72,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     <LanguageContext.Provider value={{ 
       locale, 
       setLocale: handleSetLocale, 
-      t 
+      t,
+      isInitialized 
     }}>
       {children}
     </LanguageContext.Provider>
