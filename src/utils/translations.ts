@@ -71,9 +71,9 @@ type TranslationType = {
       verificationRequired: string;
     };
     authorProfile: {
-      en-US: string;
-      en-UK: string;
-      fr-FR: string;
+      "en-US": string;
+      "en-UK": string;
+      "fr-FR": string;
     };
   };
 };
