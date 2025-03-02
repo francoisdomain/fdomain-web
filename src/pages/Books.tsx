@@ -6,11 +6,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-import { useEffect, useState } from "react";
 
 const Books = () => {
   const { locale } = useLanguage();
-  const [isLoaded, setIsLoaded] = useState(false);
 
   // Convert books object to array and sort by id
   const booksList = Object.entries(books)
@@ -19,11 +17,6 @@ const Books = () => {
       slug
     }))
     .sort((a, b) => a.id - b.id);
-
-  // Force a re-render once the component is mounted
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -44,13 +37,11 @@ const Books = () => {
             {booksList.map((book) => (
               <Link to={`/books/${book.slug}`} key={book.id} className="group">
                 <div className="aspect-[2/3] bg-cream-100 rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow duration-300">
-                  {book.coverImage[locale] && isLoaded ? (
+                  {book.coverImage[locale] ? (
                     <img
                       src={book.coverImage[locale]}
                       alt={book.title[locale]}
                       className="w-full h-full object-cover"
-                      loading="eager"
-                      fetchPriority="high"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">

@@ -12,10 +12,9 @@ import { useState, useEffect } from "react";
 
 const BookDetail = () => {
   const { slug } = useParams();
-  const { locale, isInitialized } = useLanguage();
+  const { locale } = useLanguage();
   const [imageLoaded, setImageLoaded] = useState(false);
   const [supportsWebP, setSupportsWebP] = useState(false);
-  const [forceRender, setForceRender] = useState(false);
   
   const book = slug ? books[slug] : null;
   
@@ -28,9 +27,6 @@ const BookDetail = () => {
       webP.onerror = () => setSupportsWebP(false);
     };
     checkWebP();
-    
-    // Force re-render after component mount to ensure images load
-    setForceRender(true);
   }, []);
 
   if (!book) {
@@ -87,9 +83,6 @@ const BookDetail = () => {
     setImageLoaded(true);
   };
 
-  // Only render full content when initialized or forced
-  const shouldRender = isInitialized || forceRender;
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -110,7 +103,7 @@ const BookDetail = () => {
               {/* Book Cover */}
               <figure className="relative bg-cream-100 rounded-xl overflow-hidden shadow-xl">
                 <AspectRatio ratio={2/3} className="w-full">
-                  {shouldRender && book.coverImage[locale] ? (
+                  {book.coverImage[locale] ? (
                     <>
                       <Skeleton 
                         className={`absolute inset-0 ${imageLoaded ? 'hidden' : 'block'}`} 

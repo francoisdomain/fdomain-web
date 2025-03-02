@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { WelcomeModal } from "@/components/WelcomeModal";
@@ -7,22 +6,15 @@ import { Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
-import { useEffect, useState } from "react";
 
 const Index = () => {
   const { t, locale } = useLanguage();
-  const [isLoaded, setIsLoaded] = useState(false);
 
   // Get the latest 3 books, sorted by ID
   const latestBooks = Object.entries(books)
     .map(([slug, book]) => ({ ...book, slug }))
     .sort((a, b) => b.id - a.id)
     .slice(0, 3);
-
-  // Force a re-render once the component is mounted
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -57,12 +49,11 @@ const Index = () => {
                 className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
               >
                 <div className="aspect-[2/3] bg-cream-100 flex items-center justify-center">
-                  {book.coverImage[locale] && isLoaded ? (
+                  {book.coverImage[locale] ? (
                     <img 
                       src={book.coverImage[locale]} 
                       alt={book.title[locale]}
                       className="w-full h-full object-cover"
-                      loading="eager"
                     />
                   ) : (
                     <Book size={48} className="text-warm-gray-200" />
