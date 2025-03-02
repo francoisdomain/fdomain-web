@@ -121,16 +121,16 @@ export const translations: TranslationType = {
     },
     "about": {
       "pageTitle": "About the Author",
-      "intro": "With over a decade of storytelling experience, I've dedicated my life to crafting narratives that resonate with readers across the globe. My journey began in the quiet corners of local bookstores and has since evolved into an international adventure in storytelling.",
-      "mainText": "Each story I write is a reflection of the human experience, carefully woven with threads of emotion, mystery, and revelation. My work has been recognized by various literary institutions and has been translated into multiple languages.",
+      "intro": "François Domain is a Franco-British author based in London, whose work explores identity, self-discovery, and the tangled emotions and desires that come with it. He pulls at the seams of the façades we build to protect our sense of self—the very same walls that keep us from touching the intangible.",
+      "mainText": "His writing is raw, defiant, and razor-sharp, shattering literary conventions to deliver stories laced with self-mockery, unease, and a brand of humor that cuts as much as it amuses.",
       "awardsTitle": "Awards & Recognition",
       "awards": [
         "International Literary Award, 2023",
         "Best Contemporary Fiction, 2022",
         "Author of the Year, Writers Guild, 2021"
       ],
-      "philosophyTitle": "Writing Philosophy",
-      "philosophy": "I believe in the power of stories to connect, heal, and transform. Every book is an invitation to explore new perspectives and discover universal truths that bind us together as human beings."
+      "philosophyTitle": "Coming up...",
+      "philosophy": "While waiting for François Domain's next novel—a thriller that promises to reinvent the genre—the English adaptations of Presque Vrai and La Glissade will both be available in 2025."
     },
     "contact": {
       "title": "Get in Touch",
@@ -167,7 +167,7 @@ export const translations: TranslationType = {
       "aboutTitle": "L'auteur",
       "aboutText": "Dans des textes à fleur de peau, Domain ausculte et navigue ces miroirs sans tain à travers lesquels on se construit, ces frontières hypothétiques où l'on s'abrite. Sans filtre et sans concession, les romans de François Domain traquent l'ambiguité, questionnent l'identité, dissèquent les relations humaines — en particulier celle de l'homme face à lui-même.",
       "contactTitle": "Contacter François Domain",
-      "contactText": "Pour plus d'information, séances de dédicaces ou simplement pour dire bonjour."
+      "contactText": "Pour plus d'information,"
     },
     "buttons": {
       "learnMore": "En savoir plus",
@@ -197,16 +197,16 @@ export const translations: TranslationType = {
     },
     "about": {
       "pageTitle": "L'Auteur",
-      "intro": "Avec plus d'une décennie d'expérience dans l'écriture, j'ai consacré ma vie à créer des récits qui résonnent avec les lecteurs du monde entier. Mon parcours a commencé dans les coins tranquilles des librairies locales et s'est depuis transformé en une aventure internationale.",
-      "mainText": "Chaque histoire que j'écris est un reflet de l'expérience humaine, soigneusement tissée avec des fils d'émotion, de mystère et de révélation. Mon travail a été reconnu par diverses institutions littéraires et a été traduit en plusieurs langues.",
+      "intro": "François Domain est un auteur franco-anglais basé à Londres, dont le travail s’articule autour de l’identité, de la quête de soi, de l’ambiguïté sentimentale et de la sexualité qui en découle. Il interroge et ébranle les remparts derrière lesquels on protège une image de soi, ceux-là mêmes qui nous empêchent d’effleurer l’invisible",
+      "mainText": "Son style brutal, insolent, à vif, défie les conventions littéraires pour offrir des récits empreints d’autodérision, de désarroi et d’un humour qui fait grincer les dents autant que les âmes.",
       "awardsTitle": "Prix et Reconnaissances",
       "awards": [
         "Prix Littéraire International, 2023",
         "Meilleure Fiction Contemporaine, 2022",
         "Auteur de l'Année, Guilde des Écrivains, 2021"
       ],
-      "philosophyTitle": "Philosophie d'Écriture",
-      "philosophy": "Je crois au pouvoir des histoires pour connecter, guérir et transformer. Chaque livre est une invitation à explorer de nouvelles perspectives et à découvrir des vérités universelles qui nous lient en tant qu'êtres humains."
+      "philosophyTitle": "À paraître",
+      "philosophy": "En attendant le prochain roman de François Domain – un thriller qui promet de réinventer le genre – l'adaptation en anglais de 'Presque Vrai' et 'La Glissade' seront toutes deux disponibles courant 2025."
     },
     "contact": {
       "title": "Contacter François Domain",
