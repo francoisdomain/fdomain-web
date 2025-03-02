@@ -174,10 +174,8 @@ const BookDetail = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-6 py-3 bg-[#FF9900] hover:bg-[#FF9900]/90 text-white rounded-lg transition-colors"
                     aria-label={`Buy ${book.title[locale]} on Amazon`}
-                    <!--aria-label={`${book.amazonLinkText[locale]}`}-->
                   >
                     <ShoppingCart className="w-5 h-5 mr-2" aria-hidden="true" />
-                   <!--Buy on Amazon-->
                     {book.amazonLinkText[locale]}
                   </a>
                 </div>
