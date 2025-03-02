@@ -70,6 +70,11 @@ type TranslationType = {
       errorMessage: string;
       verificationRequired: string;
     };
+    authorProfile: {
+      en-US: string;
+      en-UK: string;
+      fr-FR: string;
+    };
   };
 };
 
@@ -224,6 +229,11 @@ export const translations: TranslationType = {
       "errorTitle": "Erreur",
       "errorMessage": "Désolé, il y a eu un problème lors de l'envoi de votre message. Veuillez réessayer plus tard.",
       "verificationRequired": "Veuillez compléter la vérification reCAPTCHA."
+    },
+    "authorProfile": {
+      "en-US": "https://www.amazon.com/stores/author/B00AWHVO4C",
+      "en-UK": "https://www.amazon.co.uk/stores/author/B00AWHVO4C",
+      "fr-FR": "https://www.amazon.fr/stores/author/B00AWHVO4C"
     }
   }
 };
