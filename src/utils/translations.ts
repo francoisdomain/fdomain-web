@@ -82,7 +82,7 @@ export const translations: TranslationType = {
   "en": {
     "hero": {
       "title": "Blurring the lines that define us.",
-      "subtitle": "Beyond the lies that reassure and the truths we ignore lingers the shadow of the self."
+      "subtitle": "Beyond the lies that reassure and the truths we ignore, the shadow of the self lingers."
     },
     "nav": {
       "about": "The Author",
