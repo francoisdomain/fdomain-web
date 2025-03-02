@@ -81,7 +81,7 @@ const Index = () => {
             </p>
 
             <a
-                    href="{t{"authorProfile."{locale}}}"
+                    href={t{authorProfile.{locale}}}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-6 py-3 bg-warm-gray-900 text-white rounded-lg hover:bg-warm-gray-800 transition-colors"
