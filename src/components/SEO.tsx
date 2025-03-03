@@ -23,7 +23,7 @@ export const SEO = ({
 }: SEOProps) => {
   const { locale } = useLanguage();
   const defaultTitle = "François Domain - Author";
-  const defaultDescription = "Discover the literary works of François Domain - contemporary fiction author exploring human nature through compelling storytelling.";
+  const defaultDescription = "Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.";
   const siteUrl = "https://francoisdomain.com";
 
   const seo = {
