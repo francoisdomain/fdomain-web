@@ -331,7 +331,39 @@ export const books: Record<string, BookData> = {
       
       It's hot today.  
       There's a breeze, but it's hot.`,
-      "fr-FR": ``
+      "fr-FR": `Quand je me suis résolu à toquer à la porte en verre pour qu'on daigne venir m'ouvrir, c'est lui qui s'est retourné.
+      Ce regard qu'il m'a lancé – c'était comme saisir une ligne à haute tension à mains nues. J'ai reculé sous le choc, et pendant une seconde, j'ai bien cru que la porte en verre allait voler en éclats. 
+      La porte a tenu bon.
+      C'est moi qui ai volé en miettes.
+      
+      Je suis resté planté là, immobile, les bras ballants, le souffle coupé. Il m'a lancé un coup de menton, comme un serveur qui en a assez que l'on claque des doigts pour attirer son attention, C'est bon, je t'ai vu, mais je suis occupé, là.
+      Derrière moi, des pas feutrés se sont approchés. Une silhouette s'est arrêtée à ma hauteur ; la vingtaine, cheveux bouclés, queue-de-cheval, un tailleur un peu trop près du corps. Elle a mis deux coups secs de phalanges sur la porte en verre avant que je n'aie le temps de l'arrêter.  
+      « Tu n'as pas de pass non plus ? »
+      J'ai fait non de la tête.  
+      « C'est mon premier jour. Je m'appelle Lydia.
+      — François, » je me suis présenté en serrant sa main tendue.
+      Petite moue hautaine, un air suffisant, et un accent anglais qui me rappelait douloureusement le mien. Elle a reculé pour me toiser de la tête aux pieds. 
+      « Tu es français, toi aussi. »
+      Ce n'était pas une question ; je n'ai pas répondu.
+      De l'autre côté de la porte, le grand blond a semblé décider qu'il nous avait assez fait patienter.  Un soupir théâtral, deux enjambées, et il frappait du plat de la main le bouton d'ouverture de la porte principale. Un clic discret nous a invités à entrer. Lydia m'est passée devant, dégageant d'un coup de croupe notre portier improvisé hors de son chemin sans un regard ni un merci. 
+      « Désolé, » j'ai murmuré en me glissant dans son champ de vision. « Pour le dérangement, je veux dire. On n'a pas de…  
+      — Ouais, pas de pass, je me doute, » il m'a répondu, s'arrachant avec bien du mal aux va-et-viens de la croupe en question. « T'inquiète, depuis qu'ils m'ont fait déménager ici, j'ai plus l'impression d'être videur qu'un superviseur de centre d'appels. D'ailleurs, t'es accompagné ? Parce qu'ici, c'est comme en boîte, tu ne rentres pas si t'es pas accompagné. »
+      Il est parti d'un rire gras. 
+      Un Allemand qui blague en anglais avec un Français tout juste sorti de l'Eurostar ? Flop assuré. J'ai souri. Par politesse.
+      « T'es nouveau ? »  il m'a demandé en avançant vers son bureau.  
+      « Oui. On commence tout juste le training.  
+      — T'es un agent pour la France, j'imagine ?  
+      — Superviseur. Mais pour la France, oui. Comment tu as deviné.  
+      — Ton accent. »
+      Oui, merci, je me doute. 
+      Il m'a tendu une main deux fois plus grosse que la mienne.
+      « Je m'appelle Marvin. Je m'occupe de l'Allemagne. Et de la moitié des autres pays, puisque c'est bourré d'incapables qui ne savent que sucer de la bite, ici. Si tu veux savoir comment on fait tourner un call-center, c'est à moi qu'il faut demander, pas aux branquignols qui se paluchent au milieu. »
+      Il a lancé un nouvel éclat de rire qui nous a attiré quelques regards agacés. Je l'ai remercié d'un geste, et j'en ai profité pour avancer discrètement dans la direction que Lydia avait prise, espérant qu'elle savait mieux que moi où elle allait.   
+      « Hey ! Hey, Frenchie, tu t'appelles comment, au fait ? »
+      Une autre tournée de regards noirs se sont posés sur nous.
+      « François. »
+      Il a hoché la tête, pensif, comme s'il avait son mot à dire à ce sujet.
+      « Bienvenue chez Lyberta, Franssoua ! »`
     },
     isbn:  {
       "en-US": "978-1-0685758-1-5",
