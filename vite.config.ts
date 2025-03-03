@@ -15,7 +15,11 @@ export default defineConfig({
   base: '/',
   // Add server configuration with port 8080
   server: {
-    port: 8080
+    port: 8080,
+    // Ensure proper MIME types for module scripts
+    fs: {
+      strict: true,
+    }
   },
   // Ensure proper build settings for GitHub Pages
   build: {
@@ -28,6 +32,10 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
         },
+        // Ensure proper file paths and MIME types
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       },
     },
   }
