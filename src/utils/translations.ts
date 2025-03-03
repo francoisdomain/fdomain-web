@@ -82,7 +82,7 @@ export const translations: TranslationType = {
   "en": {
     "hero": {
       "title": "Blurring the lines that define us.",
-      "subtitle": "Beyond the lies that reassure and the truths we ignore, the shadow of the self lingers."
+      "subtitle": "The lies we choose to believe, the confessions we silence. And in that fragile in-between, the shadow of who we are."
     },
     "nav": {
       "about": "The Author",
@@ -122,7 +122,7 @@ export const translations: TranslationType = {
       "title": "Welcome to my website!",
       "message": "Thank you for visiting. Here you'll find all my latest books and updates. Feel free to explore and get in touch!",
       "buttonText": "Got it, thanks!",
-      "enabledLocales": ["en-US", "en-UK"]
+      "enabledLocales": []
     },
     "about": {
       "pageTitle": "About the Author",
@@ -163,7 +163,7 @@ export const translations: TranslationType = {
   "fr": {
     "hero": {
       "title": "Redessiner ces lignes qui nous définissent.",
-      "subtitle": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi"
+      "subtitle": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi."
     },
     "nav": {
       "about": "L'Auteur",
