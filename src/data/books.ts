@@ -62,7 +62,7 @@ export const books: Record<string, BookData> = {
     },
 
     coverImage: {
-      "en-US": "../img/CloseEnough_2025_cover.webp",
+      "en-US": "./src/img/CloseEnough_2025_cover.webp",
       "en-UK": "../src/img/CloseEnough_2025_cover.webp",
       "fr-FR": "../src/img/PresqueVrai_2025_cover.webp"
     },
