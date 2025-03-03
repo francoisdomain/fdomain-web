@@ -81,8 +81,8 @@ type TranslationType = {
 export const translations: TranslationType = {
   "en": {
     "hero": {
-      "title": "Blurring the lines that define us.",
-      "subtitle": "The lies we choose to believe, the confessions we silence. And in that fragile in-between, the shadow of who we are."
+      "title": "Blurring the lines\nthat define us.",
+      "subtitle": "The lies we choose to believe, the confessions we silence.\nAnd in that fragile in-between, the shadow of who we are."
     },
     "nav": {
       "about": "The Author",
@@ -163,7 +163,7 @@ export const translations: TranslationType = {
   "fr": {
     "hero": {
       "title": "Redessiner ces lignes qui nous définissent.",
-      "subtitle": "Des mensonges que l'on se plait à se faire croire, des aveux que l'on écarte sans y penser. Et, dans l'interstice, l'ombre de soi."
+      "subtitle": "Des mensonges que l'on se plait à se faire croire,\ndes aveux que l'on écarte sans y penser.\nEt, dans l'interstice, l'ombre de soi."
     },
     "nav": {
       "about": "L'Auteur",
