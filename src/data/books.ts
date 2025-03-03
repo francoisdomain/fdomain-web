@@ -62,9 +62,9 @@ export const books: Record<string, BookData> = {
     },
 
     coverImage: {
-      "en-US": "./src/img/CloseEnough_2025_cover.webp",
-      "en-UK": "../src/img/CloseEnough_2025_cover.webp",
-      "fr-FR": "../src/img/PresqueVrai_2025_cover.webp"
+      "en-US": "../img/CloseEnough_2025_cover.webp",
+      "en-UK": "../img/CloseEnough_2025_cover.webp",
+      "fr-FR": "../img/PresqueVrai_2025_cover.webp"
     },
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/CloseEnough",
@@ -208,8 +208,8 @@ export const books: Record<string, BookData> = {
     "fr-FR": "Le vrai combat est celui contre soi-même."
     },
     coverImage: {
-      "en-US": "../src/img/Above_2025_cover.webp",
-      "en-UK": "../src/img/Above_2025_cover.webp",
+      "en-US": "../img/Above_2025_cover.webp",
+      "en-UK": "../img/Above_2025_cover.webp",
       "fr-FR": "../img/LaGlissade_Cover.webp"
     },
     amazonLink: {
