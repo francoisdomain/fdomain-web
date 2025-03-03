@@ -26,10 +26,10 @@ const Index = () => {
       <section className="pt-32 pb-16 page-transition">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6" style="{ whiteSpace: 'pre-line' }}">
               {t("hero.title")}
             </h1>
-            <p className="text-lg md:text-xl text-warm-gray-800 mb-8">
+            <p className="text-lg md:text-xl text-warm-gray-800 mb-8" style="{ whiteSpace: 'pre-line' }}">
               {t("hero.subtitle")}
             </p>
           </div>
