@@ -11,31 +11,29 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Set base to '/' for proper path resolution
-  base: '/',
-  // Add server configuration with port 8080
+  // Use relative path for GitHub Pages
+  base: './',
   server: {
     port: 8080,
-    // Ensure proper MIME types for module scripts
-    fs: {
-      strict: true,
-    }
+    // Configure headers for proper MIME types
+    headers: {
+      'Content-Type': 'application/javascript',
+    },
   },
-  // Ensure proper build settings for GitHub Pages
   build: {
     outDir: 'dist',
+    // Ensure JavaScript files are properly recognized
     assetsDir: 'assets',
-    // Generate a proper manifest
     manifest: true,
     rollupOptions: {
       output: {
+        // Ensure proper MIME types by using standard file extensions
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[ext]',
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
         },
-        // Ensure proper file paths and MIME types
-        assetFileNames: 'assets/[name].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js',
       },
     },
   }

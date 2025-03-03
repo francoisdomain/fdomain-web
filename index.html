@@ -61,9 +61,6 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
-
-    <!-- GPT Engineer Select Script -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </head>
 
   <body>
@@ -82,6 +79,8 @@
     <!-- End Meta Pixel Code (noscript) -->
 
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Changed from type="module" to regular script with defer -->
+    <script defer src="./src/main.tsx" type="text/javascript"></script>
   </body>
 </html>
