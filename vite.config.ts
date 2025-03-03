@@ -11,8 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Set base to './' for relative paths which work on GitHub Pages
-  base: './',
+  // Set base to '/' for proper path resolution
+  base: '/',
   // Add server configuration with port 8080
   server: {
     port: 8080

@@ -6,9 +6,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { books } from "@/data/books";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+import { useState, useEffect } from "react";
 
 const Books = () => {
   const { locale } = useLanguage();
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Convert books object to array and sort by id
   const booksList = Object.entries(books)
@@ -17,6 +19,11 @@ const Books = () => {
       slug
     }))
     .sort((a, b) => a.id - b.id);
+
+  // Force a re-render after component mounts to ensure images load
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,6 +49,8 @@ const Books = () => {
                       src={book.coverImage[locale]}
                       alt={book.title[locale]}
                       className="w-full h-full object-cover"
+                      loading="eager"
+                      fetchPriority="high"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">

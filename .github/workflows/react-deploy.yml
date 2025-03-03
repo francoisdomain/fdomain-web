@@ -28,7 +28,12 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Debug build output
-        run: find dist -type f -name "*.js" -exec ls -la {} \;
+        run: |
+          find dist -type f | sort
+          echo "Checking for JavaScript files:"
+          find dist -type f -name "*.js" -exec ls -la {} \;
+          echo "Content of index.html:"
+          cat dist/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
