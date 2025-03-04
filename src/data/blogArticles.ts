@@ -96,11 +96,11 @@ Remember, the most compelling characters are those who reflect the complexity an
     imageUrl: "/img/character-development.jpg",
     publishedDate: "2023-06-22"
   },
-  "finding-inspiration": {
+  "everyone-is-a-leader": {
     id: 1,
-    title: "Finding Inspiration in Everyday Life",
-    slug: "finding-inspiration",
-    summary: "Discover how ordinary moments can spark extraordinary ideas for your writing.",
+    title: "Everyone is a Leader",
+    slug: "everyone-is-a-leader",
+    summary: "Leadership is not something you learn ; it's something you stumble across.",
     body: `
 # Finding Inspiration in Everyday Life
 
@@ -136,7 +136,7 @@ Inspiration is all around us if we learn to see the extraordinary in the ordinar
 
 As you go about your day, carry a notebook or use your phone to jot down observations, feelings, or questions that arise. These small seeds of inspiration may one day grow into your next great writing project.
     `,
-    imageUrl: "/img/inspiration-nature.jpg",
-    publishedDate: "2023-04-10"
+    imageUrl: "/img/blog/EveryoneLeader.webp",
+    publishedDate: "2025-03-04"
   }
 };
