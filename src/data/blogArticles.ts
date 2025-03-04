@@ -103,7 +103,7 @@ Remember, the most compelling characters are those who reflect the complexity an
     summary: "Leadership is not something you learn ; it's something you stumble across.",
     body: `
 # Finding Inspiration in Everyday Life
-
+\n
 As writers, we often look for grand experiences to fuel our creativity. However, I've found that the most authentic inspiration often comes from the ordinary moments that make up our daily lives.
 
 ## The Power of Observation
