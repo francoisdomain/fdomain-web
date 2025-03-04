@@ -96,7 +96,7 @@ const BlogDetail = () => {
                   </div>
                 </header>
                 
-                <div className="prose prose-lg max-w-none">
+                <div className="prose prose-lg max-w-none"  style={{ whiteSpace: 'pre-line' }}>
                   <ReactMarkdown>
                     {article.body}
                   </ReactMarkdown>
