@@ -84,7 +84,7 @@ Looking back at history, what did the great leaders of this world have in common
     id: 3,
     title: "You don't need persmission to lead.",
     slug: "licence-to-lead",
-    summary: "You don't need persmission to lead.",
+    summary: "You don’t need permission to make a difference.",
     body: `🚀 “I’m not in charge.”
     🚀 “I don’t have the experience.”
     🚀 “I’m not a leader.”
