@@ -77,19 +77,19 @@ Looking back at history, what did the great leaders of this world have in common
     As inspiration can’t be faked or forced upon anyone, there’s only one way to get it right:
     👉 **Inspire yourself before inspiring others.**
     `,
-    imageUrl: "/img/character-development.jpg",
-    publishedDate: "2023-06-22"
+    imageUrl: "/img/blog/lead-vs-inspire.webp",
+    publishedDate: "2025-03-12"
   },
-  "permission-to-lead": {
+  "licence-to-lead": {
     id: 3,
     title: "You don't need persmission to lead.",
-    slug: "permission-to-lead",
+    slug: "licence-to-lead",
     summary: "You don't need persmission to lead.",
     body: `
 coming up
     `,
-    imageUrl: "/img/writing-desk.jpg",
-    publishedDate: "2023-08-15"
+    imageUrl: "/img/blog/licence-to-lead.webp",
+    publishedDate: "2025-03-19"
   }
   
   
