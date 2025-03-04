@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { WelcomeModal } from "@/components/WelcomeModal";
@@ -44,8 +45,9 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {latestBooks.map((book) => (
-              <div
+              <Link
                 key={book.slug}
+                to={`/books/${book.slug}`}
                 className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
               >
                 <div className="aspect-[2/3] bg-cream-100 flex items-center justify-center">
@@ -65,7 +67,7 @@ const Index = () => {
                     {book.tagline[locale]}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
