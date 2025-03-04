@@ -85,9 +85,37 @@ Looking back at history, what did the great leaders of this world have in common
     title: "You don't need persmission to lead.",
     slug: "licence-to-lead",
     summary: "You don't need persmission to lead.",
-    body: `
-coming up
-    `,
+    body: `🚀 “I’m not in charge.”
+    🚀 “I don’t have the experience.”
+    🚀 “I’m not a leader.”
+    
+    Nothing is more *frustrating* than seeing someone who **should take charge**—but doesn’t **because of a job title** or job description.
+    
+    As we mentioned in the first post of this series, taking the lead isn’t something you can do—it’s **something you *can’t not* do**.
+    
+    💡 Leadership isn’t a title. It’s a mindset.
+    
+    How would you prove to anyone—yourself first—that you have what it takes to lead if you never take the chance? Did you wait until you knew how to ride a bicycle before trying?
+    
+    My eureka moment was when I realised this:
+    
+    🔥 **If you feel the *urge* to step up, it’s because there’s *a void that needs filling*.**
+    
+    A great, inspiring leader makes you want to follow—not override them. So, if you’re feeling pulled toward taking charge in a specific situation, it’s because something is missing. Someone **has** to step forward.
+    
+    👉 So **stop holding back**. Forget about looking *arrogant, presumptuous, *or* bossy*. Forget the *impostor syndrome*.
+    It’s true for most things in life—but especially for leadership:
+    
+    💡 *If you feel like it, go for it.*
+    
+    🔥 **You don’t need permission to make a difference**.
+    
+    🎭 *The same is true in storytelling. The most compelling characters don’t wait for the crown—they take action when it matters.*
+    
+    👉 So, as yourself : are you waiting for permission? Or are you **already leading without realizing it?**
+    
+    💡 *Have you ever stepped up as a leader without really thinking about it? What happened?* Drop it in the comments! 👇
+`,
     imageUrl: "/img/blog/licence-to-lead.webp",
     publishedDate: "2025-03-19"
   }
