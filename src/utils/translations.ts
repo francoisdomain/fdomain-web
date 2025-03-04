@@ -86,7 +86,7 @@ export const translations: TranslationType = {
     },
     "nav": {
       "about": "The Author",
-      "books": "Books",
+      "books": "Novels",
       "contact": "Contact",
       "language": "Location",
       "viewAllBooks": "All Books"
@@ -167,7 +167,7 @@ export const translations: TranslationType = {
     },
     "nav": {
       "about": "L'Auteur",
-      "books": "Livres",
+      "books": "Romans",
       "contact": "Contact",
       "language": "Localisation",
       "viewAllBooks": "Tous les livres"
