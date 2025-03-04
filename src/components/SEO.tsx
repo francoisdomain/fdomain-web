@@ -79,11 +79,16 @@ export const SEO = ({
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
-      {/* Facebook Meta Tags */}
+      {/* Facebook/Open Graph Meta Tags */}
+      <meta property="og:site_name" content="François Domain" />
+      <meta property="og:locale" content={locale.toLowerCase()} />
       <meta property="og:type" content={article ? "article" : "website"} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`Cover image for ${seo.title}`} />
       <meta property="og:url" content={seo.url} />
 
       {/* Twitter Meta Tags */}
