@@ -11,11 +11,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Set base to '/' for absolute paths which work better with GitHub Pages
+  // Set base to '/' for absolute paths which work better with browser routing
   base: '/',
   // Add server configuration with port 8080
   server: {
-    port: 8080
+    port: 8080,
+    // This helps with SPA routing during development
+    historyApiFallback: true
   },
   build: {
     // Ensure proper MIME types

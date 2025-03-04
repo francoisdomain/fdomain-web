@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, Globe, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -25,6 +24,26 @@ export const Navigation = () => {
       path: `/books/${slug}`
     }))
     .sort((a, b) => a.id - b.id);
+
+  // Close menus when clicking outside
+  const handleDocumentClick = (e: MouseEvent) => {
+    if (isBookOpen || isLangOpen) {
+      const target = e.target as Node;
+      const nav = document.querySelector('nav');
+      if (nav && !nav.contains(target)) {
+        setIsBookOpen(false);
+        setIsLangOpen(false);
+      }
+    }
+  };
+
+  // Handle closing dropdown menus when clicking outside
+  useState(() => {
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  });
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
