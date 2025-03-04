@@ -16,7 +16,7 @@ export const blogArticles: Record<string, BlogArticle> = {
     slug: "everyone-is-a-leader",
     summary: "Leadership is not something you learn ; it's something you stumble across.",
     body: `
-How many times have you heard (or told yourself), *“I’m not a leader”*?
+👉 How many times have you heard (or told yourself), *“I’m not a leader”*?
 
 We’ve been conditioned to believe that leadership is a title you earn, a skill you acquire, or a role you step into. 
 Newsflash: it isn’t.
