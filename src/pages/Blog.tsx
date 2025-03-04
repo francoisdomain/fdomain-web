@@ -23,7 +23,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Blog"
-        description="Explore articles and insights from François Domain on writing, publishing, and the creative process."
+        description="Explore articles and insights from François Domain."
         pathname="/blog"
       />
       <Navigation />
@@ -34,8 +34,7 @@ const Blog = () => {
             Blog
           </h1>
           <p className="text-center text-warm-gray-600 mb-12 max-w-2xl mx-auto">
-            Thoughts, insights, and stories from the writing journey. Explore articles on creativity, 
-            the writing process, and literary reflections.
+            Thoughts, insights, and stories...
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
