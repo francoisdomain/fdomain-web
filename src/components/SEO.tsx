@@ -1,6 +1,8 @@
 
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title?: string;
@@ -25,12 +27,27 @@ export const SEO = ({
   const defaultTitle = "François Domain - Author";
   const defaultDescription = "Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.";
   const siteUrl = "https://francoisdomain.com";
+  const location = useLocation();
+
+  // Send pageview to Google Analytics
+  useEffect(() => {
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('config', 'G-GM51NBVRBW', {
+        page_path: location.pathname + location.search
+      });
+    }
+    
+    // Also track for Facebook Pixel
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('track', 'PageView');
+    }
+  }, [location.pathname, location.search]);
 
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
     image: image.startsWith("http") ? image : `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname}`,
+    url: `${siteUrl}${pathname || location.pathname}`,
   };
 
   // Default website schema
@@ -99,4 +116,3 @@ export const SEO = ({
     </Helmet>
   )
 };
-
