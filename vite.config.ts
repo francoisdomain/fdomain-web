@@ -16,8 +16,14 @@ export default defineConfig({
   // Add server configuration with port 8080
   server: {
     port: 8080,
-    // This helps with SPA routing during development
-    historyApiFallback: true
+    // Correctly configure SPA routing during development
+    proxy: {
+      // Redirect any 404 to index.html for SPA routing
+      "/*": {
+        target: "/index.html",
+        rewrite: (path) => "/index.html",
+      }
+    }
   },
   build: {
     // Ensure proper MIME types
