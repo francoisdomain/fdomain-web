@@ -66,11 +66,13 @@ Leaders doesn’t just give instructions. They move people. Not with authority, 
 👉 You can enforce rules without belief.
 **But without inspiration, leadership is just administration.**
 
+And remember the saying:
+💡 “People don’t leave jobs—they leave managers.”
 
-
-
-
-`,
+🎭 *The same applies to storytelling. The most unforgettable characters aren’t the ones who control or command. They’re the ones who **make us feel** something.*
+So here’s a statement that isn’t as obvious as it sounds:
+As inspiration can’t be faked or forced upon anyone, there’s only one way to get it right:
+👉 **Inspire yourself before inspiring others.**`,
     imageUrl: "/img/blog/lead-vs-inspire.webp",
     publishedDate: "2025-03-12"
   }
