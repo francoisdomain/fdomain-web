@@ -4,22 +4,48 @@
 <head>
   <meta charset="utf-8">
   <title>François Domain</title>
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="all">
+  <meta name="prerender-status-code" content="200">
   <script type="text/javascript">
-    // Improved bot detection regex
+    // Even more comprehensive bot detection
     function isBot() {
-      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|twitter|pinterest|slack|search|lighthouse|prerender|headless|preview/i
-        .test(navigator.userAgent);
+      var userAgent = navigator.userAgent || '';
+      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
     }
 
-    // If it's a bot, we'll serve appropriate content based on URL
+    // Handle both standard page loading and hash-based routing
     if (isBot()) {
-      // The URL path will be available to JavaScript even on a 404 page
+      console.log("Bot detected: " + navigator.userAgent);
+      
+      // Get the path that was accessed
       var path = window.location.pathname;
       
-      // For bots, we'll redirect to the homepage with a special fragment
-      // The server can then render appropriate content for the crawler
-      window.location.replace('/?_escaped_fragment_=' + encodeURIComponent(path));
+      // Create canonical URL for the content
+      var canonicalUrl = window.location.protocol + '//' + window.location.host + path;
+      
+      // Add a canonical link for search engines
+      var canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      canonicalLink.href = canonicalUrl;
+      document.head.appendChild(canonicalLink);
+
+      // Add og:url for social media
+      var ogUrl = document.createElement('meta');
+      ogUrl.property = 'og:url';
+      ogUrl.content = canonicalUrl;
+      document.head.appendChild(ogUrl);
+
+      // For LinkedIn specifically, we'll add extra metadata
+      var ogType = document.createElement('meta');
+      ogType.property = 'og:type';
+      ogType.content = 'website';
+      document.head.appendChild(ogType);
+
+      // Indicate this is a valid page with status 200
+      var statusMeta = document.createElement('meta');
+      statusMeta.name = 'prerender-status-code';
+      statusMeta.content = '200';
+      document.head.appendChild(statusMeta);
     } else {
       // For regular users, proceed with normal SPA routing
       // Single Page Apps for GitHub Pages
@@ -37,20 +63,54 @@
       );
     }
   </script>
-  <!-- Add prerender status code -->
-  <meta name="prerender-status-code" content="200">
 </head>
 <body>
-  <!-- This page is a fallback for 404 errors -->
-  <div style="font-family: sans-serif; padding: 20px; text-align: center;">
+  <!-- Enhanced content for crawlers -->
+  <div style="font-family: sans-serif; padding: 20px; max-width: 800px; margin: 0 auto;">
     <h1>François Domain</h1>
-    <p>If you are seeing this message, you are being redirected to the correct page...</p>
     
-    <!-- For crawlers: Add basic content that describes the site -->
-    <div id="crawler-content">
+    <!-- Dynamic content for different routes -->
+    <div id="dynamic-content">
       <h2>François Domain - Author</h2>
       <p>Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.</p>
-      <p>This website features books, blog articles, and information about the author.</p>
+      
+      <!-- Blog specific content for crawler -->
+      <section id="blog-everyone-is-a-leader" style="display:none;">
+        <h2>Everyone is a Leader</h2>
+        <p>Exploring how leadership exists in all of us, regardless of title or position.</p>
+        <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" />
+      </section>
+      
+      <section id="blog-lead-vs-inspire" style="display:none;">
+        <h2>Lead vs Inspire</h2>
+        <p>Understanding the crucial differences between leading and inspiring others.</p>
+        <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" />
+      </section>
+      
+      <section id="blog-licence-to-lead" style="display:none;">
+        <h2>Licence to Lead</h2>
+        <p>What gives someone the authority to lead? Exploring the concept of leadership permission.</p>
+        <img src="https://francoisdomain.com/img/blog/licence-to-lead.webp" alt="Licence to Lead" />
+      </section>
+      
+      <script>
+        // Dynamically show content based on URL path
+        (function() {
+          var path = window.location.pathname;
+          if (path.includes('blog/everyone-is-a-leader')) {
+            document.getElementById('blog-everyone-is-a-leader').style.display = 'block';
+          } else if (path.includes('blog/lead-vs-inspire')) {
+            document.getElementById('blog-lead-vs-inspire').style.display = 'block';
+          } else if (path.includes('blog/licence-to-lead')) {
+            document.getElementById('blog-licence-to-lead').style.display = 'block';
+          }
+        })();
+      </script>
+    </div>
+    
+    <div>
+      <p>If you are seeing this message and are not a bot, you will be redirected to the homepage shortly...</p>
+      <p><a href="/">Go to Homepage</a></p>
     </div>
   </div>
 </body>

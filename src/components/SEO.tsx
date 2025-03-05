@@ -100,6 +100,12 @@ export const SEO = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
+      {/* LinkedIn specific - extra emphasis on the URL */}
+      <meta property="linkedin:owner" content="François Domain" />
+      <meta property="linkedin:title" content={seo.title} />
+      <meta property="linkedin:description" content={seo.description} />
+      <meta property="linkedin:image" content={seo.image} />
+
       {/* Language alternates */}
       <link rel="alternate" href={`${seo.url}`} hrefLang={locale.toLowerCase()} />
       <link rel="alternate" href={`${seo.url}`} hrefLang="x-default" />
@@ -112,6 +118,9 @@ export const SEO = ({
       <meta name="prerender-status-code" content="200" />
       <meta name="renderer" content="webkit" />
       <meta name="force-rendering" content="webkit" />
+      <meta name="crawlable" content="yes" />
+      <meta name="pinterest" content="nohover" />
+      <meta name="format-detection" content="telephone=no" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
