@@ -47,6 +47,8 @@ Looking back at history, what did the great leaders of this world have in common
     slug: "lead-vs-inspire",
     summary: "You can inspire without leading - but can you lead without inspiring?",
     body: `
+👉 How many times have you heard (or told yourself), *“I’m not a leader”*?
+
       🔥 And here comes the buzzword: **VISION**.
       
       No word has been more overused—or misunderstood. “I want to increase my bottom line by 40%” has very little to do with *Vision*—it’s merely an objective.
