@@ -6,33 +6,63 @@
   <title>François Domain</title>
   <meta name="robots" content="all">
   <meta name="prerender-status-code" content="200">
-
-  <!-- Additional tags for LinkedIn -->
-  <meta property="og:url" content="https://francoisdomain.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="François Domain - Author" />
-  <meta property="og:description" content="Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling." />
-  <meta property="og:image" content="https://francoisdomain.com/og-image.png" />
-  
   <script type="text/javascript">
-    // Comprehensive bot detection
+    // Even more comprehensive bot detection
     function isBot() {
       var userAgent = navigator.userAgent || '';
-      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|linkedinbot|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb|semrush|bingbot|baiduspider/i.test(userAgent);
+      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
     }
 
-    // Handle path for direct social media crawler access
+    // Handle both standard page loading and hash-based routing
     if (isBot()) {
       console.log("Bot detected: " + navigator.userAgent);
-      // We don't redirect bots - serve static content that search engines can index
+      
+      // Get the path that was accessed
+      var path = window.location.pathname;
+      
+      // Create canonical URL for the content
+      var canonicalUrl = window.location.protocol + '//' + window.location.host + path;
+      
+      // Add a canonical link for search engines
+      var canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      canonicalLink.href = canonicalUrl;
+      document.head.appendChild(canonicalLink);
+
+      // Add og:url for social media
+      var ogUrl = document.createElement('meta');
+      ogUrl.property = 'og:url';
+      ogUrl.content = canonicalUrl;
+      document.head.appendChild(ogUrl);
+
+      // For LinkedIn specifically, we'll add extra metadata
+      var ogType = document.createElement('meta');
+      ogType.property = 'og:type';
+      ogType.content = 'website';
+      document.head.appendChild(ogType);
+
+      // Indicate this is a valid page with status 200
+      var statusMeta = document.createElement('meta');
+      statusMeta.name = 'prerender-status-code';
+      statusMeta.content = '200';
+      document.head.appendChild(statusMeta);
     } else {
-      // For human visitors, redirect to the SPA
-      window.location.href = '/';
+      // For regular users, proceed with normal SPA routing
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     }
   </script>
-  
-  <!-- Canonical URL for SEO -->
-  <link rel="canonical" href="https://francoisdomain.com" />
 </head>
 <body>
   <!-- Enhanced content for crawlers -->
@@ -49,63 +79,30 @@
         <h2>Everyone is a Leader</h2>
         <p>Exploring how leadership exists in all of us, regardless of title or position.</p>
         <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" />
-        <div>
-          <p>Leadership is not about titles or positions. It's about influence and impact. Everyone has the ability to lead in their own unique way.</p>
-          <p>Whether you're guiding a team through a project or simply setting an example through your actions, you are exercising leadership.</p>
-        </div>
       </section>
       
       <section id="blog-lead-vs-inspire" style="display:none;">
         <h2>Lead vs Inspire</h2>
         <p>Understanding the crucial differences between leading and inspiring others.</p>
         <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" />
-        <div>
-          <p>While leading involves guiding others toward a goal, inspiring ignites the internal motivation that drives people to excel.</p>
-          <p>Great leaders understand that inspiration creates sustainable change that outlasts direct leadership.</p>
-        </div>
       </section>
       
       <section id="blog-licence-to-lead" style="display:none;">
         <h2>Licence to Lead</h2>
         <p>What gives someone the authority to lead? Exploring the concept of leadership permission.</p>
         <img src="https://francoisdomain.com/img/blog/licence-to-lead.webp" alt="Licence to Lead" />
-        <div>
-          <p>The authority to lead comes not just from a title, but from earning trust and demonstrating competence.</p>
-          <p>True leadership permission is granted by those being led, based on their belief in your ability to guide them effectively.</p>
-        </div>
       </section>
       
       <script>
-        // Dynamically show content based on URL path for bots
+        // Dynamically show content based on URL path
         (function() {
           var path = window.location.pathname;
           if (path.includes('blog/everyone-is-a-leader')) {
             document.getElementById('blog-everyone-is-a-leader').style.display = 'block';
-            document.title = "Everyone is a Leader | François Domain";
-            // Update meta tags for this specific page
-            var metaTags = document.getElementsByTagName('meta');
-            for (var i = 0; i < metaTags.length; i++) {
-              if (metaTags[i].getAttribute('property') === 'og:title') {
-                metaTags[i].setAttribute('content', 'Everyone is a Leader | François Domain');
-              }
-              if (metaTags[i].getAttribute('property') === 'og:description') {
-                metaTags[i].setAttribute('content', 'Exploring how leadership exists in all of us, regardless of title or position.');
-              }
-              if (metaTags[i].getAttribute('property') === 'og:url') {
-                metaTags[i].setAttribute('content', 'https://francoisdomain.com/blog/everyone-is-a-leader');
-              }
-              if (metaTags[i].getAttribute('property') === 'og:image') {
-                metaTags[i].setAttribute('content', 'https://francoisdomain.com/img/blog/EveryoneLeader.webp');
-              }
-            }
           } else if (path.includes('blog/lead-vs-inspire')) {
             document.getElementById('blog-lead-vs-inspire').style.display = 'block';
-            document.title = "Lead vs Inspire | François Domain";
-            // Similar meta updates
           } else if (path.includes('blog/licence-to-lead')) {
             document.getElementById('blog-licence-to-lead').style.display = 'block';
-            document.title = "Licence to Lead | François Domain";
-            // Similar meta updates
           }
         })();
       </script>
