@@ -107,8 +107,11 @@ export const SEO = ({
       {/* Canonical URL */}
       <link rel="canonical" href={seo.url} />
 
-      {/* Prerender hint for crawlers */}
+      {/* Enhanced Prerender hints for crawlers */}
       <meta name="fragment" content="!" />
+      <meta name="prerender-status-code" content="200" />
+      <meta name="renderer" content="webkit" />
+      <meta name="force-rendering" content="webkit" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
