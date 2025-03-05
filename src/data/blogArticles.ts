@@ -83,7 +83,7 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
     slug: "licence-to-lead",
     summary: "You don't need permission to lead.",
     body: `
-    📢 You Don’t Need Permission to Lead
+    📢 You Don’t Need Permission to Lead.
 
 “*I’m not in charge.*”
 “*I don’t have the experience.*”
@@ -110,6 +110,7 @@ So **𝐬𝐭𝐨𝐩 𝐡𝐨𝐥𝐝𝐢𝐧𝐠 𝐛𝐚𝐜𝐤**. Forget ab
 
 👉 So, ask yourself :
 Are you waiting for permission? Or **are you 𝒂𝒍𝒓𝒆𝒂𝒅𝒚 𝒍𝒆𝒂𝒅𝒊𝒏𝒈 𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒓𝒆𝒂𝒍𝒊𝒛𝒊𝒏𝒈 𝒊𝒕?**
+
 
     `,
     imageUrl: "/img/blog/licence-to-lead.webp",
