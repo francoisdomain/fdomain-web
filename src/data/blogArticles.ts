@@ -47,7 +47,7 @@ Looking back at history, what did the great leaders of this world have in common
     slug: "lead-vs-inspire",
     summary: "You can inspire without leading - but can you lead without inspiring?",
     body: `
-👉 How many times have you heard (or told yourself), *“I’m not a leader”*?
+🔥 And here comes the buzzword: **VISION**.
 
 We’ve been conditioned to believe that leadership is a title you earn, a skill you acquire, or a role you step into. 
 Newsflash: it isn’t.
@@ -69,8 +69,8 @@ Looking back at history, what did the great leaders of this world have in common
 📖 In storytelling, the most compelling leaders aren’t the ones who set out to lead from day one. They’re the ones who find something worth fighting for. Because what people follow is never just a man or a woman—it’s an idea.
 
 🔥 **Don’t chase leadership. Find your reason, and leadership will follow.**    `,
-    imageUrl: "/img/blog/licence-to-lead.webp",
-    publishedDate: "2025-03-19"
+    imageUrl: "/img/blog/lead-vs-inspire.webp",
+    publishedDate: "2025-03-12"
   }
   
   
