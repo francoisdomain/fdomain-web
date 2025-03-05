@@ -82,6 +82,11 @@ export const SEO = ({
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
+      {/* Prerender.io specific meta tags */}
+      <meta name="prerender-status-code" content="200" />
+      <meta name="prerender-header" content="Content-Type: text/html; charset=utf-8" />
+      <meta name="renderer" content="prerender" />
+
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />
       <meta property="og:locale" content={locale.toLowerCase()} />

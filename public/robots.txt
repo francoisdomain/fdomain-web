@@ -13,5 +13,9 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Allow Prerender.io bot
+User-agent: prerender
+Allow: /
+
 # Make sure sitemap is properly referenced
 Sitemap: https://francoisdomain.com/sitemap.xml

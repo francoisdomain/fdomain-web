@@ -1,0 +1,17 @@
+
+# Enable rewriting
+RewriteEngine On
+
+# If it's not a real file or directory, redirect to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L,QSA]
+
+# Additional headers for Prerender.io to work correctly
+<IfModule mod_headers.c>
+  # Set correct content type
+  Header set Content-Type "text/html; charset=UTF-8"
+  
+  # Allow Prerender.io to access the content
+  Header set X-Prerender-Token "YOUR_PRERENDER_TOKEN"
+</IfModule>
