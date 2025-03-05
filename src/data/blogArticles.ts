@@ -89,30 +89,8 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
 “*I don’t have the experience.*”
 “*I’m not a leader.*”
 
-Nothing is more *𝑓𝑟𝑢𝑠𝑡𝑟𝑎𝑡𝑖𝑛𝑔* than seeing someone who **𝐬𝐡𝐨𝐮𝐥𝐝 𝐭𝐚𝐤𝐞 𝐜𝐡𝐚𝐫𝐠𝐞**—but doesn’t because of a job title or job description.
 
-As we mentioned in the first post of this series, 
-💡 **𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 𝐢𝐬𝐧’𝐭 𝐚 𝐭𝐢𝐭𝐥𝐞. 𝐈𝐭’𝐬 𝐚 𝐦𝐢𝐧𝐝𝐬𝐞𝐭.**
-
-How would you prove to anyone—yourself first—that you have what it takes to lead if you never take the chance? Did you wait until you knew how to ride a bicycle before trying?
-
-My eureka moment was when I realised this:
-👉 If you *𝑓𝑒𝑒𝑙 𝑡ℎ𝑒 𝑢𝑟𝑔𝑒* to step up, it’s because *𝑡ℎ𝑒𝑟𝑒’𝑠 𝑎 𝑣𝑜𝑖𝑑 𝑡ℎ𝑎𝑡 𝑛𝑒𝑒𝑑𝑠 𝑓𝑖𝑙𝑙𝑖𝑛𝑔.*
-A great, inspiring leader makes you want to follow—not override them. So, if you’re feeling pulled toward taking charge in a specific situation, it’s because something is missing. 
-Someone **𝒉𝒂𝒔** to step forward. 
-Why not you?
-
-So **𝐬𝐭𝐨𝐩 𝐡𝐨𝐥𝐝𝐢𝐧𝐠 𝐛𝐚𝐜𝐤**. Forget about looking *𝑎𝑟𝑟𝑜𝑔𝑎𝑛𝑡*, *𝑝𝑟𝑒𝑠𝑢𝑚𝑝𝑡𝑢𝑜𝑢𝑠*, 𝑜𝑟 *𝑏𝑜𝑠𝑠𝑦*. Forget the *𝑖𝑚𝑝𝑜𝑠𝑡𝑜𝑟 𝑠𝑦𝑛𝑑𝑟𝑜𝑚𝑒*. It’s true for most things in life—but especially for leadership: **If 𝑦𝑜𝑢 𝑓𝑒𝑒𝑙 𝑙𝑖𝑘𝑒 𝑖𝑡, 𝑔𝑜 𝑓𝑜𝑟 𝑖t.**
-
-💡 **𝐘𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐧𝐞𝐞𝐝 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐭𝐨 𝐦𝐚𝐤𝐞 𝐚 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞.**
-
-🎭 *𝑇ℎ𝑒 𝑠𝑎𝑚𝑒 𝑖𝑠 𝑡𝑟𝑢𝑒 𝑖𝑛 𝑠𝑡𝑜𝑟𝑦𝑡𝑒𝑙𝑙𝑖𝑛𝑔. 𝑇ℎ𝑒 𝑚𝑜𝑠𝑡 𝑐𝑜𝑚𝑝𝑒𝑙𝑙𝑖𝑛𝑔 𝑐ℎ𝑎𝑟𝑎𝑐𝑡𝑒𝑟𝑠 𝑑𝑜𝑛’𝑡 𝑤𝑎𝑖𝑡 𝑓𝑜𝑟 𝑡ℎ𝑒 𝑐𝑟𝑜𝑤𝑛—𝑡ℎ𝑒𝑦 𝑡𝑎𝑘𝑒 𝑎𝑐𝑡𝑖𝑜𝑛 𝑤ℎ𝑒𝑛 𝑖𝑡 𝑚𝑎𝑡𝑡𝑒𝑟𝑠.*
-
-👉 So, ask yourself :
-Are you waiting for permission? Or **are you 𝒂𝒍𝒓𝒆𝒂𝒅𝒚 𝒍𝒆𝒂𝒅𝒊𝒏𝒈 𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒓𝒆𝒂𝒍𝒊𝒛𝒊𝒏𝒈 𝒊𝒕?**
-
-
-    `,
+`,
     imageUrl: "/img/blog/licence-to-lead.webp",
     publishedDate: "2025-03-12"
   }
