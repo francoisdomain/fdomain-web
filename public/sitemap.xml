@@ -8,21 +8,46 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://francoisdomain.com/#/about</loc>
+    <loc>https://francoisdomain.com/about</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://francoisdomain.com/#/books</loc>
+    <loc>https://francoisdomain.com/books</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://francoisdomain.com/#/contact</loc>
+    <loc>https://francoisdomain.com/blog</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://francoisdomain.com/contact</loc>
     <lastmod>2023-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://francoisdomain.com/blog/everyone-is-a-leader</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://francoisdomain.com/blog/lead-vs-inspire</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://francoisdomain.com/blog/licence-to-lead</loc>
+    <lastmod>2023-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

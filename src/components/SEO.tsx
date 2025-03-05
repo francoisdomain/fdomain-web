@@ -43,11 +43,14 @@ export const SEO = ({
     }
   }, [location.pathname, location.search]);
 
+  const currentPath = pathname || location.pathname;
+  
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
+    // Ensure image URLs are absolute
     image: image.startsWith("http") ? image : `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname || location.pathname}`,
+    url: `${siteUrl}${currentPath}`,
   };
 
   // Default website schema
@@ -103,6 +106,9 @@ export const SEO = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={seo.url} />
+
+      {/* Prerender hint for crawlers */}
+      <meta name="fragment" content="!" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
