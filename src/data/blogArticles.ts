@@ -76,22 +76,4 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
     imageUrl: "/img/blog/lead-vs-inspire.webp",
     publishedDate: "2025-03-12"
   }
-},
-  "licence-to-lead": {
-    id: 3,
-    title: "Licence to Lead?",
-    slug: "licence-to-lead",
-    summary: "You don't need permission to lead.",
-    body: `
-    📢 You Don’t Need Permission to Lead.
-
-“*I’m not in charge.*”
-“*I don’t have the experience.*”
-“*I’m not a leader.*”
-
-
-`,
-    imageUrl: "/img/blog/licence-to-lead.webp",
-    publishedDate: "2025-03-12"
-  }
 };
