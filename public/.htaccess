@@ -7,11 +7,32 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html [L,QSA]
 
-# Additional headers for Prerender.io to work correctly
+# Set correct content types
 <IfModule mod_headers.c>
   # Set correct content type
   Header set Content-Type "text/html; charset=UTF-8"
+</IfModule>
+
+# Proper caching headers for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
   
-  # Allow Prerender.io to access the content
-  Header set X-Prerender-Token "YOUR_PRERENDER_TOKEN"
+  # Cache all static assets for 1 week
+  ExpiresByType image/jpg "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 week"
+  ExpiresByType image/gif "access plus 1 week"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/webp "access plus 1 week"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/pdf "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/x-javascript "access plus 1 week"
+  ExpiresByType application/x-shockwave-flash "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # Cache HTML and data files for only 1 day
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType application/xhtml+xml "access plus 1 day"
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
 </IfModule>
