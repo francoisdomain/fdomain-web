@@ -22,8 +22,6 @@ if (!rootElement) {
 }
 
 // This helps react-snap know when the app is ready to be crawled
-if (typeof window !== 'undefined') {
-  window.snapSaveState = () => ({
-    __PRERENDERED: true
-  });
-}
+window.snapSaveState = () => ({
+  __PRERENDERED: true
+});

@@ -1,16 +1,15 @@
 
 module.exports = {
+  // Specify the correct build directory for Vite
+  buildDir: 'dist',
   // Include all major routes that should be pre-rendered
   include: [
     '/',
     '/about',
     '/books',
     '/contact',
-    '/blog',
-    // Add book detail pages dynamically
-    ...Object.keys(require('./data/books')).map(slug => `/books/${slug}`),
-    // Add blog detail pages dynamically
-    ...Object.keys(require('./data/blogArticles')).map(slug => `/blog/${slug}`)
+    '/blog'
+    // Note: Dynamic routes will be added when the application is built
   ],
   // Handle locale variants
   locales: ['en-US', 'en-UK', 'fr-FR'],
