@@ -41,18 +41,6 @@ export const SEO = ({
     if (typeof window.fbq !== 'undefined') {
       window.fbq('track', 'PageView');
     }
-    
-    // Add prerender ready signal when page is fully loaded
-    if (window.prerenderReady === undefined) {
-      window.prerenderReady = false;
-    }
-    
-    const timer = setTimeout(() => {
-      window.prerenderReady = true;
-      console.log("Prerender ready signal sent");
-    }, 1000);
-    
-    return () => clearTimeout(timer);
   }, [location.pathname, location.search]);
 
   const currentPath = pathname || location.pathname;
@@ -87,19 +75,6 @@ export const SEO = ({
     })),
   } : null;
 
-  // Person schema for François Domain
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "François Domain",
-    url: siteUrl,
-    jobTitle: "Author",
-    sameAs: [
-      "https://www.linkedin.com/in/francoisdomain/",
-      "https://www.facebook.com/francoisdomain.author"
-    ]
-  };
-
   return (
     <Helmet>
       <html lang={locale.toLowerCase()} />
@@ -111,7 +86,6 @@ export const SEO = ({
       <meta name="prerender-status-code" content="200" />
       <meta name="prerender-header" content="Content-Type: text/html; charset=utf-8" />
       <meta name="renderer" content="prerender" />
-      <script type="text/javascript">{`window.prerenderReady = false;`}</script>
 
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />
@@ -162,9 +136,6 @@ export const SEO = ({
           {JSON.stringify(breadcrumbSchema)}
         </script>
       )}
-      <script type="application/ld+json">
-        {JSON.stringify(personSchema)}
-      </script>
       {jsonLd && (
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}

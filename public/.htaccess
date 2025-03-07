@@ -13,5 +13,5 @@ RewriteRule ^(.*)$ /index.html [L,QSA]
   Header set Content-Type "text/html; charset=UTF-8"
   
   # Allow Prerender.io to access the content
-  Header set X-Prerender-Token "zm44BapHnc8wwTilOwM4"
+  Header set X-Prerender-Token "YOUR_PRERENDER_TOKEN"
 </IfModule>

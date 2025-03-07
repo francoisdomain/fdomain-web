@@ -3,10 +3,14 @@
 
 interface Window {
   gtag: (
-    key: string,
-    trackingId: string,
-    config: { [key: string]: any }
+    command: 'config' | 'event' | 'js' | 'set', 
+    targetId: string, 
+    config?: { [key: string]: any }
   ) => void;
-  fbq: any;
-  prerenderReady: boolean;
+  fbq: (
+    command: string,
+    event: string,
+    parameters?: { [key: string]: any }
+  ) => void;
+  dataLayer: any[];
 }
