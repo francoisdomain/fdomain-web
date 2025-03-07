@@ -27,8 +27,11 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+      - name: Create react-snap config
+        run: |
+          echo 'module.exports = { buildDir: "dist" };' > react-snap.config.js
       - name: Run react-snap to prerender pages
-        run: npx react-snap --build-dir=dist
+        run: npx react-snap
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
         run: touch ./dist/.nojekyll
       - name: Setup Pages

@@ -1,3 +1,4 @@
+
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
@@ -22,6 +23,8 @@ if (!rootElement) {
 }
 
 // This helps react-snap know when the app is ready to be crawled
-window.snapSaveState = () => ({
-  __PRERENDERED: true
-});
+if (typeof window !== 'undefined') {
+  window.snapSaveState = () => ({
+    __PRERENDERED: true
+  });
+}
