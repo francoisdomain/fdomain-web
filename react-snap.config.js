@@ -1,6 +1,8 @@
 
 module.exports = {
   buildDir: "dist",
+  destination: "dist",
+  source: "dist",
   include: [
     '/',
     '/about',
