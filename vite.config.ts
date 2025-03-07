@@ -23,6 +23,11 @@ export default defineConfig({
         target: "/index.html",
         rewrite: (path) => "/index.html",
       }
+    },
+    // Add headers for Prerender.io
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'X-Prerender-Token': 'zm44BapHnc8wwTilOwM4'
     }
   },
   build: {
