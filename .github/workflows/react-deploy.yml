@@ -27,25 +27,6 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
-      - name: Debug directory structure before
-        run: |
-          echo "Current directory structure:"
-          ls -la
-          echo "Dist directory structure:"
-          ls -la dist
-      - name: Create symbolic link from build to dist
-        run: |
-          mkdir -p build
-          cp -r dist/* build/
-          echo "Build directory after copy:"
-          ls -la build
-      - name: Run react-snap to prerender pages
-        run: npx react-snap
-      - name: Copy prerendered files back to dist
-        run: |
-          cp -r build/* dist/
-          echo "Dist directory after copy back:"
-          ls -la dist
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
         run: touch ./dist/.nojekyll
       - name: Setup Pages

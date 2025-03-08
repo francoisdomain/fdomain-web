@@ -32,10 +32,6 @@ export default defineConfig({
       output: {
         manualChunks: undefined
       }
-    },
-    // Generate source maps for better debugging
-    sourcemap: true,
-    // Ensure clean URLs for better SEO
-    outDir: 'dist'
+    }
   }
 })
