@@ -31,12 +31,12 @@
 
       // For SEO and social media
       var ogUrl = document.createElement('meta');
-      ogUrl.property = 'og:url';
+      ogUrl.setAttribute('property', 'og:url');
       ogUrl.content = canonicalUrl;
       document.head.appendChild(ogUrl);
       
       var ogType = document.createElement('meta');
-      ogType.property = 'og:type';
+      ogType.setAttribute('property', 'og:type');
       ogType.content = 'article';
       document.head.appendChild(ogType);
       
@@ -45,17 +45,17 @@
         document.title = "Everyone is a Leader | François Domain";
         
         var ogTitle = document.createElement('meta');
-        ogTitle.property = 'og:title';
+        ogTitle.setAttribute('property', 'og:title');
         ogTitle.content = "Everyone is a Leader | François Domain";
         document.head.appendChild(ogTitle);
         
         var ogDesc = document.createElement('meta');
-        ogDesc.property = 'og:description';
+        ogDesc.setAttribute('property', 'og:description');
         ogDesc.content = "Leadership is not something you learn ; it's something you stumble across.";
         document.head.appendChild(ogDesc);
         
         var ogImage = document.createElement('meta');
-        ogImage.property = 'og:image';
+        ogImage.setAttribute('property', 'og:image');
         ogImage.content = "https://francoisdomain.com/img/blog/EveryoneLeader.webp";
         document.head.appendChild(ogImage);
       }
@@ -63,17 +63,17 @@
         document.title = "Can you lead without inspiring? | François Domain";
         
         var ogTitle = document.createElement('meta');
-        ogTitle.property = 'og:title';
+        ogTitle.setAttribute('property', 'og:title');
         ogTitle.content = "Can you lead without inspiring? | François Domain";
         document.head.appendChild(ogTitle);
         
         var ogDesc = document.createElement('meta');
-        ogDesc.property = 'og:description';
+        ogDesc.setAttribute('property', 'og:description');
         ogDesc.content = "You can inspire without leading - but can you lead without inspiring?";
         document.head.appendChild(ogDesc);
         
         var ogImage = document.createElement('meta');
-        ogImage.property = 'og:image';
+        ogImage.setAttribute('property', 'og:image');
         ogImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
         document.head.appendChild(ogImage);
       }
@@ -105,7 +105,7 @@
           <p>Leadership isn't something you learn—it's something you stumble upon.</p>
           <p>The moment you find something you believe in so deeply that you can't not act—that's leadership.</p>
         </div>
-        <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" />
+        <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" style="max-width: 100%; height: auto;" />
       </div>
       
       <div id="blog-lead-vs-inspire" style="display:none;">
@@ -117,7 +117,7 @@
           <p>The distinction is the same as management vs. inspiration.</p>
           <p>Leadership, however, is impossible without inspiration.</p>
         </div>
-        <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" />
+        <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" style="max-width: 100%; height: auto;" />
       </div>
       
       <script>
