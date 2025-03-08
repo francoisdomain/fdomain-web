@@ -7,13 +7,13 @@
   <meta name="robots" content="all">
   <meta name="prerender-status-code" content="200">
   <script type="text/javascript">
-    // Even more comprehensive bot detection
+    // Enhanced bot detection
     function isBot() {
       var userAgent = navigator.userAgent || '';
       return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
     }
 
-    // Handle both standard page loading and hash-based routing
+    // If it's a bot, provide content directly
     if (isBot()) {
       console.log("Bot detected: " + navigator.userAgent);
       
@@ -29,38 +29,63 @@
       canonicalLink.href = canonicalUrl;
       document.head.appendChild(canonicalLink);
 
-      // Add og:url for social media
+      // For SEO and social media
       var ogUrl = document.createElement('meta');
       ogUrl.property = 'og:url';
       ogUrl.content = canonicalUrl;
       document.head.appendChild(ogUrl);
-
-      // For LinkedIn specifically, we'll add extra metadata
+      
       var ogType = document.createElement('meta');
       ogType.property = 'og:type';
-      ogType.content = 'website';
+      ogType.content = 'article';
       document.head.appendChild(ogType);
-
-      // Indicate this is a valid page with status 200
+      
+      // Add blog-specific metadata based on URL
+      if (path.includes('/blog/everyone-is-a-leader')) {
+        document.title = "Everyone is a Leader | François Domain";
+        
+        var ogTitle = document.createElement('meta');
+        ogTitle.property = 'og:title';
+        ogTitle.content = "Everyone is a Leader | François Domain";
+        document.head.appendChild(ogTitle);
+        
+        var ogDesc = document.createElement('meta');
+        ogDesc.property = 'og:description';
+        ogDesc.content = "Leadership is not something you learn ; it's something you stumble across.";
+        document.head.appendChild(ogDesc);
+        
+        var ogImage = document.createElement('meta');
+        ogImage.property = 'og:image';
+        ogImage.content = "https://francoisdomain.com/img/blog/EveryoneLeader.webp";
+        document.head.appendChild(ogImage);
+      }
+      else if (path.includes('/blog/lead-vs-inspire')) {
+        document.title = "Can you lead without inspiring? | François Domain";
+        
+        var ogTitle = document.createElement('meta');
+        ogTitle.property = 'og:title';
+        ogTitle.content = "Can you lead without inspiring? | François Domain";
+        document.head.appendChild(ogTitle);
+        
+        var ogDesc = document.createElement('meta');
+        ogDesc.property = 'og:description';
+        ogDesc.content = "You can inspire without leading - but can you lead without inspiring?";
+        document.head.appendChild(ogDesc);
+        
+        var ogImage = document.createElement('meta');
+        ogImage.property = 'og:image';
+        ogImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
+        document.head.appendChild(ogImage);
+      }
+      
+      // Indicate this is a valid page for crawlers
       var statusMeta = document.createElement('meta');
       statusMeta.name = 'prerender-status-code';
       statusMeta.content = '200';
       document.head.appendChild(statusMeta);
     } else {
-      // For regular users, proceed with normal SPA routing
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      // For regular users, redirect to the main app
+      window.location.replace('/');
     }
   </script>
 </head>
@@ -71,27 +96,29 @@
     
     <!-- Dynamic content for different routes -->
     <div id="dynamic-content">
-      <h2>François Domain - Author</h2>
-      <p>Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.</p>
-      
-      <!-- Blog specific content for crawler -->
-      <section id="blog-everyone-is-a-leader" style="display:none;">
+      <div id="blog-everyone-is-a-leader" style="display:none;">
         <h2>Everyone is a Leader</h2>
-        <p>Exploring how leadership exists in all of us, regardless of title or position.</p>
+        <p>Leadership is not something you learn ; it's something you stumble across.</p>
+        <div>
+          <p>How many times have you heard (or told yourself), "I'm not a leader"?</p>
+          <p>We've been conditioned to believe that leadership is a title you earn, a skill you acquire, or a role you step into. Newsflash: it isn't.</p>
+          <p>Leadership isn't something you learn—it's something you stumble upon.</p>
+          <p>The moment you find something you believe in so deeply that you can't not act—that's leadership.</p>
+        </div>
         <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" />
-      </section>
+      </div>
       
-      <section id="blog-lead-vs-inspire" style="display:none;">
-        <h2>Lead vs Inspire</h2>
-        <p>Understanding the crucial differences between leading and inspiring others.</p>
+      <div id="blog-lead-vs-inspire" style="display:none;">
+        <h2>Can you lead without inspiring?</h2>
+        <p>You can inspire without leading - but can you lead without inspiring?</p>
+        <div>
+          <p>And here comes the buzzword: VISION.</p>
+          <p>No word has been more overused—or misunderstood. "I want to increase my bottom line by 40%" has very little to do with Vision—it's merely an objective.</p>
+          <p>The distinction is the same as management vs. inspiration.</p>
+          <p>Leadership, however, is impossible without inspiration.</p>
+        </div>
         <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" />
-      </section>
-      
-      <section id="blog-licence-to-lead" style="display:none;">
-        <h2>Licence to Lead</h2>
-        <p>What gives someone the authority to lead? Exploring the concept of leadership permission.</p>
-        <img src="https://francoisdomain.com/img/blog/licence-to-lead.webp" alt="Licence to Lead" />
-      </section>
+      </div>
       
       <script>
         // Dynamically show content based on URL path
@@ -101,8 +128,6 @@
             document.getElementById('blog-everyone-is-a-leader').style.display = 'block';
           } else if (path.includes('blog/lead-vs-inspire')) {
             document.getElementById('blog-lead-vs-inspire').style.display = 'block';
-          } else if (path.includes('blog/licence-to-lead')) {
-            document.getElementById('blog-licence-to-lead').style.display = 'block';
           }
         })();
       </script>
