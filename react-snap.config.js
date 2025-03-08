@@ -1,8 +1,6 @@
 
 module.exports = {
-  buildDir: "dist",
-  destination: "dist",
-  source: "dist",
+  // Use the default build directory that react-snap expects
   include: [
     '/',
     '/about',
