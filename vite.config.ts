@@ -28,6 +28,12 @@ export default defineConfig({
   build: {
     // Ensure proper MIME types
     assetsInlineLimit: 0,
+    // Generate clean URLs (no .html extension in URLs)
+    outDir: 'dist',
+    // Improve prerendering for static site generation
+    ssrManifest: true,
+    // Add source maps for better debugging
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: undefined
