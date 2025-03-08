@@ -75,6 +75,31 @@ export const SEO = ({
     })),
   } : null;
 
+  // Article schema
+  const articleSchema = article ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: seo.title,
+    description: seo.description,
+    image: seo.image,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": seo.url
+    },
+    author: {
+      "@type": "Person",
+      name: "François Domain"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "François Domain",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/img/FD_LOGO small.png`
+      }
+    }
+  } : null;
+
   return (
     <Helmet>
       <html lang={locale.toLowerCase()} />
@@ -129,6 +154,11 @@ export const SEO = ({
       {breadcrumbSchema && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
+        </script>
+      )}
+      {articleSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
         </script>
       )}
       {jsonLd && (

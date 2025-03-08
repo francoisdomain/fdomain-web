@@ -58,6 +58,43 @@
         ogImage.setAttribute('property', 'og:image');
         ogImage.content = "https://francoisdomain.com/img/blog/EveryoneLeader.webp";
         document.head.appendChild(ogImage);
+        
+        // Add Twitter card metadata
+        var twitterCard = document.createElement('meta');
+        twitterCard.setAttribute('name', 'twitter:card');
+        twitterCard.content = "summary_large_image";
+        document.head.appendChild(twitterCard);
+        
+        var twitterTitle = document.createElement('meta');
+        twitterTitle.setAttribute('name', 'twitter:title');
+        twitterTitle.content = "Everyone is a Leader | François Domain";
+        document.head.appendChild(twitterTitle);
+        
+        var twitterDesc = document.createElement('meta');
+        twitterDesc.setAttribute('name', 'twitter:description');
+        twitterDesc.content = "Leadership is not something you learn ; it's something you stumble across.";
+        document.head.appendChild(twitterDesc);
+        
+        var twitterImage = document.createElement('meta');
+        twitterImage.setAttribute('name', 'twitter:image');
+        twitterImage.content = "https://francoisdomain.com/img/blog/EveryoneLeader.webp";
+        document.head.appendChild(twitterImage);
+        
+        // LinkedIn specific metadata
+        var linkedinTitle = document.createElement('meta');
+        linkedinTitle.setAttribute('property', 'linkedin:title');
+        linkedinTitle.content = "Everyone is a Leader | François Domain";
+        document.head.appendChild(linkedinTitle);
+        
+        var linkedinDesc = document.createElement('meta');
+        linkedinDesc.setAttribute('property', 'linkedin:description');
+        linkedinDesc.content = "Leadership is not something you learn ; it's something you stumble across.";
+        document.head.appendChild(linkedinDesc);
+        
+        var linkedinImage = document.createElement('meta');
+        linkedinImage.setAttribute('property', 'linkedin:image');
+        linkedinImage.content = "https://francoisdomain.com/img/blog/EveryoneLeader.webp";
+        document.head.appendChild(linkedinImage);
       }
       else if (path.includes('/blog/lead-vs-inspire')) {
         document.title = "Can you lead without inspiring? | François Domain";
@@ -76,6 +113,43 @@
         ogImage.setAttribute('property', 'og:image');
         ogImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
         document.head.appendChild(ogImage);
+        
+        // Twitter card metadata
+        var twitterCard = document.createElement('meta');
+        twitterCard.setAttribute('name', 'twitter:card');
+        twitterCard.content = "summary_large_image";
+        document.head.appendChild(twitterCard);
+        
+        var twitterTitle = document.createElement('meta');
+        twitterTitle.setAttribute('name', 'twitter:title');
+        twitterTitle.content = "Can you lead without inspiring? | François Domain";
+        document.head.appendChild(twitterTitle);
+        
+        var twitterDesc = document.createElement('meta');
+        twitterDesc.setAttribute('name', 'twitter:description');
+        twitterDesc.content = "You can inspire without leading - but can you lead without inspiring?";
+        document.head.appendChild(twitterDesc);
+        
+        var twitterImage = document.createElement('meta');
+        twitterImage.setAttribute('name', 'twitter:image');
+        twitterImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
+        document.head.appendChild(twitterImage);
+        
+        // LinkedIn specific metadata
+        var linkedinTitle = document.createElement('meta');
+        linkedinTitle.setAttribute('property', 'linkedin:title');
+        linkedinTitle.content = "Can you lead without inspiring? | François Domain";
+        document.head.appendChild(linkedinTitle);
+        
+        var linkedinDesc = document.createElement('meta');
+        linkedinDesc.setAttribute('property', 'linkedin:description');
+        linkedinDesc.content = "You can inspire without leading - but can you lead without inspiring?";
+        document.head.appendChild(linkedinDesc);
+        
+        var linkedinImage = document.createElement('meta');
+        linkedinImage.setAttribute('property', 'linkedin:image');
+        linkedinImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
+        document.head.appendChild(linkedinImage);
       }
       
       // Indicate this is a valid page for crawlers
