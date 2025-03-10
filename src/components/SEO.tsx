@@ -176,12 +176,3 @@ export const SEO = ({
     </Helmet>
   )
 };
-
-// Declare window.prerenderReady for TypeScript
-declare global {
-  interface Window {
-    prerenderReady?: boolean;
-    gtag?: (...args: any[]) => void;
-    fbq?: (...args: any[]) => void;
-  }
-}
