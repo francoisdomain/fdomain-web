@@ -45,25 +45,11 @@ export const SEO = ({
 
   const currentPath = pathname || location.pathname;
   
-  // Special handling for blog article URLs
-  const isBlogArticle = currentPath.includes('/blog/');
-  let currentImagePath = image;
-  
-  // Set a specific image for blog posts based on the URL if not already provided
-  if (isBlogArticle && image === "/og-image.png") {
-    const blogSlug = currentPath.split('/blog/')[1];
-    if (blogSlug === 'everyone-is-a-leader') {
-      currentImagePath = "/img/blog/EveryoneLeader.webp";
-    } else if (blogSlug === 'lead-vs-inspire') {
-      currentImagePath = "/img/blog/lead-vs-inspire.webp";
-    }
-  }
-  
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
     // Ensure image URLs are absolute
-    image: currentImagePath.startsWith("http") ? currentImagePath : `${siteUrl}${currentImagePath}`,
+    image: image.startsWith("http") ? image : `${siteUrl}${image}`,
     url: `${siteUrl}${currentPath}`,
   };
 
@@ -89,35 +75,29 @@ export const SEO = ({
     })),
   } : null;
 
-  // Article schema - enhanced for better recognition
+  // Article schema
   const articleSchema = article ? {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: seo.title,
     description: seo.description,
     image: seo.image,
-    url: seo.url,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": seo.url
     },
     author: {
       "@type": "Person",
-      name: "François Domain",
-      url: `${siteUrl}/about`
+      name: "François Domain"
     },
     publisher: {
       "@type": "Organization",
       name: "François Domain",
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/img/FD_LOGO small.png`,
-        width: 200,
-        height: 60
+        url: `${siteUrl}/img/FD_LOGO small.png`
       }
-    },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString()
+    }
   } : null;
 
   return (
