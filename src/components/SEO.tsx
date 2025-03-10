@@ -43,9 +43,29 @@ export const SEO = ({
     }
     
     // Signal to prerender.io that the page is fully loaded
-    if (typeof window !== 'undefined' && typeof window.prerenderReady !== 'undefined') {
-      window.prerenderReady = true;
-    }
+    // This function uses the prerenderReady flag that prerender.io looks for
+    const signalPrerenderComplete = () => {
+      if (typeof window !== 'undefined') {
+        window.prerenderReady = true;
+        
+        // If we have a prerender token, add it to the meta tags dynamically
+        // This lets prerender.io know that this page is authorized
+        const prerenderToken = process.env.PRERENDER_TOKEN || '';
+        if (prerenderToken && !document.querySelector('meta[name="prerender-token"]')) {
+          const tokenMeta = document.createElement('meta');
+          tokenMeta.name = 'prerender-token';
+          tokenMeta.content = prerenderToken;
+          document.head.appendChild(tokenMeta);
+        }
+      }
+    };
+    
+    // Signal prerender completion after a short delay to ensure content is loaded
+    const timer = setTimeout(signalPrerenderComplete, 500);
+    
+    return () => {
+      clearTimeout(timer);
+    };
   }, [location.pathname, location.search]);
 
   const currentPath = pathname || location.pathname;
@@ -115,6 +135,11 @@ export const SEO = ({
       {/* Enhanced prerender.io support */}
       <meta name="fragment" content="!" />
       <meta name="prerender-status-code" content="200" />
+      
+      {/* Prerender token meta tag (will be populated dynamically if token exists) */}
+      {process.env.PRERENDER_TOKEN && (
+        <meta name="prerender-token" content={process.env.PRERENDER_TOKEN} />
+      )}
 
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />

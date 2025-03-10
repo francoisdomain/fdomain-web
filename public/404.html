@@ -25,6 +25,17 @@
              document.querySelector('meta[name="fragment"][content="!"]') !== null;
     }
 
+    // Setup prerender token if available
+    function setupPrerenderToken() {
+      var prerenderToken = window.PRERENDER_TOKEN || '';
+      if (prerenderToken && !document.querySelector('meta[name="prerender-token"]')) {
+        var tokenMeta = document.createElement('meta');
+        tokenMeta.name = 'prerender-token';
+        tokenMeta.content = prerenderToken;
+        document.head.appendChild(tokenMeta);
+      }
+    }
+
     // Handle path extraction for improved routing
     function getPathDetails() {
       var path = window.location.pathname;
@@ -166,6 +177,9 @@
     
     // Initialize the page
     function init() {
+      // Setup prerender token if available
+      setupPrerenderToken();
+      
       // Signal to prerender that the page is ready
       window.prerenderReady = true;
       
