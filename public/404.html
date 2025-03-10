@@ -11,7 +11,13 @@
   <!-- Explicitly declare Prerender compatibility -->
   <meta name="fragment" content="!">
   
+  <!-- Prerender token - for authentication with prerender.io -->
+  <meta name="prerender-token" content="zm44BapHnc8wwTilOwM4">
+  
   <script type="text/javascript">
+    // Prerender token to be used in JavaScript functions
+    window.PRERENDER_TOKEN = "zm44BapHnc8wwTilOwM4";
+    
     // Enhanced bot detection with improved LinkedIn crawler detection
     function isBot() {
       var userAgent = navigator.userAgent || '';

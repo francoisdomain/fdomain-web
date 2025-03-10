@@ -28,6 +28,9 @@ export const SEO = ({
   const defaultDescription = "Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.";
   const siteUrl = "https://francoisdomain.com";
   const location = useLocation();
+  
+  // Hard-coded prerender token
+  const PRERENDER_TOKEN = "zm44BapHnc8wwTilOwM4";
 
   // Send pageview to Google Analytics
   useEffect(() => {
@@ -48,13 +51,11 @@ export const SEO = ({
       if (typeof window !== 'undefined') {
         window.prerenderReady = true;
         
-        // If we have a prerender token, add it to the meta tags dynamically
-        // This lets prerender.io know that this page is authorized
-        const prerenderToken = process.env.PRERENDER_TOKEN || '';
-        if (prerenderToken && !document.querySelector('meta[name="prerender-token"]')) {
+        // Add prerender token to meta tags dynamically
+        if (PRERENDER_TOKEN && !document.querySelector('meta[name="prerender-token"]')) {
           const tokenMeta = document.createElement('meta');
           tokenMeta.name = 'prerender-token';
-          tokenMeta.content = prerenderToken;
+          tokenMeta.content = PRERENDER_TOKEN;
           document.head.appendChild(tokenMeta);
         }
       }
@@ -136,10 +137,8 @@ export const SEO = ({
       <meta name="fragment" content="!" />
       <meta name="prerender-status-code" content="200" />
       
-      {/* Prerender token meta tag (will be populated dynamically if token exists) */}
-      {process.env.PRERENDER_TOKEN && (
-        <meta name="prerender-token" content={process.env.PRERENDER_TOKEN} />
-      )}
+      {/* Prerender token meta tag */}
+      <meta name="prerender-token" content={PRERENDER_TOKEN} />
 
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />

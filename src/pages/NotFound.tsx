@@ -6,6 +6,9 @@ import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import { SEO } from "@/components/SEO";
 
+// Hard-coded prerender token
+const PRERENDER_TOKEN = "zm44BapHnc8wwTilOwM4";
+
 // Helper function to check if the current visitor is likely a bot
 const isBot = () => {
   const userAgent = navigator.userAgent || '';
@@ -47,6 +50,14 @@ const NotFound = () => {
     // Signal to prerender.io that the page is fully loaded
     if (typeof window !== 'undefined' && !window.prerenderReady) {
       window.prerenderReady = true;
+      
+      // Add prerender token to meta tags
+      if (PRERENDER_TOKEN && !document.querySelector('meta[name="prerender-token"]')) {
+        const tokenMeta = document.createElement('meta');
+        tokenMeta.name = 'prerender-token';
+        tokenMeta.content = PRERENDER_TOKEN;
+        document.head.appendChild(tokenMeta);
+      }
     }
   }, [location.pathname, navigate]);
 
