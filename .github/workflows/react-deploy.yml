@@ -29,20 +29,43 @@ jobs:
         run: npm run build
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
         run: touch ./dist/.nojekyll
+
+      # Enhanced static page generation for blog posts
       - name: Create static blog pages for SEO
         run: |
+          # Create directories for blog posts
           mkdir -p ./dist/blog/everyone-is-a-leader
           mkdir -p ./dist/blog/lead-vs-inspire
-          cp ./dist/index.html ./dist/blog/everyone-is-a-leader/index.html
-          cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
+          mkdir -p ./dist/blog/licence-to-lead
+          
+          # Copy index.html to blog directories and rename as 200.html (standard prerender filename)
+          cp ./dist/404.html ./dist/blog/everyone-is-a-leader/200.html
+          cp ./dist/404.html ./dist/blog/lead-vs-inspire/200.html
+          cp ./dist/404.html ./dist/blog/licence-to-lead/200.html
+          
+          # Also keep index.html in each directory for standard web servers
+          cp ./dist/404.html ./dist/blog/everyone-is-a-leader/index.html
+          cp ./dist/404.html ./dist/blog/lead-vs-inspire/index.html
+          cp ./dist/404.html ./dist/blog/licence-to-lead/index.html
+          
           # Copy 404.html to each blog directory to ensure proper handling
           cp ./dist/404.html ./dist/blog/everyone-is-a-leader/404.html
           cp ./dist/404.html ./dist/blog/lead-vs-inspire/404.html
-          # Optional: Create symbolic links to images and assets to ensure relative paths work
+          cp ./dist/404.html ./dist/blog/licence-to-lead/404.html
+          
+          # Create 200.html at the root for prerender
+          cp ./dist/index.html ./dist/200.html
+          
+          # Create necessary image directories
           mkdir -p ./dist/blog/everyone-is-a-leader/img/blog
           mkdir -p ./dist/blog/lead-vs-inspire/img/blog
+          mkdir -p ./dist/blog/licence-to-lead/img/blog
+          
+          # Copy blog images to ensure they're available in the static paths
           cp ./dist/img/blog/EveryoneLeader.webp ./dist/blog/everyone-is-a-leader/img/blog/
           cp ./dist/img/blog/lead-vs-inspire.webp ./dist/blog/lead-vs-inspire/img/blog/
+          cp ./dist/img/blog/licence-to-lead.webp ./dist/blog/licence-to-lead/img/blog/
+      
       - name: Debug directory structure
         run: |
           echo "Contents of dist directory:"
@@ -53,6 +76,7 @@ jobs:
           ls -la ./dist/blog/everyone-is-a-leader
           echo "Contents of blog/everyone-is-a-leader/img/blog directory:"
           ls -la ./dist/blog/everyone-is-a-leader/img/blog 2>/dev/null || echo "Directory not found"
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

@@ -41,6 +41,11 @@ export const SEO = ({
     if (typeof window.fbq !== 'undefined') {
       window.fbq('track', 'PageView');
     }
+    
+    // Signal to prerender.io that the page is fully loaded
+    if (typeof window !== 'undefined' && typeof window.prerenderReady !== 'undefined') {
+      window.prerenderReady = true;
+    }
   }, [location.pathname, location.search]);
 
   const currentPath = pathname || location.pathname;
@@ -107,6 +112,10 @@ export const SEO = ({
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
+      {/* Enhanced prerender.io support */}
+      <meta name="fragment" content="!" />
+      <meta name="prerender-status-code" content="200" />
+
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />
       <meta property="og:locale" content={locale.toLowerCase()} />
@@ -139,8 +148,6 @@ export const SEO = ({
       <link rel="canonical" href={seo.url} />
 
       {/* Enhanced Prerender hints for crawlers */}
-      <meta name="fragment" content="!" />
-      <meta name="prerender-status-code" content="200" />
       <meta name="renderer" content="webkit" />
       <meta name="force-rendering" content="webkit" />
       <meta name="crawlable" content="yes" />
@@ -169,3 +176,12 @@ export const SEO = ({
     </Helmet>
   )
 };
+
+// Declare window.prerenderReady for TypeScript
+declare global {
+  interface Window {
+    prerenderReady?: boolean;
+    gtag?: (...args: any[]) => void;
+    fbq?: (...args: any[]) => void;
+  }
+}
