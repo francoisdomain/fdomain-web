@@ -33,16 +33,18 @@ jobs:
         run: |
           mkdir -p ./dist/blog/everyone-is-a-leader
           mkdir -p ./dist/blog/lead-vs-inspire
-          cp ./dist/index.html ./dist/blog/everyone-is-a-leader/index.html
-          cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
-          # Copy 404.html to each blog directory to ensure proper handling
-          cp ./dist/404.html ./dist/blog/everyone-is-a-leader/404.html
-          cp ./dist/404.html ./dist/blog/lead-vs-inspire/404.html
-          # Optional: Create symbolic links to images and assets to ensure relative paths work
+          cp ./dist/404.html ./dist/blog/everyone-is-a-leader/index.html
+          cp ./dist/404.html ./dist/blog/lead-vs-inspire/index.html
+          # Copy assets for blog posts
           mkdir -p ./dist/blog/everyone-is-a-leader/img/blog
           mkdir -p ./dist/blog/lead-vs-inspire/img/blog
-          cp ./dist/img/blog/EveryoneLeader.webp ./dist/blog/everyone-is-a-leader/img/blog/
-          cp ./dist/img/blog/lead-vs-inspire.webp ./dist/blog/lead-vs-inspire/img/blog/
+          cp ./dist/img/blog/EveryoneLeader.webp ./dist/blog/everyone-is-a-leader/img/blog/ || echo "Warning: EveryoneLeader.webp not found"
+          cp ./dist/img/blog/lead-vs-inspire.webp ./dist/blog/lead-vs-inspire/img/blog/ || echo "Warning: lead-vs-inspire.webp not found"
+      - name: Add robots.txt directives to ensure crawlability 
+        run: |
+          echo "User-agent: *" > ./dist/robots.txt
+          echo "Allow: /" >> ./dist/robots.txt
+          echo "Sitemap: https://francoisdomain.com/sitemap.xml" >> ./dist/robots.txt
       - name: Debug directory structure
         run: |
           echo "Contents of dist directory:"

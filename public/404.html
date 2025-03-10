@@ -7,13 +7,13 @@
   <meta name="robots" content="all">
   <meta name="prerender-status-code" content="200">
   <script type="text/javascript">
-    // Enhanced bot detection
+    // Enhanced bot detection with explicit LinkedIn crawler detection
     function isBot() {
       var userAgent = navigator.userAgent || '';
-      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
+      return /bot|googlebot|crawler|spider|robot|crawling|facebook|linkedin|linkedinbot|lnkd\.in|whatsapp|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
     }
 
-    // If it's a bot, provide content directly
+    // If it's a bot, provide content directly, otherwise redirect after delay
     if (isBot()) {
       console.log("Bot detected: " + navigator.userAgent);
       
@@ -158,8 +158,11 @@
       statusMeta.content = '200';
       document.head.appendChild(statusMeta);
     } else {
-      // For regular users, redirect to the main app
-      window.location.replace('/');
+      // For regular users, add a delay before redirecting
+      // This helps ensure crawlers have time to process content
+      setTimeout(function() {
+        window.location.href = '/';
+      }, 3000); // 3 second delay before redirecting
     }
   </script>
 </head>
@@ -180,6 +183,7 @@
           <p>The moment you find something you believe in so deeply that you can't not act—that's leadership.</p>
         </div>
         <img src="https://francoisdomain.com/img/blog/EveryoneLeader.webp" alt="Everyone is a Leader" style="max-width: 100%; height: auto;" />
+        <a href="https://francoisdomain.com/blog/everyone-is-a-leader">Read more on the website</a>
       </div>
       
       <div id="blog-lead-vs-inspire" style="display:none;">
@@ -192,6 +196,7 @@
           <p>Leadership, however, is impossible without inspiration.</p>
         </div>
         <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" style="max-width: 100%; height: auto;" />
+        <a href="https://francoisdomain.com/blog/lead-vs-inspire">Read more on the website</a>
       </div>
       
       <script>
