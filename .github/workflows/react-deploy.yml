@@ -31,85 +31,33 @@ jobs:
         run: touch ./dist/.nojekyll
       - name: Create static blog pages for SEO
         run: |
-          # Create directories for blog articles
           mkdir -p ./dist/blog/everyone-is-a-leader
           mkdir -p ./dist/blog/lead-vs-inspire
           mkdir -p ./dist/blog/active-listening-skills
-          
-          # Copy index.html to each blog directory for server-side routing
           cp ./dist/index.html ./dist/blog/everyone-is-a-leader/index.html
           cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
           cp ./dist/index.html ./dist/blog/active-listening-skills/index.html
-          
-          # Copy 404.html to each blog directory for proper fallback handling
+          # Copy 404.html to each blog directory to ensure proper handling
           cp ./dist/404.html ./dist/blog/everyone-is-a-leader/404.html
           cp ./dist/404.html ./dist/blog/lead-vs-inspire/404.html
           cp ./dist/404.html ./dist/blog/active-listening-skills/404.html
-          
-          # Create directories for blog images
+          # Optional: Create symbolic links to images and assets to ensure relative paths work
           mkdir -p ./dist/blog/everyone-is-a-leader/img/blog
           mkdir -p ./dist/blog/lead-vs-inspire/img/blog
           mkdir -p ./dist/blog/active-listening-skills/img/blog
-          
-          # Copy blog images to ensure they're available in the static paths
-          cp -r ./dist/img/blog/* ./dist/blog/everyone-is-a-leader/img/blog/
-          cp -r ./dist/img/blog/* ./dist/blog/lead-vs-inspire/img/blog/
-          cp -r ./dist/img/blog/* ./dist/blog/active-listening-skills/img/blog/
-          
-          # Create specific HTML files for each blog post with unique meta tags for SEO
-          cat > ./dist/blog/active-listening-skills/active-listening-skills.html << 'EOL'
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="UTF-8">
-            <title>How Good Is Your Active Listening? | François Domain</title>
-            <meta name="description" content="Soft skills can transform your relationships and leadership capabilities.">
-            <meta name="robots" content="all">
-            <meta name="fragment" content="!">
-            <meta name="prerender-status-code" content="200">
-            <link rel="canonical" href="https://francoisdomain.com/blog/active-listening-skills">
-            <meta property="og:title" content="How Good Is Your Active Listening? | François Domain">
-            <meta property="og:description" content="Soft skills can transform your relationships and leadership capabilities.">
-            <meta property="og:image" content="https://francoisdomain.com/img/blog/good-listener.webp">
-            <meta property="og:url" content="https://francoisdomain.com/blog/active-listening-skills">
-            <meta property="og:type" content="article">
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="How Good Is Your Active Listening? | François Domain">
-            <meta name="twitter:description" content="Soft skills can transform your relationships and leadership capabilities.">
-            <meta name="twitter:image" content="https://francoisdomain.com/img/blog/good-listener.webp">
-          </head>
-          <body>
-            <h1>How Good Is Your Active Listening?</h1>
-            <img src="https://francoisdomain.com/img/blog/good-listener.webp" alt="Active Listening Skills">
-            <p>In a world where everyone is talking, few are truly listening. We've all been there – nodding along in a conversation while our mind wanders elsewhere.</p>
-            <p>Active listening goes beyond just hearing words. It's a conscious effort to understand, interpret, and respond thoughtfully to what someone is saying.</p>
-            <h2>Why Active Listening Matters:</h2>
-            <ol>
-              <li>It builds trust and rapport</li>
-              <li>It prevents misunderstandings</li>
-              <li>It shows respect and value for others</li>
-              <li>It gives you more accurate information</li>
-              <li>It helps you make better decisions</li>
-            </ol>
-            <p>As leaders, our ability to truly hear others can make or break our effectiveness. When team members feel heard, they feel valued.</p>
-            <p>Take the quiz to assess your active listening skills and learn how to improve this critical leadership capability.</p>
-            <p><a href="https://francoisdomain.com/#/blog/active-listening-skills">View Full Article</a></p>
-            <script>
-              window.location.replace("https://francoisdomain.com/#/blog/active-listening-skills");
-            </script>
-          </body>
-          </html>
-          EOL
+          cp ./dist/img/blog/EveryoneLeader.webp ./dist/blog/everyone-is-a-leader/img/blog/
+          cp ./dist/img/blog/lead-vs-inspire.webp ./dist/blog/lead-vs-inspire/img/blog/
+          cp ./dist/img/blog/good-listener.webp ./dist/blog/active-listening-skills/img/blog/
       - name: Debug directory structure
         run: |
           echo "Contents of dist directory:"
           ls -la ./dist
           echo "Contents of blog directory:"
           ls -la ./dist/blog
-          echo "Contents of blog/active-listening-skills directory:"
-          ls -la ./dist/blog/active-listening-skills
-          echo "Contents of blog/active-listening-skills/img/blog directory:"
-          ls -la ./dist/blog/active-listening-skills/img/blog 2>/dev/null || echo "Directory not found"
+          echo "Contents of blog/everyone-is-a-leader directory:"
+          ls -la ./dist/blog/everyone-is-a-leader
+          echo "Contents of blog/everyone-is-a-leader/img/blog directory:"
+          ls -la ./dist/blog/everyone-is-a-leader/img/blog 2>/dev/null || echo "Directory not found"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
