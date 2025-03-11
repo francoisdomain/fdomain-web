@@ -80,19 +80,11 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
   },
   "active-listening-skills": {
     id: 3,
-    title: "How good are your soft skills #1: Active Listening",
+    title: "How Good Is Your Active Listening?",
     slug: "active-listening-skills",
     summary: "Soft skills can transform your relationships and leadership capabilities.",
     body: `How good are your soft skills? 
-    Let’s find out!
-    
-    We’re kicking off a 7-part series about **Soft Skills**, which are far too often overlooked and underrated compared to hard skills. 
-    However, especially if you are—or wish to be–in a leadership position, soft skills can make a massive difference between *good* and *great* team culture. 
-
-    Rest assured, **no lecture**, here (especially if you're not a good listener!) but a fun and quick quiz to assess where you are with your Active Listening.
-
-    Ready to find out? 
-`,
+    Let’s find out!`,
     imageUrl: "/img/blog/licence-to-lead.webp",
     publishedDate: "2025-03-20",
     hasQuiz: true,
