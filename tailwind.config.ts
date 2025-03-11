@@ -85,53 +85,7 @@ export default {
         fadeIn: "fadeIn 0.5s ease-out forwards",
         slideIn: "slideIn 0.3s ease-out forwards",
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-            color: 'inherit',
-            p: {
-              color: 'inherit',
-            },
-            strong: {
-              color: 'inherit',
-              fontWeight: 600,
-            },
-            a: {
-              color: 'inherit',
-              textDecoration: 'underline',
-              fontWeight: 500,
-            },
-            h1: {
-              color: 'inherit',
-            },
-            h2: {
-              color: 'inherit',
-            },
-            h3: {
-              color: 'inherit',
-            },
-            h4: {
-              color: 'inherit',
-            },
-            code: {
-              color: 'inherit',
-            },
-            pre: {
-              color: 'inherit',
-              backgroundColor: 'rgb(244 244 245)',
-            },
-            blockquote: {
-              color: 'inherit',
-              borderLeftColor: 'inherit',
-            },
-            hr: {
-              color: 'inherit',
-            },
-          },
-        },
-      },
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
