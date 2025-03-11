@@ -143,19 +143,7 @@ export const activeListeningQuiz: QuizData = {
       maxScore: 8,
       title: `Oops! Hearing, Not Listening. 🚨`,
       description: 
-        `
-         You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
-      
-      **How to Improve:**
-      
-        - **Remove distractions** (put your phone away, close emails, mute notifications) before important discussions.
-        - Practice **mindfulness**—when you catch your mind drifting, bring it back to the conversation.
-        - Use **body language** to stay engaged: nod, maintain eye contact, and react naturally.
-        - **Summarize key points** to confirm you understood correctly (e.g., *So you’re saying…*).
-        - Ask at least one **follow-up question** in every conversation to show you’re invested.
-        
-        **Small changes will make a huge difference!**
-        `
+        `Oops! Hearing, Not Listening. 🚨`
       
     },
     {
