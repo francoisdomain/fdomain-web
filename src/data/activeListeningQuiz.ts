@@ -144,7 +144,7 @@ export const activeListeningQuiz: QuizData = {
       title: "Oops! Hearing, Not Listening. 🚨",
       description: `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
       
-        ✅ How to Improve:
+      **How to Improve:**
       
         - **Remove distractions** (put your phone away, close emails, mute notifications) before important discussions.
         - Practice **mindfulness**—when you catch your mind drifting, bring it back to the conversation.
@@ -160,7 +160,7 @@ export const activeListeningQuiz: QuizData = {
       title: "Selective Listener 😬",
       description: `You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
       
-      ✅ How to Improve:
+      **How to Improve:**
       
       - **Pause** before responding—let the other person’s words sink in before jumping in with a reply.
       - **Paraphrase occasionally** to confirm understanding (e.g., *Just to make sure I got this right, you’re saying…*).
@@ -175,7 +175,7 @@ export const activeListeningQuiz: QuizData = {
       title: "Good Listener, But… 🤔",
       description: `You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
       
-      ✅ How to Improve:
+      **How to Improve:**
       
       - Ask **open-ended questions** to deepen discussions (e.g., *Can you tell me more about that?*).
       - **Mirror emotions**—if they’re frustrated, acknowledge it (*I can see why that’s frustrating*).
@@ -190,7 +190,7 @@ export const activeListeningQuiz: QuizData = {
       title: "Active Listening Pro! 🏆",
       description: `**You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
       
-      ✅ How to Stay Sharp:
+      **How to Stay Sharp:**
       
       - **Keep practicing** active listening techniques, even when you’re tired or distracted.
       - **Adapt** your listening style—some people need advice, others just need to vent. Recognizing the difference makes you an even better communicator.
