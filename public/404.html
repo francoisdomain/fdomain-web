@@ -219,8 +219,29 @@
       prerenderToken.content = 'zm44BapHnc8wwTilOwM4';
       document.head.appendChild(prerenderToken);
     } else {
-      // For regular users, redirect to the main app
-      window.location.replace('/');
+      // For regular users, redirect to the main app and preserve the path
+      var path = window.location.pathname;
+      // Clean the path by removing any trailing slash
+      path = path.replace(/\/$/, '');
+      
+      // Create a properly formatted redirect URL
+      var redirectUrl = window.location.origin;
+      
+      // Check if we have a path to append
+      if (path && path !== '/404.html') {
+        // Encode any special characters in the path
+        var encodedPath = path
+          .split('/')
+          .map(function(segment) {
+            return encodeURIComponent(segment);
+          })
+          .join('/');
+          
+        redirectUrl += '/#' + encodedPath;
+      }
+      
+      // Redirect with the hash for client-side routing
+      window.location.replace(redirectUrl);
     }
   </script>
 </head>
@@ -289,3 +310,4 @@
   </div>
 </body>
 </html>
+
