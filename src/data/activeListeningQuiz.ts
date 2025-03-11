@@ -141,7 +141,7 @@ export const activeListeningQuiz: QuizData = {
     {
       minScore: 5,
       maxScore: 8,
-      title: "Oops! Hearing, Not Listening. 🚨",
+      title: `Oops! Hearing, Not Listening. 🚨`,
       description: `
       You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
       
@@ -159,7 +159,7 @@ export const activeListeningQuiz: QuizData = {
     {
       minScore: 9,
       maxScore: 12,
-      title: "Selective Listener 😬",
+      title: `Selective Listener 😬`,
       description: `
       You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
       
@@ -176,7 +176,7 @@ export const activeListeningQuiz: QuizData = {
     {
       minScore: 13,
       maxScore: 16,
-      title: "Good Listener, But… 🤔",
+      title: `Good Listener, But… 🤔`,
       description: `
       You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
       
@@ -193,7 +193,7 @@ export const activeListeningQuiz: QuizData = {
     {
       minScore: 17,
       maxScore: 20,
-      title: "Active Listening Pro! 🏆",
+      title: `Active Listening Pro! 🏆`,
       description: `
       **You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
       
