@@ -3,7 +3,7 @@ import { QuizData } from "@/types/quiz";
 
 export const activeListeningQuiz: QuizData = {
   id: "active-listening-quiz",
-  title: "How Good Is Your Active Listening? Rate Yourself! 🎧👂",
+  title: "How Good Is Your Active Listening? 🎧👂",
   description: "Are you a conversation MVP or just nodding on autopilot? Find out now!",
   questions: [
     {
@@ -11,24 +11,24 @@ export const activeListeningQuiz: QuizData = {
       text: "1️⃣ When someone is talking to you, what's really happening?",
       options: [
         {
-          id: "1a",
-          text: "Wait, what? Were they talking to me?",
-          points: 1
-        },
-        {
           id: "1b",
           text: "I zone out halfway and just guess what they said based on keywords",
           points: 2
         },
         {
-          id: "1c",
-          text: "I hear them, but I'm mostly just waiting for my turn to speak",
-          points: 3
-        },
-        {
           id: "1d",
           text: "I'm fully present, nodding, and actually absorbing what they're saying",
           points: 4
+        },
+        {
+          id: "1a",
+          text: "Huh, what? My connexion dropped for a bit...",
+          points: 1
+        },
+        {
+          id: "1c",
+          text: "I'm waiting for my turn to speak",
+          points: 3
         }
       ]
     },
@@ -38,7 +38,7 @@ export const activeListeningQuiz: QuizData = {
       options: [
         {
           id: "2a",
-          text: "I nod, say \"that's crazy,\" and hope they stop talking",
+          text: "I nod, say \"that's crazy,\" and hope they move on",
           points: 1
         },
         {
@@ -47,14 +47,14 @@ export const activeListeningQuiz: QuizData = {
           points: 2
         },
         {
-          id: "2c",
-          text: "I give them a solution before they even finish their sentence",
-          points: 3
-        },
-        {
           id: "2d",
           text: "I ask a few follow-up questions to make sure I understand before responding",
           points: 4
+        },
+        {
+          id: "2c",
+          text: "I give them a solution before they even finish their sentence",
+          points: 3
         }
       ]
     },
@@ -63,24 +63,24 @@ export const activeListeningQuiz: QuizData = {
       text: "3️⃣ You're in a meeting, and someone else is speaking. What are you doing?",
       options: [
         {
+          id: "3d",
+          text: "I'm taking notes, asking questions, and engaging when relevant",
+          points: 4
+        },
+        {
+          id: "3b",
+          text: "I'm staring at them trying to see how I can contradict them",
+          points: 2
+        },
+        {
           id: "3a",
           text: "I'm planning my next meal in my head",
           points: 1
         },
         {
-          id: "3b",
-          text: "I'm staring at them but only thinking about what I'm going to say next",
-          points: 2
-        },
-        {
           id: "3c",
-          text: "I'm half-listening while scrolling my phone (but stealthily, of course)",
+          text: "I'm listening while scrolling my phone to keep myself busy",
           points: 3
-        },
-        {
-          id: "3d",
-          text: "I'm actively listening, taking notes, and engaging when needed",
-          points: 4
         }
       ]
     },
@@ -90,7 +90,7 @@ export const activeListeningQuiz: QuizData = {
       options: [
         {
           id: "4a",
-          text: "I laugh nervously and pretend I didn't hear them",
+          text: "I laugh - do you think I'm your shrink or what?",
           points: 1
         },
         {
@@ -115,24 +115,24 @@ export const activeListeningQuiz: QuizData = {
       text: "5️⃣ How often do you repeat or paraphrase what someone just said to confirm understanding?",
       options: [
         {
-          id: "5a",
-          text: "Never. My strategy is nodding and hoping for the best",
-          points: 1
-        },
-        {
           id: "5b",
-          text: "Rarely, I just assume I got the gist and wing it",
+          text: "Rarely, I usually wing it",
           points: 2
-        },
-        {
-          id: "5c",
-          text: "Sometimes, if I'm not sure I caught everything",
-          points: 3
         },
         {
           id: "5d",
           text: "Almost always—I make sure we're aligned before responding",
           points: 4
+        },
+        {
+          id: "5a",
+          text: "Never. My strategy is nodding and hoping for the best",
+          points: 1
+        },
+        {
+          id: "5c",
+          text: "Sometimes, if I'm not sure I caught everything",
+          points: 3
         }
       ]
     }
@@ -142,25 +142,62 @@ export const activeListeningQuiz: QuizData = {
       minScore: 5,
       maxScore: 8,
       title: "Oops! Hearing, Not Listening. 🚨",
-      description: "You might be missing some very important details in conversations… like, you know, everything."
+      description: `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
+      
+        ✅ How to Improve:
+      
+        - **Remove distractions** (put your phone away, close emails, mute notifications) before important discussions.
+        - Practice **mindfulness**—when you catch your mind drifting, bring it back to the conversation.
+        - Use **body language** to stay engaged: nod, maintain eye contact, and react naturally.
+        - **Summarize key points** to confirm you understood correctly (e.g., *So you’re saying…*).
+        - Ask at least one **follow-up question** in every conversation to show you’re invested.
+        
+        **Small changes will make a huge difference!**`
     },
     {
       minScore: 9,
       maxScore: 12,
       title: "Selective Listener 😬",
-      description: "You hear words, but are you really listening? Try focusing more."
+      description: `You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
+      
+      ✅ How to Improve:
+      
+      - **Pause** before responding—let the other person’s words sink in before jumping in with a reply.
+      - **Paraphrase occasionally** to confirm understanding (e.g., *Just to make sure I got this right, you’re saying…*).
+      - **Resist the urge to interrupt**—even if you think you know where they’re going, let them finish.
+      - Be **genuinely curious**—shift from *How will I respond?* to *What can I learn from this?*
+      
+      Being **fully present** will make people feel heard—and you’ll avoid misunderstandings!`
     },
     {
       minScore: 13,
       maxScore: 16,
       title: "Good Listener, But… 🤔",
-      description: "You're engaged, but you might be more focused on responding than understanding."
+      description: `You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
+      
+      ✅ How to Improve:
+      
+      - Ask **open-ended questions** to deepen discussions (e.g., *Can you tell me more about that?*).
+      - **Mirror emotions**—if they’re frustrated, acknowledge it (*I can see why that’s frustrating*).
+      - **Resist solution mode** too quickly—sometimes, people just need to be heard before jumping into fixes.
+      - **Take notes** during key meetings to keep focus and retention high.
+      
+      You’re close to mastering active listening—just a little more **fine-tuning** will take you to the **next level**!`
     },
     {
       minScore: 17,
       maxScore: 20,
       title: "Active Listening Pro! 🏆",
-      description: "People love talking to you because they actually feel heard. Keep it up!"
+      description: `**You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
+      
+      ✅ How to Stay Sharp:
+      
+      - **Keep practicing** active listening techniques, even when you’re tired or distracted.
+      - **Adapt** your listening style—some people need advice, others just need to vent. Recognizing the difference makes you an even better communicator.
+      - **Teach others**—help your team improve their listening skills by setting the example.
+      - Use **silence as a tool**—sometimes, the best response is just a thoughtful pause.
+      
+      Your ability to truly listen will **set you apart as a leader, mentor, and trusted colleague**!`
     }
   ]
 };
