@@ -142,7 +142,8 @@ export const activeListeningQuiz: QuizData = {
       minScore: 5,
       maxScore: 8,
       title: "Oops! Hearing, Not Listening. 🚨",
-      description: `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
+      description: `
+      You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
       
       **How to Improve:**
       
@@ -152,13 +153,15 @@ export const activeListeningQuiz: QuizData = {
         - **Summarize key points** to confirm you understood correctly (e.g., *So you’re saying…*).
         - Ask at least one **follow-up question** in every conversation to show you’re invested.
         
-        **Small changes will make a huge difference!**`
+        **Small changes will make a huge difference!**
+        `
     },
     {
       minScore: 9,
       maxScore: 12,
       title: "Selective Listener 😬",
-      description: `You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
+      description: `
+      You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
       
       **How to Improve:**
       
@@ -167,13 +170,15 @@ export const activeListeningQuiz: QuizData = {
       - **Resist the urge to interrupt**—even if you think you know where they’re going, let them finish.
       - Be **genuinely curious**—shift from *How will I respond?* to *What can I learn from this?*
       
-      Being **fully present** will make people feel heard—and you’ll avoid misunderstandings!`
+      Being **fully present** will make people feel heard—and you’ll avoid misunderstandings!
+      `
     },
     {
       minScore: 13,
       maxScore: 16,
       title: "Good Listener, But… 🤔",
-      description: `You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
+      description: `
+      You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
       
       **How to Improve:**
       
@@ -182,13 +187,15 @@ export const activeListeningQuiz: QuizData = {
       - **Resist solution mode** too quickly—sometimes, people just need to be heard before jumping into fixes.
       - **Take notes** during key meetings to keep focus and retention high.
       
-      You’re close to mastering active listening—just a little more **fine-tuning** will take you to the **next level**!`
+      You’re close to mastering active listening—just a little more **fine-tuning** will take you to the **next level**!
+      `
     },
     {
       minScore: 17,
       maxScore: 20,
       title: "Active Listening Pro! 🏆",
-      description: `**You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
+      description: `
+      **You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
       
       **How to Stay Sharp:**
       
@@ -197,7 +204,8 @@ export const activeListeningQuiz: QuizData = {
       - **Teach others**—help your team improve their listening skills by setting the example.
       - Use **silence as a tool**—sometimes, the best response is just a thoughtful pause.
       
-      Your ability to truly listen will **set you apart as a leader, mentor, and trusted colleague**!`
+      Your ability to truly listen will **set you apart as a leader, mentor, and trusted colleague**!
+      `
     }
   ]
 };
