@@ -6,48 +6,29 @@ import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import { SEO } from "@/components/SEO";
 
-// Helper function to check if the current visitor is likely a bot
-const isBot = () => {
-  const userAgent = navigator.userAgent || '';
-  return /bot|googlebot|crawler|spider|robot|crawling|linkedin|facebook|twitter|slack|discordbot|telegrambot|vkshare|skype|line|embedly|postman|curl|wget|mediapartners|search|lighthouse|headless|prerender|screenshot|phantom|puppeteer|webthumb/i.test(userAgent);
-};
-
 const NotFound = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(5);
-  const [isUserBot, setIsUserBot] = useState(false);
 
   useEffect(() => {
-    // Check if the current user is a bot
-    setIsUserBot(isBot());
-    
-    console.log(
-      "404 Error: Route accessed:",
-      location.pathname,
-      "Bot detected:", isBot()
+    console.error(
+      "404 Error: User attempted to access non-existent route:",
+      location.pathname
     );
 
-    // If not a bot, set up countdown and navigation
-    if (!isBot()) {
-      const timer = setInterval(() => {
-        setCountdown((prev) => prev - 1);
-      }, 1000);
+    const timer = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
 
-      const redirect = setTimeout(() => {
-        navigate('/');
-      }, 5000);
+    const redirect = setTimeout(() => {
+      navigate('/');
+    }, 5000);
 
-      return () => {
-        clearInterval(timer);
-        clearTimeout(redirect);
-      };
-    }
-    
-    // Signal to prerender.io that the page is fully loaded
-    if (typeof window !== 'undefined' && !window.prerenderReady) {
-      window.prerenderReady = true;
-    }
+    return () => {
+      clearInterval(timer);
+      clearTimeout(redirect);
+    };
   }, [location.pathname, navigate]);
 
   return (
@@ -74,11 +55,9 @@ const NotFound = () => {
             or is temporarily unavailable.
           </p>
           
-          {!isUserBot && (
-            <p className="text-warm-gray-600 mb-8">
-              Redirecting to homepage in {countdown} seconds...
-            </p>
-          )}
+          <p className="text-warm-gray-600 mb-8">
+            Redirecting to homepage in {countdown} seconds...
+          </p>
           
           <a 
             href="/" 
@@ -94,10 +73,5 @@ const NotFound = () => {
     </div>
   );
 };
-
-// Add this globally for prerender.io to detect
-if (typeof window !== 'undefined') {
-  window.prerenderReady = true;
-}
 
 export default NotFound;
