@@ -151,12 +151,73 @@
         linkedinImage.content = "https://francoisdomain.com/img/blog/lead-vs-inspire.webp";
         document.head.appendChild(linkedinImage);
       }
+      else if (path.includes('/blog/active-listening-skills')) {
+        document.title = "The Art of Active Listening | François Domain";
+        
+        var ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        ogTitle.content = "The Art of Active Listening | François Domain";
+        document.head.appendChild(ogTitle);
+        
+        var ogDesc = document.createElement('meta');
+        ogDesc.setAttribute('property', 'og:description');
+        ogDesc.content = "Discover how active listening can transform your relationships and leadership capabilities.";
+        document.head.appendChild(ogDesc);
+        
+        var ogImage = document.createElement('meta');
+        ogImage.setAttribute('property', 'og:image');
+        ogImage.content = "https://francoisdomain.com/img/blog/licence-to-lead.webp";
+        document.head.appendChild(ogImage);
+        
+        // Twitter card metadata
+        var twitterCard = document.createElement('meta');
+        twitterCard.setAttribute('name', 'twitter:card');
+        twitterCard.content = "summary_large_image";
+        document.head.appendChild(twitterCard);
+        
+        var twitterTitle = document.createElement('meta');
+        twitterTitle.setAttribute('name', 'twitter:title');
+        twitterTitle.content = "The Art of Active Listening | François Domain";
+        document.head.appendChild(twitterTitle);
+        
+        var twitterDesc = document.createElement('meta');
+        twitterDesc.setAttribute('name', 'twitter:description');
+        twitterDesc.content = "Discover how active listening can transform your relationships and leadership capabilities.";
+        document.head.appendChild(twitterDesc);
+        
+        var twitterImage = document.createElement('meta');
+        twitterImage.setAttribute('name', 'twitter:image');
+        twitterImage.content = "https://francoisdomain.com/img/blog/licence-to-lead.webp";
+        document.head.appendChild(twitterImage);
+        
+        // LinkedIn specific metadata
+        var linkedinTitle = document.createElement('meta');
+        linkedinTitle.setAttribute('property', 'linkedin:title');
+        linkedinTitle.content = "The Art of Active Listening | François Domain";
+        document.head.appendChild(linkedinTitle);
+        
+        var linkedinDesc = document.createElement('meta');
+        linkedinDesc.setAttribute('property', 'linkedin:description');
+        linkedinDesc.content = "Discover how active listening can transform your relationships and leadership capabilities.";
+        document.head.appendChild(linkedinDesc);
+        
+        var linkedinImage = document.createElement('meta');
+        linkedinImage.setAttribute('property', 'linkedin:image');
+        linkedinImage.content = "https://francoisdomain.com/img/blog/licence-to-lead.webp";
+        document.head.appendChild(linkedinImage);
+      }
       
       // Indicate this is a valid page for crawlers
       var statusMeta = document.createElement('meta');
       statusMeta.name = 'prerender-status-code';
       statusMeta.content = '200';
       document.head.appendChild(statusMeta);
+
+      // Add prerender.io token
+      var prerenderToken = document.createElement('meta');
+      prerenderToken.name = 'prerender-token';
+      prerenderToken.content = 'zm44BapHnc8wwTilOwM4';
+      document.head.appendChild(prerenderToken);
     } else {
       // For regular users, redirect to the main app
       window.location.replace('/');
@@ -194,6 +255,18 @@
         <img src="https://francoisdomain.com/img/blog/lead-vs-inspire.webp" alt="Lead vs Inspire" style="max-width: 100%; height: auto;" />
       </div>
       
+      <div id="blog-active-listening-skills" style="display:none;">
+        <h2>The Art of Active Listening</h2>
+        <p>Discover how active listening can transform your relationships and leadership capabilities.</p>
+        <div>
+          <p>In a world where everyone is talking, few are truly listening. We've all been there – nodding along in a conversation while our mind wanders elsewhere.</p>
+          <p>Active listening goes beyond just hearing words. It's a conscious effort to understand, interpret, and respond thoughtfully to what someone is saying.</p>
+          <p>As leaders, our ability to truly hear others can make or break our effectiveness. When team members feel heard, they feel valued.</p>
+          <p>For the next week, try to catch yourself when your mind wanders during conversations. Gently bring your attention back to the speaker.</p>
+        </div>
+        <img src="https://francoisdomain.com/img/blog/licence-to-lead.webp" alt="Active Listening Skills" style="max-width: 100%; height: auto;" />
+      </div>
+      
       <script>
         // Dynamically show content based on URL path
         (function() {
@@ -202,6 +275,8 @@
             document.getElementById('blog-everyone-is-a-leader').style.display = 'block';
           } else if (path.includes('blog/lead-vs-inspire')) {
             document.getElementById('blog-lead-vs-inspire').style.display = 'block';
+          } else if (path.includes('blog/active-listening-skills')) {
+            document.getElementById('blog-active-listening-skills').style.display = 'block';
           }
         })();
       </script>
