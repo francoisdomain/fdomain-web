@@ -28,9 +28,6 @@ export const SEO = ({
   const defaultDescription = "Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.";
   const siteUrl = "https://francoisdomain.com";
   const location = useLocation();
-  
-  // Hard-coded prerender token
-  const PRERENDER_TOKEN = "zm44BapHnc8wwTilOwM4";
 
   // Send pageview to Google Analytics
   useEffect(() => {
@@ -46,27 +43,9 @@ export const SEO = ({
     }
     
     // Signal to prerender.io that the page is fully loaded
-    // This function uses the prerenderReady flag that prerender.io looks for
-    const signalPrerenderComplete = () => {
-      if (typeof window !== 'undefined') {
-        window.prerenderReady = true;
-        
-        // Add prerender token to meta tags dynamically
-        if (PRERENDER_TOKEN && !document.querySelector('meta[name="prerender-token"]')) {
-          const tokenMeta = document.createElement('meta');
-          tokenMeta.name = 'prerender-token';
-          tokenMeta.content = PRERENDER_TOKEN;
-          document.head.appendChild(tokenMeta);
-        }
-      }
-    };
-    
-    // Signal prerender completion after a short delay to ensure content is loaded
-    const timer = setTimeout(signalPrerenderComplete, 500);
-    
-    return () => {
-      clearTimeout(timer);
-    };
+    if (typeof window !== 'undefined' && typeof window.prerenderReady !== 'undefined') {
+      window.prerenderReady = true;
+    }
   }, [location.pathname, location.search]);
 
   const currentPath = pathname || location.pathname;
@@ -136,9 +115,6 @@ export const SEO = ({
       {/* Enhanced prerender.io support */}
       <meta name="fragment" content="!" />
       <meta name="prerender-status-code" content="200" />
-      
-      {/* Prerender token meta tag */}
-      <meta name="prerender-token" content={PRERENDER_TOKEN} />
 
       {/* Facebook/Open Graph Meta Tags */}
       <meta property="og:site_name" content="François Domain" />
@@ -200,3 +176,12 @@ export const SEO = ({
     </Helmet>
   )
 };
+
+// Declare window.prerenderReady for TypeScript
+declare global {
+  interface Window {
+    prerenderReady?: boolean;
+    gtag?: (...args: any[]) => void;
+    fbq?: (...args: any[]) => void;
+  }
+}
