@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { blogArticles } from "@/data/blogArticles";
 
 const NotFound = () => {
   const location = useLocation();
@@ -16,6 +17,17 @@ const NotFound = () => {
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
+
+    // Check if this is a blog article URL and handle specially
+    const blogMatch = location.pathname.match(/\/blog\/(.+)/);
+    if (blogMatch) {
+      const slug = blogMatch[1];
+      if (blogArticles[slug]) {
+        // This is a valid blog article, redirect to blog detail page
+        navigate(`/blog/${slug}`);
+        return;
+      }
+    }
 
     const timer = setInterval(() => {
       setCountdown((prev) => prev - 1);
