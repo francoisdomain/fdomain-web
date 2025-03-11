@@ -80,51 +80,19 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
   },
   "active-listening-skills": {
     id: 3,
-    title: "The Art of Active Listening: Why It Matters More Than You Think",
+    title: "How good are your soft skills #1: Active Listening",
     slug: "active-listening-skills",
-    summary: "Discover how active listening can transform your relationships and leadership capabilities.",
-    body: `
-# The Art of Active Listening: Why It Matters More Than You Think
+    summary: "Soft skills can transform your relationships and leadership capabilities.",
+    body: `How good are your soft skills? 
+    Let’s find out!
+    
+    We’re kicking off a 7-part series about **Soft Skills**, which are far too often overlooked and underrated compared to hard skills. 
+    However, especially if you are—or wish to be–in a leadership position, soft skills can make a massive difference between *good* and *great* team culture. 
 
-In a world where everyone is talking, few are truly listening. We've all been there – nodding along in a conversation while our mind wanders elsewhere. But what if I told you that mastering the art of active listening could be your secret superpower?
+    Rest assured, **no lecture**, here (especially if you're not a good listener!) but a fun and quick quiz to assess where you are with your Active Listening.
 
-## What Is Active Listening?
-
-Active listening goes beyond just hearing words. It's a conscious effort to understand, interpret, and respond thoughtfully to what someone is saying. It means being fully present and engaged with the speaker, rather than just waiting for your turn to talk.
-
-## Why Active Listening Matters in Leadership
-
-As leaders, our ability to truly hear others can make or break our effectiveness. When team members feel heard, they feel valued. This builds trust, encourages open communication, and fosters a collaborative environment where ideas can flourish.
-
-Think about the best leader you've ever had. Chances are, they made you feel seen and heard. They asked questions, sought your input, and made you feel that your voice mattered. That's the power of active listening in action.
-
-## The Cost of Not Listening
-
-Poor listening skills can lead to:
-- Miscommunication and errors
-- Damaged relationships
-- Missed opportunities and insights
-- Decreased team morale
-- Ineffective problem-solving
-
-## How to Become a Better Listener
-
-1. **Give your full attention** – Put away distractions and focus on the speaker.
-2. **Show that you're listening** – Use non-verbal cues like nodding, eye contact, and appropriate facial expressions.
-3. **Ask clarifying questions** – This shows you're engaged and helps ensure understanding.
-4. **Resist the urge to interrupt** – Let people finish their thoughts before responding.
-5. **Reflect and paraphrase** – Summarize what you've heard to confirm understanding.
-
-## A Challenge for You
-
-For the next week, try to catch yourself when your mind wanders during conversations. Gently bring your attention back to the speaker. Notice how this small shift impacts your interactions and relationships.
-
-And if you're curious about where you stand in your listening journey, take the quiz below to assess your current listening skills!
-
-## Test Your Listening Skills
-
-Take our quiz below to see how you rate as an active listener. Be honest with yourself – this is the first step toward improvement!
-    `,
+    Ready to find out? 
+`,
     imageUrl: "/img/blog/licence-to-lead.webp",
     publishedDate: "2025-03-20",
     hasQuiz: true,
