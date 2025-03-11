@@ -18,29 +18,30 @@ export const QuizResults: React.FC<QuizResultsProps> = ({ results, score, onRese
   ) || results[0];
 
   return (
-    <div className="p-6 text-center">
+    <div className="p-6">
       <div className="mb-6 flex justify-center">
         <div className="bg-primary/10 rounded-full p-4">
           <Trophy className="h-12 w-12 text-primary" />
         </div>
       </div>
       
-      <h2 className="text-2xl font-serif font-medium mb-3">Your Score: {score} points</h2>
-      <h3 className="text-xl font-medium mb-4">{result.title}</h3>
+      <h2 className="text-2xl font-serif font-medium mb-3 text-center">Your Score: {score} points</h2>
+      <h3 className="text-xl font-medium mb-4 text-center">{result.title}</h3>
       
-      <div className="text-warm-gray-600 mb-8 prose prose-sm max-w-none mx-auto">
+      <div className="text-warm-gray-600 mb-8 prose prose-sm max-w-none">
         <ReactMarkdown>
           {result.description}
         </ReactMarkdown>
       </div>
       
-      <Button 
-        onClick={onReset}
-        className="mx-auto"
-      >
-        <RefreshCw className="mr-2 h-4 w-4" />
-        Take Quiz Again
-      </Button>
+      <div className="flex justify-center">
+        <Button 
+          onClick={onReset}
+        >
+          <RefreshCw className="mr-2 h-4 w-4" />
+          Take Quiz Again
+        </Button>
+      </div>
     </div>
   );
 };
