@@ -85,7 +85,7 @@ As inspiration can’t be faked or forced upon anyone, there’s only one way to
     summary: "Soft skills can transform your relationships and leadership capabilities.",
     body: `How good are your soft skills? 
     Let’s find out!`,
-    imageUrl: "/img/blog/licence-to-lead.webp",
+    imageUrl: "img/blog/good-listener.webp",
     publishedDate: "2025-03-20",
     hasQuiz: true,
     quizId: "active-listening-quiz"
