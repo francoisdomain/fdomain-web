@@ -3,6 +3,7 @@ import React from 'react';
 import { Result } from '@/types/quiz';
 import { Button } from '@/components/ui/button';
 import { Trophy, RefreshCw } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface QuizResultsProps {
   results: Result[];
@@ -27,9 +28,11 @@ export const QuizResults: React.FC<QuizResultsProps> = ({ results, score, onRese
       <h2 className="text-2xl font-serif font-medium mb-3">Your Score: {score} points</h2>
       <h3 className="text-xl font-medium mb-4">{result.title}</h3>
       
-      <p className="text-warm-gray-600 mb-8">
-        {result.description}
-      </p>
+      <div className="text-warm-gray-600 mb-8 prose prose-sm max-w-none mx-auto">
+        <ReactMarkdown>
+          {result.description}
+        </ReactMarkdown>
+      </div>
       
       <Button 
         onClick={onReset}
