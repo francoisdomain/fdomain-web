@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import ReactMarkdown from 'react-markdown';
+import { QuizContainer } from "@/components/Quiz/QuizContainer";
+import { activeListeningQuiz } from "@/data/activeListeningQuiz";
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -17,6 +19,11 @@ const BlogDetail = () => {
   if (!article) {
     return <Navigate to="/blog" replace />;
   }
+
+  // Get the quiz data if the article has a quiz
+  const quizData = article.hasQuiz && article.quizId === "active-listening-quiz" 
+    ? activeListeningQuiz 
+    : null;
 
   // Format the published date
   const formattedDate = format(parseISO(article.publishedDate), 'MMMM d, yyyy');
@@ -106,11 +113,17 @@ const BlogDetail = () => {
                   </div>
                 </header>
                 
-                <div className="prose prose-lg max-w-none"  style={{ whiteSpace: 'pre-line' }}>
+                <div className="prose prose-lg max-w-none" style={{ whiteSpace: 'pre-line' }}>
                   <ReactMarkdown>
                     {article.body}
                   </ReactMarkdown>
                 </div>
+                
+                {quizData && (
+                  <div className="mt-12 mb-8">
+                    <QuizContainer quizData={quizData} />
+                  </div>
+                )}
               </div>
             </article>
             

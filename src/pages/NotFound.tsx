@@ -38,6 +38,9 @@ const NotFound = () => {
         description="Sorry, the page you are looking for does not exist. You will be redirected to the homepage."
         pathname={location.pathname}
       />
+      {/* Add prerender.io token */}
+      <meta name="prerender-token" content="zm44BapHnc8wwTilOwM4" />
+      
       <Navigation />
       
       <div className="container mx-auto px-4 pt-32 pb-16">
