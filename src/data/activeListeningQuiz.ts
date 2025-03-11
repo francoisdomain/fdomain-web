@@ -154,7 +154,7 @@ export const activeListeningQuiz: QuizData = {
         - Ask at least one **follow-up question** in every conversation to show you’re invested.
         
         **Small changes will make a huge difference!**
-        `
+      `
     },
     {
       minScore: 9,
