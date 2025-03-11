@@ -29,7 +29,7 @@ export const QuizResults: React.FC<QuizResultsProps> = ({ results, score, onRese
       <h3 className="text-xl font-medium mb-4">{result.title}</h3>
       
       <div className="text-left">
-        <div>
+        <div className="prose prose-sm max-w-none" style={{ whiteSpace: 'pre-line' }}>
           <ReactMarkdown>
             {result.description}
           </ReactMarkdown>
