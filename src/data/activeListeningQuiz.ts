@@ -143,62 +143,65 @@ export const activeListeningQuiz: QuizData = {
       maxScore: 8,
       title: `Oops! Hearing, Not Listening. 🚨`,
       description: 
-        `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
-        
-        **How to improve?**
-        `
-      
+`You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
+
+**How to improve?**
+
+- **Put away distractions** during conversations—silence your phone and close unrelated tabs.
+- **Make eye contact** and use affirming nods to stay engaged.
+- **Ask follow-up questions** to get deeper into the conversation.
+- Practice **repeating back** key points to ensure understanding.
+- **Set a mental timer** to check your focus every minute or so during important conversations.
+
+Remember, good listening is a skill that requires practice. Start small with one focused conversation daily!`
     },
     {
       minScore: 9,
       maxScore: 12,
       title: `Selective Listener 😬`,
-      description: `
-      You hear words, but are you **really listening**? You might get the gist of what people say, but you’re more focused on what you’ll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
-      
-      **How to Improve:**
-      
-      - **Pause** before responding—let the other person’s words sink in before jumping in with a reply.
-      - **Paraphrase occasionally** to confirm understanding (e.g., *Just to make sure I got this right, you’re saying…*).
-      - **Resist the urge to interrupt**—even if you think you know where they’re going, let them finish.
-      - Be **genuinely curious**—shift from *How will I respond?* to *What can I learn from this?*
-      
-      Being **fully present** will make people feel heard—and you’ll avoid misunderstandings!
-      `
+      description: 
+`You hear words, but are you **really listening**? You might get the gist of what people say, but you're more focused on what you'll say next than truly understanding. This can lead to **rushed responses, assumptions, or missing key details**.
+
+**How to Improve:**
+
+- **Pause** before responding—let the other person's words sink in before jumping in with a reply.
+- **Paraphrase occasionally** to confirm understanding (e.g., *Just to make sure I got this right, you're saying…*).
+- **Resist the urge to interrupt**—even if you think you know where they're going, let them finish.
+- Be **genuinely curious**—shift from *How will I respond?* to *What can I learn from this?*
+
+Being **fully present** will make people feel heard—and you'll avoid misunderstandings!`
     },
     {
       minScore: 13,
       maxScore: 16,
       title: `Good Listener, But… 🤔`,
-      description: `
-      You’re engaged in conversations, but sometimes your focus drifts—especially when you’re eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
-      
-      **How to Improve:**
-      
-      - Ask **open-ended questions** to deepen discussions (e.g., *Can you tell me more about that?*).
-      - **Mirror emotions**—if they’re frustrated, acknowledge it (*I can see why that’s frustrating*).
-      - **Resist solution mode** too quickly—sometimes, people just need to be heard before jumping into fixes.
-      - **Take notes** during key meetings to keep focus and retention high.
-      
-      You’re close to mastering active listening—just a little more **fine-tuning** will take you to the **next level**!
-      `
+      description: 
+`You're engaged in conversations, but sometimes your focus drifts—especially when you're eager to share your own thoughts. While you generally listen well, you could be even better at making people feel truly understood.
+
+**How to Improve:**
+
+- Ask **open-ended questions** to deepen discussions (e.g., *Can you tell me more about that?*).
+- **Mirror emotions**—if they're frustrated, acknowledge it (*I can see why that's frustrating*).
+- **Resist solution mode** too quickly—sometimes, people just need to be heard before jumping into fixes.
+- **Take notes** during key meetings to keep focus and retention high.
+
+You're close to mastering active listening—just a little more **fine-tuning** will take you to the **next level**!`
     },
     {
       minScore: 17,
       maxScore: 20,
       title: `Active Listening Pro! 🏆`,
-      description: `
-      **You’re a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
-      
-      **How to Stay Sharp:**
-      
-      - **Keep practicing** active listening techniques, even when you’re tired or distracted.
-      - **Adapt** your listening style—some people need advice, others just need to vent. Recognizing the difference makes you an even better communicator.
-      - **Teach others**—help your team improve their listening skills by setting the example.
-      - Use **silence as a tool**—sometimes, the best response is just a thoughtful pause.
-      
-      Your ability to truly listen will **set you apart as a leader, mentor, and trusted colleague**!
-      `
+      description: 
+`**You're a conversation MVP**! People love talking to you because you make them feel heard and valued. You engage, respond thoughtfully, and ask great questions. This helps you build stronger relationships, solve problems faster, and earn trust.
+
+**How to Stay Sharp:**
+
+- **Keep practicing** active listening techniques, even when you're tired or distracted.
+- **Adapt** your listening style—some people need advice, others just need to vent. Recognizing the difference makes you an even better communicator.
+- **Teach others**—help your team improve their listening skills by setting the example.
+- Use **silence as a tool**—sometimes, the best response is just a thoughtful pause.
+
+Your ability to truly listen will **set you apart as a leader, mentor, and trusted colleague**!`
     }
   ]
 };

@@ -90,15 +90,28 @@ export default {
           css: {
             maxWidth: '100%',
             color: 'var(--foreground)',
+            p: {
+              marginTop: '1em',
+              marginBottom: '1em',
+              fontFamily: 'var(--font-sans, Inter, sans-serif)',
+            },
+            strong: {
+              fontWeight: '600',
+              color: 'var(--foreground)',
+            },
             a: {
               color: 'var(--primary)',
               '&:hover': {
                 color: 'var(--primary-foreground)',
               },
             },
-            strong: {
-              fontWeight: '600',
-              color: 'var(--foreground)',
+            ul: {
+              marginTop: '1em',
+              marginBottom: '1em',
+            },
+            li: {
+              marginTop: '0.5em',
+              marginBottom: '0.5em',
             },
           },
         },
