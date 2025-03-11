@@ -143,7 +143,11 @@ export const activeListeningQuiz: QuizData = {
       maxScore: 8,
       title: `Oops! Hearing, Not Listening. 🚨`,
       description: 
-        `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.`
+        `You might be **physically present** in conversations, but your mind is often elsewhere—scrolling, zoning out, or just waiting for the other person to stop talking. This can lead to **misunderstandings, missed details, and frustrated colleagues** who feel unheard.
+        
+         **How to Improve:**
+        
+        `
       
     },
     {
