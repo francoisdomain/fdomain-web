@@ -30,9 +30,7 @@ export const QuizResults: React.FC<QuizResultsProps> = ({ results, score, onRese
       
       <div className="text-left">
         <div className="prose prose-sm max-w-none">
-          // <ReactMarkdown>
             {result.description}
-          // </ReactMarkdown>
         </div>
       </div>
       
