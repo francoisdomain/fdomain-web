@@ -44,10 +44,10 @@
 
 @layer utilities {
   .text-indent-8 {
-    text-indent: 2rem;
+    text-indent: 2rem !important;
   }
   .text-indent-0 {
-    text-indent: 0;
+    text-indent: 0 !important;
   }
 }
 

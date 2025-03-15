@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -27,7 +26,7 @@ const BookDetail = () => {
     };
     checkWebP();
   }, []);
-
+  
   if (!book) {
     return <Navigate to="/books" replace />;
   }
@@ -191,9 +190,13 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <div className="text-warm-gray-800 leading-relaxed whitespace-pre-line">
+                    <div className="text-warm-gray-800 leading-relaxed">
                       {book.prologue[locale].split('\n\n').map((paragraph, index) => (
-                        <p key={index} className={index === 0 ? "text-indent-0" : "text-indent-8"}>
+                        <p 
+                          key={index} 
+                          style={index === 0 ? {} : { textIndent: '2rem' }}
+                          className={index === 0 ? "" : "mt-4"}
+                        >
                           {paragraph}
                         </p>
                       ))}
