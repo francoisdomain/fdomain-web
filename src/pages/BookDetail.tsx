@@ -121,7 +121,7 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
-                          fetchpriority="high"
+                          fetchPriority="high"
                         />
                       </picture>
                     </>
