@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -120,7 +121,6 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
-                          fetchPriority="high"
                         />
                       </picture>
                     </>
@@ -191,9 +191,13 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line [&>*:first-child]:text-indent-0 [&>*]:text-indent-8">
-                      {book.prologue[locale]}
-                    </p>
+                    <div className="text-warm-gray-800 leading-relaxed whitespace-pre-line">
+                      {book.prologue[locale].split('\n\n').map((paragraph, index) => (
+                        <p key={index} className={index === 0 ? "text-indent-0" : "text-indent-8"}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
                   </blockquote>
                 </div>
               </div>
