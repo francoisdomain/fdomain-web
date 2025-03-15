@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -120,7 +121,7 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
-                          fetchPriority="high"
+                          fetchpriority="high"
                         />
                       </picture>
                     </>

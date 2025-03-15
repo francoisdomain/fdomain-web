@@ -31,17 +31,33 @@ export const SEO = ({
 
   // Send pageview to Google Analytics
   useEffect(() => {
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('config', 'G-GM51NBVRBW', {
-        page_path: location.pathname + location.search
-      });
-    }
+    // Use a small delay to ensure proper initialization
+    const sendPageView = () => {
+      const currentPath = location.pathname + location.search;
+      
+      // Log what we're sending to help debug
+      console.log("GA4 Sending pageview for:", currentPath);
+      
+      // Send to Google Analytics 4
+      if (typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'page_view', {
+          page_title: title || defaultTitle,
+          page_location: window.location.href,
+          page_path: currentPath,
+        });
+      }
+      
+      // Also track for Facebook Pixel
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('track', 'PageView');
+      }
+    };
+
+    // Add a small timeout to ensure all page data is loaded
+    const timeoutId = setTimeout(sendPageView, 10);
     
-    // Also track for Facebook Pixel
-    if (typeof window.fbq !== 'undefined') {
-      window.fbq('track', 'PageView');
-    }
-  }, [location.pathname, location.search]);
+    return () => clearTimeout(timeoutId);
+  }, [location.pathname, location.search, title]);
 
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
@@ -121,3 +137,4 @@ export const SEO = ({
     </Helmet>
   )
 };
+
