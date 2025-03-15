@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +13,8 @@
     var l = window.location;
     var url = l.pathname;
     
-    // Detect if accessing a blog post URL
-    var isBlogPost = url.includes('/blog/');
-    
     // Check if this is a crawler/bot
-    var isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    var isBot = /bot|googlebot|crawler|spider|robot|crawling|facebook|twitter|linkedin|social/i.test(navigator.userAgent);
     
     // Regular redirect for non-bot users
     if (!isBot) {
@@ -30,13 +26,267 @@
         l.hash
       );
     } else {
-      // For bots, we'll redirect to the index page
-      window.location.href = '/';
+      // For bots, we'll load the appropriate metadata based on the URL
+      // but keep them on this page
+      console.log("Bot detected, serving appropriate metadata");
+    }
+
+    // Function to add book metadata to the page for crawlers
+    function addBookMetadata(bookSlug) {
+      // Books data (simplified version of what's in books.ts)
+      const booksData = {
+        "above-the-waterline": {
+          title: {
+            EN: "Above the Waterline",
+            FR: "Au-dessus de la ligne de flottaison"
+          },
+          tagline: {
+            EN: "A poignant exploration of human connection in a fractured world.",
+            FR: "Une exploration poignante des relations humaines dans un monde fracturé."
+          },
+          coverImage: {
+            EN: "/img/Above_2025_cover.webp",
+            FR: "/img/Above_2025_cover.webp"
+          }
+        },
+        "close-enough": {
+          title: {
+            EN: "Close Enough",
+            FR: "Presque vrai"
+          },
+          tagline: {
+            EN: "Where truth and fiction collide in unexpected ways.",
+            FR: "Quand la vérité et la fiction se rencontrent de façon inattendue."
+          },
+          coverImage: {
+            EN: "/img/CloseEnough_2025_cover.webp",
+            FR: "/img/PresqueVrai_2025_cover.webp"
+          }
+        },
+        "la-glissade": {
+          title: {
+            EN: "La Glissade",
+            FR: "La Glissade"
+          },
+          tagline: {
+            EN: "A compelling tale of loss and redemption set against the backdrop of rural Quebec.",
+            FR: "Un récit captivant de perte et de rédemption dans le Québec rural."
+          },
+          coverImage: {
+            EN: "/img/LaGlissade_Cover.webp",
+            FR: "/img/LaGlissade_Cover.webp"
+          }
+        }
+      };
+
+      // Default to English if the book exists
+      const lang = "EN";
+      const book = booksData[bookSlug];
+      
+      if (book) {
+        document.title = book.title[lang] + " | François Domain - Author";
+        
+        // Add meta tags
+        var meta = document.createElement('meta');
+        meta.name = "description";
+        meta.content = book.tagline[lang];
+        document.head.appendChild(meta);
+        
+        // OG tags
+        var ogTitle = document.createElement('meta');
+        ogTitle.property = "og:title";
+        ogTitle.content = book.title[lang] + " | François Domain - Author";
+        document.head.appendChild(ogTitle);
+        
+        var ogDesc = document.createElement('meta');
+        ogDesc.property = "og:description";
+        ogDesc.content = book.tagline[lang];
+        document.head.appendChild(ogDesc);
+        
+        var ogImage = document.createElement('meta');
+        ogImage.property = "og:image";
+        ogImage.content = "https://francoisdomain.com" + book.coverImage[lang];
+        document.head.appendChild(ogImage);
+        
+        var ogUrl = document.createElement('meta');
+        ogUrl.property = "og:url";
+        ogUrl.content = "https://francoisdomain.com/books/" + bookSlug;
+        document.head.appendChild(ogUrl);
+        
+        var ogType = document.createElement('meta');
+        ogType.property = "og:type";
+        ogType.content = "book";
+        document.head.appendChild(ogType);
+        
+        // Twitter tags
+        var twitterCard = document.createElement('meta');
+        twitterCard.name = "twitter:card";
+        twitterCard.content = "summary_large_image";
+        document.head.appendChild(twitterCard);
+        
+        var twitterTitle = document.createElement('meta');
+        twitterTitle.name = "twitter:title";
+        twitterTitle.content = book.title[lang] + " | François Domain - Author";
+        document.head.appendChild(twitterTitle);
+        
+        var twitterDesc = document.createElement('meta');
+        twitterDesc.name = "twitter:description";
+        twitterDesc.content = book.tagline[lang];
+        document.head.appendChild(twitterDesc);
+        
+        var twitterImage = document.createElement('meta');
+        twitterImage.name = "twitter:image";
+        twitterImage.content = "https://francoisdomain.com" + book.coverImage[lang];
+        document.head.appendChild(twitterImage);
+        
+        // Add canonical URL
+        var link = document.createElement('link');
+        link.rel = "canonical";
+        link.href = "https://francoisdomain.com/books/" + bookSlug;
+        document.head.appendChild(link);
+        
+        // Update the content of the body
+        document.getElementById('title').textContent = book.title[lang];
+        document.getElementById('description').textContent = book.tagline[lang];
+        document.getElementById('image').src = book.coverImage[lang];
+        document.getElementById('link').href = "/books/" + bookSlug;
+      }
+    }
+    
+    // Function to add blog article metadata
+    function addBlogMetadata(blogSlug) {
+      // Blog data (simplified version of blogArticles.ts)
+      const blogData = {
+        "everyone-is-a-leader": {
+          title: "Everyone is a Leader",
+          summary: "Leadership is not something you learn ; it's something you stumble across.",
+          imageUrl: "/img/blog/EveryoneLeader.webp"
+        },
+        "lead-vs-inspire": {
+          title: "Can you lead without inspiring?",
+          summary: "You can inspire without leading - but can you lead without inspiring?",
+          imageUrl: "/img/blog/lead-vs-inspire.webp"
+        },
+        "licence-to-lead": {
+          title: "You don't need persmission to lead.",
+          summary: "You don't need permission to make a difference.",
+          imageUrl: "/img/blog/licence-to-lead.webp"
+        }
+      };
+      
+      const article = blogData[blogSlug];
+      
+      if (article) {
+        document.title = article.title + " | François Domain - Author";
+        
+        // Add meta tags
+        var meta = document.createElement('meta');
+        meta.name = "description";
+        meta.content = article.summary;
+        document.head.appendChild(meta);
+        
+        // OG tags
+        var ogTitle = document.createElement('meta');
+        ogTitle.property = "og:title";
+        ogTitle.content = article.title + " | François Domain - Author";
+        document.head.appendChild(ogTitle);
+        
+        var ogDesc = document.createElement('meta');
+        ogDesc.property = "og:description";
+        ogDesc.content = article.summary;
+        document.head.appendChild(ogDesc);
+        
+        var ogImage = document.createElement('meta');
+        ogImage.property = "og:image";
+        ogImage.content = "https://francoisdomain.com" + article.imageUrl;
+        document.head.appendChild(ogImage);
+        
+        var ogUrl = document.createElement('meta');
+        ogUrl.property = "og:url";
+        ogUrl.content = "https://francoisdomain.com/blog/" + blogSlug;
+        document.head.appendChild(ogUrl);
+        
+        var ogType = document.createElement('meta');
+        ogType.property = "og:type";
+        ogType.content = "article";
+        document.head.appendChild(ogType);
+        
+        // Twitter tags
+        var twitterCard = document.createElement('meta');
+        twitterCard.name = "twitter:card";
+        twitterCard.content = "summary_large_image";
+        document.head.appendChild(twitterCard);
+        
+        var twitterTitle = document.createElement('meta');
+        twitterTitle.name = "twitter:title";
+        twitterTitle.content = article.title + " | François Domain - Author";
+        document.head.appendChild(twitterTitle);
+        
+        var twitterDesc = document.createElement('meta');
+        twitterDesc.name = "twitter:description";
+        twitterDesc.content = article.summary;
+        document.head.appendChild(twitterDesc);
+        
+        var twitterImage = document.createElement('meta');
+        twitterImage.name = "twitter:image";
+        twitterImage.content = "https://francoisdomain.com" + article.imageUrl;
+        document.head.appendChild(twitterImage);
+        
+        // Add canonical URL
+        var link = document.createElement('link');
+        link.rel = "canonical";
+        link.href = "https://francoisdomain.com/blog/" + blogSlug;
+        document.head.appendChild(link);
+        
+        // Update the content of the body
+        document.getElementById('title').textContent = article.title;
+        document.getElementById('description').textContent = article.summary;
+        document.getElementById('image').src = article.imageUrl;
+        document.getElementById('link').href = "/blog/" + blogSlug;
+      }
+    }
+    
+    // Parse the URL to determine if it's a book or blog article
+    if (isBot) {
+      var pathParts = url.split('/').filter(Boolean);
+      
+      if (pathParts.length >= 2) {
+        var section = pathParts[0];
+        var slug = pathParts[1];
+        
+        if (section === 'books') {
+          addBookMetadata(slug);
+        } else if (section === 'blog') {
+          addBlogMetadata(slug);
+        }
+      }
     }
   </script>
+  
+  <!-- Default metadata for SEO -->
+  <meta name="description" content="Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.">
+  
+  <!-- Default Open Graph -->
+  <meta property="og:title" content="François Domain - Author">
+  <meta property="og:description" content="Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.">
+  <meta property="og:image" content="https://francoisdomain.com/og-image.png">
+  <meta property="og:url" content="https://francoisdomain.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Default Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="François Domain - Author">
+  <meta name="twitter:description" content="Discover the works of François Domain - contemporary fiction author exploring human connection through compelling storytelling.">
+  <meta name="twitter:image" content="https://francoisdomain.com/og-image.png">
 </head>
 <body>
-  <h1>Redirecting...</h1>
-  <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+  <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 40px; text-align: center; max-width: 600px; margin: 0 auto;">
+    <h1 id="title">Redirecting...</h1>
+    <p id="description">If you are not redirected automatically, follow this link:</p>
+    <div style="margin: 20px 0;">
+      <img id="image" src="/og-image.png" alt="François Domain" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </div>
+    <a id="link" href="/" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Go to homepage</a>
+  </div>
 </body>
 </html>
