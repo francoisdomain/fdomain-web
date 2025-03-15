@@ -29,6 +29,24 @@ jobs:
         run: npm run build
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
         run: touch ./dist/.nojekyll
+      - name: Create blog directories for SEO
+        run: |
+          mkdir -p ./dist/blog
+          mkdir -p ./dist/blog/active-listening-skills
+          mkdir -p ./dist/blog/license-to-lead
+          mkdir -p ./dist/blog/lead-vs-inspire
+          mkdir -p ./dist/blog/everyone-leader
+      - name: Create blog HTML files for SEO
+        run: |
+          cp ./dist/index.html ./dist/blog/index.html
+          cp ./dist/index.html ./dist/blog/active-listening-skills/index.html
+          cp ./dist/index.html ./dist/blog/license-to-lead/index.html
+          cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
+          cp ./dist/index.html ./dist/blog/everyone-leader/index.html
+      - name: Make sure blog images are copied
+        run: |
+          mkdir -p ./dist/img/blog
+          cp -r ./public/img/blog/* ./dist/img/blog/ || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
