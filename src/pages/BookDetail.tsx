@@ -26,7 +26,7 @@ const BookDetail = () => {
     };
     checkWebP();
   }, []);
-  
+
   if (!book) {
     return <Navigate to="/books" replace />;
   }
@@ -120,6 +120,7 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
+                          fetchPriority="high"
                         />
                       </picture>
                     </>
@@ -190,20 +191,9 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <div className="text-warm-gray-800 leading-relaxed">
-                      {book.prologue[locale].split('\n\n').map((paragraph, index) => (
-                        <p 
-                          key={index} 
-                          className="mb-6"
-                          style={{
-                            textIndent: index === 0 ? '0' : '2rem',
-                            display: 'block'
-                          }}
-                        >
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
+                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line [&>*:first-child]:text-indent-0 [&>*]:text-indent-8">
+                      {book.prologue[locale]}
+                    </p>
                   </blockquote>
                 </div>
               </div>
