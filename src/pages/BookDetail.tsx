@@ -194,8 +194,11 @@ const BookDetail = () => {
                       {book.prologue[locale].split('\n\n').map((paragraph, index) => (
                         <p 
                           key={index} 
-                          style={index === 0 ? {} : { textIndent: '2rem' }}
-                          className={index === 0 ? "" : "mt-4"}
+                          className="mb-6"
+                          style={{
+                            textIndent: index === 0 ? '0' : '2rem',
+                            display: 'block'
+                          }}
                         >
                           {paragraph}
                         </p>

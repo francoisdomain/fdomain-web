@@ -49,6 +49,15 @@
   .text-indent-0 {
     text-indent: 0 !important;
   }
+  
+  .prologue-paragraph {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prologue-paragraph:not(:first-child) {
+    text-indent: 2rem;
+  }
 }
 
 .page-transition {
