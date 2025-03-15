@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -19,7 +18,6 @@ const BookDetail = () => {
   const book = slug ? books[slug] : null;
   
   useEffect(() => {
-    // Check WebP support
     const checkWebP = async () => {
       const webP = new Image();
       webP.src = 'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==';
@@ -36,14 +34,12 @@ const BookDetail = () => {
   const getOptimizedImageUrl = (url: string) => {
     if (!url) return '';
     
-    // Extract the base path without extension
     const basePath = url.replace(/\.[^/.]+$/, '');
     
     if (supportsWebP) {
       return `${basePath}.webp`;
     }
     
-    // Fallback to original format
     return url;
   };
 
@@ -100,7 +96,6 @@ const BookDetail = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <article className="grid md:grid-cols-2 gap-12">
-              {/* Book Cover */}
               <figure className="relative bg-cream-100 rounded-xl overflow-hidden shadow-xl">
                 <AspectRatio ratio={2/3} className="w-full">
                   {book.coverImage[locale] ? (
@@ -137,7 +132,6 @@ const BookDetail = () => {
                 </AspectRatio>
               </figure>
               
-              {/* Book Info */}
               <div>
                 <header>
                   <h1 className="text-4xl md:text-5xl font-serif font-medium mb-4">
@@ -189,7 +183,6 @@ const BookDetail = () => {
               </div>
             </article>
             
-            {/* Prologue Section */}
             <section className="mt-16 pt-16 border-t">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-serif font-medium mb-8 text-center">
@@ -198,7 +191,7 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line">
+                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line [&>*:first-child]:text-indent-0 [&>*]:text-indent-8">
                       {book.prologue[locale]}
                     </p>
                   </blockquote>

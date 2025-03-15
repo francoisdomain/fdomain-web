@@ -42,6 +42,15 @@
   }
 }
 
+@layer utilities {
+  .text-indent-8 {
+    text-indent: 2rem;
+  }
+  .text-indent-0 {
+    text-indent: 0;
+  }
+}
+
 .page-transition {
   @apply opacity-0;
   animation: fadeIn 0.5s ease-out forwards;
