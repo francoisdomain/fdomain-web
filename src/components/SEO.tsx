@@ -43,14 +43,11 @@ export const SEO = ({
     }
   }, [location.pathname, location.search]);
 
-  const currentPath = pathname || location.pathname;
-  
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
-    // Ensure image URLs are absolute
     image: image.startsWith("http") ? image : `${siteUrl}${image}`,
-    url: `${siteUrl}${currentPath}`,
+    url: `${siteUrl}${pathname || location.pathname}`,
   };
 
   // Default website schema
@@ -73,31 +70,6 @@ export const SEO = ({
       name: item.name,
       item: `${siteUrl}${item.item}`,
     })),
-  } : null;
-
-  // Article schema
-  const articleSchema = article ? {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: seo.title,
-    description: seo.description,
-    image: seo.image,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": seo.url
-    },
-    author: {
-      "@type": "Person",
-      name: "François Domain"
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "François Domain",
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/img/FD_LOGO small.png`
-      }
-    }
   } : null;
 
   return (
@@ -125,27 +97,12 @@ export const SEO = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      {/* LinkedIn specific - extra emphasis on the URL */}
-      <meta property="linkedin:owner" content="François Domain" />
-      <meta property="linkedin:title" content={seo.title} />
-      <meta property="linkedin:description" content={seo.description} />
-      <meta property="linkedin:image" content={seo.image} />
-
       {/* Language alternates */}
       <link rel="alternate" href={`${seo.url}`} hrefLang={locale.toLowerCase()} />
       <link rel="alternate" href={`${seo.url}`} hrefLang="x-default" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={seo.url} />
-
-      {/* Enhanced Prerender hints for crawlers */}
-      <meta name="fragment" content="!" />
-      <meta name="prerender-status-code" content="200" />
-      <meta name="renderer" content="webkit" />
-      <meta name="force-rendering" content="webkit" />
-      <meta name="crawlable" content="yes" />
-      <meta name="pinterest" content="nohover" />
-      <meta name="format-detection" content="telephone=no" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
@@ -154,11 +111,6 @@ export const SEO = ({
       {breadcrumbSchema && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
-        </script>
-      )}
-      {articleSchema && (
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
         </script>
       )}
       {jsonLd && (

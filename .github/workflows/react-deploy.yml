@@ -29,35 +29,6 @@ jobs:
         run: npm run build
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
         run: touch ./dist/.nojekyll
-      - name: Create static blog pages for SEO
-        run: |
-          mkdir -p ./dist/blog/everyone-is-a-leader
-          mkdir -p ./dist/blog/lead-vs-inspire
-          mkdir -p ./dist/blog/active-listening-skills
-          cp ./dist/index.html ./dist/blog/everyone-is-a-leader/index.html
-          cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
-          cp ./dist/index.html ./dist/blog/active-listening-skills/index.html
-          # Copy 404.html to each blog directory to ensure proper handling
-          cp ./dist/404.html ./dist/blog/everyone-is-a-leader/404.html
-          cp ./dist/404.html ./dist/blog/lead-vs-inspire/404.html
-          cp ./dist/404.html ./dist/blog/active-listening-skills/404.html
-          # Optional: Create symbolic links to images and assets to ensure relative paths work
-          mkdir -p ./dist/blog/everyone-is-a-leader/img/blog
-          mkdir -p ./dist/blog/lead-vs-inspire/img/blog
-          mkdir -p ./dist/blog/active-listening-skills/img/blog
-          cp ./dist/img/blog/EveryoneLeader.webp ./dist/blog/everyone-is-a-leader/img/blog/
-          cp ./dist/img/blog/lead-vs-inspire.webp ./dist/blog/lead-vs-inspire/img/blog/
-          cp ./dist/img/blog/good-listener.webp ./dist/blog/active-listening-skills/img/blog/
-      - name: Debug directory structure
-        run: |
-          echo "Contents of dist directory:"
-          ls -la ./dist
-          echo "Contents of blog directory:"
-          ls -la ./dist/blog
-          echo "Contents of blog/everyone-is-a-leader directory:"
-          ls -la ./dist/blog/everyone-is-a-leader
-          echo "Contents of blog/everyone-is-a-leader/img/blog directory:"
-          ls -la ./dist/blog/everyone-is-a-leader/img/blog 2>/dev/null || echo "Directory not found"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

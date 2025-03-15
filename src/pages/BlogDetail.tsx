@@ -8,37 +8,24 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import ReactMarkdown from 'react-markdown';
-import { QuizContainer } from "@/components/Quiz/QuizContainer";
-import { activeListeningQuiz } from "@/data/activeListeningQuiz";
 
 const BlogDetail = () => {
   const { slug } = useParams();
   const article = slug ? blogArticles[slug] : null;
-  const siteUrl = "https://francoisdomain.com";
   
   if (!article) {
     return <Navigate to="/blog" replace />;
   }
 
-  // Get the quiz data if the article has a quiz
-  const quizData = article.hasQuiz && article.quizId === "active-listening-quiz" 
-    ? activeListeningQuiz 
-    : null;
-
   // Format the published date
   const formattedDate = format(parseISO(article.publishedDate), 'MMMM d, yyyy');
-
-  // Ensure image URL is absolute
-  const absoluteImageUrl = article.imageUrl.startsWith('http') 
-    ? article.imageUrl 
-    : `${siteUrl}${article.imageUrl}`;
 
   // Create schema for SEO
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": article.title,
-    "image": absoluteImageUrl,
+    "image": article.imageUrl,
     "datePublished": article.publishedDate,
     "author": {
       "@type": "Person",
@@ -52,11 +39,7 @@ const BlogDetail = () => {
         "url": "https://francoisdomain.com/img/FD_LOGO small.png"
       }
     },
-    "description": article.summary,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `${siteUrl}/blog/${slug}`
-    }
+    "description": article.summary
   };
 
   const breadcrumbs = [
@@ -70,7 +53,7 @@ const BlogDetail = () => {
       <SEO 
         title={article.title}
         description={article.summary}
-        image={absoluteImageUrl}
+        image={article.imageUrl}
         article={true}
         pathname={`/blog/${slug}`}
         jsonLd={articleJsonLd}
@@ -95,7 +78,7 @@ const BlogDetail = () => {
             <article className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="h-[300px] md:h-[400px] w-full bg-cream-100 relative">
                 <img 
-                  src={absoluteImageUrl}
+                  src={article.imageUrl}
                   alt={article.title}
                   className="w-full h-full object-cover"
                 />
@@ -113,17 +96,11 @@ const BlogDetail = () => {
                   </div>
                 </header>
                 
-                <div className="prose prose-lg max-w-none" style={{ whiteSpace: 'pre-line' }}>
+                <div className="prose prose-lg max-w-none"  style={{ whiteSpace: 'pre-line' }}>
                   <ReactMarkdown>
                     {article.body}
                   </ReactMarkdown>
                 </div>
-                
-                {quizData && (
-                  <div className="mt-12 mb-8">
-                    <QuizContainer quizData={quizData} />
-                  </div>
-                )}
               </div>
             </article>
             

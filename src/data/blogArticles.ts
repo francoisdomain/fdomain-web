@@ -7,8 +7,6 @@ export interface BlogArticle {
   body: string;
   imageUrl: string;
   publishedDate: string;
-  hasQuiz?: boolean;
-  quizId?: string;
 }
 
 export const blogArticles: Record<string, BlogArticle> = {
@@ -49,68 +47,78 @@ Looking back at history, what did the great leaders of this world have in common
     slug: "lead-vs-inspire",
     summary: "You can inspire without leading - but can you lead without inspiring?",
     body: `
-🔥 And here comes the buzzword: **VISION**.
-
-No word has been more overused—or misunderstood. “I want to increase my bottom line by 40%” has very little to do with *Vision*—it’s merely an objective.
-
-The distinction is the same as *management* vs. *inspiration*.
-✅ A good manager will give you a target—and hopefully the tools to achieve it.
-✅ A leader will make you want to achieve it.
-And if money isn’t a long-term motivator, **inspiration** is.
-
-We often think of leadership and inspiration as interchangeable. They’re not.
-We can inspire someone—with words, actions, or ideas—without leading them anywhere. And that’s valuable It can change the way they think, the way they behave. But it doesn’t necessarily drive action.
-💡 **Leadership, however, is *impossible* without inspiration.**
-
-Leaders doesn’t just give instructions. They move people. Not with authority, but with meaning.
-👉 You can manage a team without inspiring them.
-👉 You can give orders without engagement.
-👉 You can enforce rules without belief.
-**But without inspiration, leadership is just administration.**
-
-And remember the saying:
-💡 “People don’t leave jobs—they leave managers.”
-
-🎭 *The same applies to storytelling. The most unforgettable characters aren’t the ones who control or command. They’re the ones who **make us feel** something.*
-So here’s a statement that isn’t as obvious as it sounds:
-As inspiration can’t be faked or forced upon anyone, there’s only one way to get it right:
-👉 **Inspire yourself before inspiring others.**`,
+    🔥 And here comes the buzzword: **VISION**.
+    
+    No word has been more overused—or misunderstood. “I want to increase my bottom line by 40%” has very little to do with *Vision*—it’s merely an objective.
+    
+    The distinction is the same as *management* vs. *inspiration*.
+    ✅ A good manager will give you a target—and hopefully the tools to achieve it.
+    ✅ A leader will make you want to achieve it.
+    
+    And if money isn’t a long-term motivator, **inspiration** is.
+    
+    We often think of leadership and inspiration as interchangeable. They’re not.
+    We can inspire someone—with words, actions, or ideas—without leading them anywhere. And that’s valuable. It can change the way they think, the way they behave. But it doesn’t necessarily drive action.
+    
+    💡 **Leadership, however, is *impossible* without inspiration.**
+    
+    Leaders doesn’t just give instructions. They move people. Not with authority, but with meaning.
+    👉 You can manage a team without inspiring them.
+    👉 You can give orders without engagement.
+    👉 You can enforce rules without belief.
+    **But without inspiration, leadership is just administration.**
+    
+    And remember the saying:
+    💡 “People don’t leave jobs—they leave managers.”
+    
+    🎭 *The same applies to storytelling. The most unforgettable characters aren’t the ones who control or command. They’re the ones who **make us feel** something.*
+    
+    So here’s a statement that isn’t as obvious as it sounds:
+    As inspiration can’t be faked or forced upon anyone, there’s only one way to get it right:
+    👉 **Inspire yourself before inspiring others.**
+    `,
     imageUrl: "/img/blog/lead-vs-inspire.webp",
     publishedDate: "2025-03-12"
   },
-  "active-listening-skills": {
+  "licence-to-lead": {
     id: 3,
-    title: "How Good Is Your Active Listening?",
-    slug: "active-listening-skills",
-    summary: "Soft skills can transform your relationships and leadership capabilities.",
-    body: `In a world where everyone is talking, few are truly listening. We've all been there – nodding along in a conversation while our mind wanders elsewhere.
-
-Active listening goes beyond just hearing words. It's a conscious effort to understand, interpret, and respond thoughtfully to what someone is saying.
-
-**Why Active Listening Matters:**
-
-1. It builds trust and rapport
-2. It prevents misunderstandings
-3. It shows respect and value for others
-4. It gives you more accurate information
-5. It helps you make better decisions
-
-As leaders, our ability to truly hear others can make or break our effectiveness. When team members feel heard, they feel valued.
-
-**How to Improve Your Active Listening:**
-
-- Focus fully on the speaker
-- Put aside distracting thoughts
-- Avoid interrupting
-- Ask clarifying questions
-- Provide feedback and summarize what you've heard
-
-For the next week, try to catch yourself when your mind wanders during conversations. Gently bring your attention back to the speaker.
-
-Take the quiz below to assess your current active listening skills and discover areas for improvement.`,
-    imageUrl: "/img/blog/good-listener.webp",
-    publishedDate: "2025-03-20",
-    hasQuiz: true,
-    quizId: "active-listening-quiz"
+    title: "You don't need persmission to lead.",
+    slug: "licence-to-lead",
+    summary: "You don’t need permission to make a difference.",
+    body: `🚀 “I’m not in charge.”
+    🚀 “I don’t have the experience.”
+    🚀 “I’m not a leader.”
+    
+    Nothing is more *frustrating* than seeing someone who **should take charge**—but doesn’t **because of a job title** or job description.
+    
+    As we mentioned in the first post of this series, taking the lead isn’t something you can do—it’s **something you *can’t not* do**.
+    
+    💡 Leadership isn’t a title. It’s a mindset.
+    
+    How would you prove to anyone—yourself first—that you have what it takes to lead if you never take the chance? Did you wait until you knew how to ride a bicycle before trying?
+    
+    My eureka moment was when I realised this:
+    
+    🔥 **If you feel the *urge* to step up, it’s because there’s *a void that needs filling*.**
+    
+    A great, inspiring leader makes you want to follow—not override them. So, if you’re feeling pulled toward taking charge in a specific situation, it’s because something is missing. Someone **has** to step forward.
+    
+    👉 So **stop holding back**. Forget about looking *arrogant, presumptuous, *or* bossy*. Forget the *impostor syndrome*.
+    It’s true for most things in life—but especially for leadership:
+    
+    💡 *If you feel like it, go for it.*
+    
+    🔥 **You don’t need permission to make a difference**.
+    
+    🎭 *The same is true in storytelling. The most compelling characters don’t wait for the crown—they take action when it matters.*
+    
+    👉 So, as yourself : are you waiting for permission? Or are you **already leading without realizing it?**
+    
+    💡 *Have you ever stepped up as a leader without really thinking about it? What happened?* Drop it in the comments! 👇
+`,
+    imageUrl: "/img/blog/licence-to-lead.webp",
+    publishedDate: "2025-03-19"
   }
+  
+  
 };

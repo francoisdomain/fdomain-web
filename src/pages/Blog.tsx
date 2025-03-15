@@ -10,7 +10,6 @@ import { format, parseISO } from "date-fns";
 
 const Blog = () => {
   const { locale } = useLanguage();
-  const siteUrl = "https://francoisdomain.com";
 
   // Convert blog articles object to array and sort by id descending
   const articlesList = Object.entries(blogArticles)
@@ -47,7 +46,7 @@ const Blog = () => {
               >
                 <div className="aspect-[16/9] bg-cream-100 overflow-hidden">
                   <img
-                    src={article.imageUrl.startsWith('http') ? article.imageUrl : `${siteUrl}${article.imageUrl}`}
+                    src={article.imageUrl}
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,25 +38,6 @@
           );
         }
       }(window.location))
-
-      // Enhanced SPA Routing Support
-      (function() {
-        var path = window.location.pathname;
-        // Only process if we're not at the root and not requesting a static file
-        if (path !== '/' && 
-            path !== '/index.html' && 
-            !path.match(/\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|json|xml)$/)) {
-          // If we're not using the hash already, we need to redirect
-          if (!window.location.hash) {
-            // Get the clean path without trailing slash
-            var cleanPath = path.replace(/\/$/, '');
-            // If the current URL has query parameters, maintain them
-            var queryString = window.location.search || '';
-            // Create a hash-based URL for the SPA router
-            history.replaceState(null, null, '/#' + cleanPath + queryString);
-          }
-        }
-      })();
     </script>
 
     <!-- Google Tag Manager -->
