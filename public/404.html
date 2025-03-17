@@ -16,8 +16,29 @@
     // Check if this is a crawler/bot
     var isBot = /bot|googlebot|crawler|spider|robot|crawling|facebook|twitter|linkedin|social/i.test(navigator.userAgent);
     
-    // Regular redirect for non-bot users
-    if (!isBot) {
+    // Parse the URL to determine if it's a book or blog article
+    var pathParts = url.split('/').filter(Boolean);
+    var redirectPath = null;
+    
+    if (pathParts.length >= 2) {
+      var section = pathParts[0];
+      var slug = pathParts[1];
+      
+      // For bots, redirect to the pre-rendered pages
+      if (isBot) {
+        if (section === 'books') {
+          redirectPath = '/books-pr/' + slug + '.html';
+        } else if (section === 'blog') {
+          redirectPath = '/blog-pr/' + slug + '.html';
+        }
+      }
+    }
+    
+    // If this is a bot and we have a pre-rendered page, redirect to it
+    if (isBot && redirectPath) {
+      window.location.replace(redirectPath);
+    } else if (!isBot) {
+      // Regular redirect for non-bot users
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
@@ -26,9 +47,8 @@
         l.hash
       );
     } else {
-      // For bots, we'll load the appropriate metadata based on the URL
-      // but keep them on this page
-      console.log("Bot detected, serving appropriate metadata");
+      // For bots, if we don't have a pre-rendered page, we'll show the generic SEO content
+      console.log("Bot detected, serving generic SEO content");
     }
 
     // Function to add book metadata to the page for crawlers
@@ -243,22 +263,6 @@
         document.getElementById('description').textContent = article.summary;
         document.getElementById('image').src = article.imageUrl;
         document.getElementById('link').href = "/blog/" + blogSlug;
-      }
-    }
-    
-    // Parse the URL to determine if it's a book or blog article
-    if (isBot) {
-      var pathParts = url.split('/').filter(Boolean);
-      
-      if (pathParts.length >= 2) {
-        var section = pathParts[0];
-        var slug = pathParts[1];
-        
-        if (section === 'books') {
-          addBookMetadata(slug);
-        } else if (section === 'blog') {
-          addBlogMetadata(slug);
-        }
       }
     }
   </script>

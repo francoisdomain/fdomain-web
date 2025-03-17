@@ -33,6 +33,20 @@ const NotFound = () => {
   let seoImage = "";
   let jsonLd = null;
   
+  // Check if this might be a crawler/bot
+  const isBot = typeof navigator !== 'undefined' && /bot|googlebot|crawler|spider|robot|crawling|facebook|twitter|linkedin|social/i.test(navigator.userAgent);
+  
+  // If it's a bot and looking for a book or blog page, suggest the pre-rendered version
+  useEffect(() => {
+    if (isBot) {
+      if (book && isBookPage) {
+        window.location.href = `/books-pr/${slug}.html`;
+      } else if (blogArticle && isBlogPage) {
+        window.location.href = `/blog-pr/${slug}.html`;
+      }
+    }
+  }, [isBot, book, blogArticle, isBookPage, isBlogPage, slug]);
+  
   if (book) {
     seoTitle = book.title[locale];
     seoDescription = book.tagline[locale];
