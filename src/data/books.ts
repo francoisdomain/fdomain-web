@@ -220,7 +220,7 @@ export const books: Record<string, BookData> = {
     amazonLinkText: {
       "en-US": "Preorder on Amazon",
       "en-UK": "Preorder on Amazon",
-      "fr-FR": "Nouvelle édition Juin 2025"
+      "fr-FR": "Nouvelle édition Avril 2025"
     },
     year: "2025",
     summary: {
@@ -390,7 +390,7 @@ export const books: Record<string, BookData> = {
       "en-UK": "978-1-0685758-1-5",
       "fr-FR": "978-1-0685758-3-9"
     },
-    pages: 324,
+    pages: 411,
     publisher: "François Domain",
     slug: "above-waterline"
   }
