@@ -121,7 +121,6 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
-                          fetchPriority="high"
                         />
                       </picture>
                     </>
@@ -159,8 +158,10 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <div className="text-warm-gray-800" style={{ whiteSpace: 'pre-line' }}>
-                    <ReactMarkdown>
+                  <div className="text-warm-gray-800">
+                    <ReactMarkdown components={{
+                      p: ({node, ...props}) => <p style={{whiteSpace: 'pre-line', marginBottom: '1rem'}} {...props} />
+                    }}>
                       {book.summary[locale]}
                     </ReactMarkdown>
                   </div>
@@ -196,9 +197,13 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <p className="text-warm-gray-800 leading-relaxed" style={{ whiteSpace: 'pre-line', textIndent: '0' }}>
-                      {book.prologue[locale]}
-                    </p>
+                    <div className="text-warm-gray-800 leading-relaxed">
+                      <ReactMarkdown components={{
+                        p: ({node, ...props}) => <p style={{whiteSpace: 'pre-line', textIndent: '0', marginBottom: '1rem'}} {...props} />
+                      }}>
+                        {book.prologue[locale]}
+                      </ReactMarkdown>
+                    </div>
                   </blockquote>
                 </div>
               </div>
