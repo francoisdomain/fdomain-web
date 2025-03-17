@@ -25,9 +25,6 @@ jobs:
           node-version: '20.x'
       - name: Install dependencies
         run: npm ci
-      - name: Generate pre-rendered pages
-        run: node scripts/generate-prerender-pages.js
-        continue-on-error: true
       - name: Build project
         run: npm run build
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
@@ -39,10 +36,6 @@ jobs:
           mkdir -p ./dist/blog/license-to-lead
           mkdir -p ./dist/blog/lead-vs-inspire
           mkdir -p ./dist/blog/everyone-leader
-          mkdir -p ./dist/books
-          mkdir -p ./dist/books/above-the-waterline
-          mkdir -p ./dist/books/close-enough
-          mkdir -p ./dist/books/la-glissade
       - name: Create blog HTML files for SEO
         run: |
           cp ./dist/index.html ./dist/blog/index.html
@@ -50,49 +43,10 @@ jobs:
           cp ./dist/index.html ./dist/blog/license-to-lead/index.html
           cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
           cp ./dist/index.html ./dist/blog/everyone-leader/index.html
-          cp ./dist/index.html ./dist/books/index.html
-          cp ./dist/index.html ./dist/books/above-the-waterline/index.html
-          cp ./dist/index.html ./dist/books/close-enough/index.html
-          cp ./dist/index.html ./dist/books/la-glissade/index.html
-      - name: Create dedicated directories for prerendered pages
-        run: |
-          mkdir -p ./dist/prerender
-          mkdir -p ./dist/prerender/books
-          mkdir -p ./dist/prerender/blog
-      - name: Copy pre-rendered pages to dist
-        run: |
-          if [ -d "./public/books-pr" ]; then
-            if [ "$(ls -A ./public/books-pr 2>/dev/null)" ]; then
-              cp -r ./public/books-pr/* ./dist/prerender/books/ || true
-              cp -r ./public/books-pr/* ./dist/ || true
-              echo "Copied books prerender files successfully"
-            else
-              echo "Warning: books-pr directory is empty"
-            fi
-          else
-            echo "Warning: books-pr directory does not exist"
-          fi
-          
-          if [ -d "./public/blog-pr" ]; then
-            if [ "$(ls -A ./public/blog-pr 2>/dev/null)" ]; then
-              cp -r ./public/blog-pr/* ./dist/prerender/blog/ || true
-              cp -r ./public/blog-pr/* ./dist/ || true
-              echo "Copied blog prerender files successfully"
-            else
-              echo "Warning: blog-pr directory is empty"
-            fi
-          else
-            echo "Warning: blog-pr directory does not exist"
-          fi
       - name: Make sure blog images are copied
         run: |
           mkdir -p ./dist/img/blog
-          if [ -d "./public/img/blog" ] && [ "$(ls -A ./public/img/blog 2>/dev/null)" ]; then
-            cp -r ./public/img/blog/* ./dist/img/blog/ || true
-            echo "Copied blog images successfully"
-          else
-            echo "Warning: blog images directory missing or empty"
-          fi
+          cp -r ./public/img/blog/* ./dist/img/blog/ || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
