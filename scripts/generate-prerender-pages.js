@@ -256,10 +256,16 @@ const generateIndexPages = () => {
 
 // Generate all pages
 const generateAllPages = () => {
-  generateBookPages();
-  generateBlogPages();
-  generateIndexPages();
-  console.log('All pre-render pages generated successfully!');
+  console.log('Starting pre-render page generation...');
+  try {
+    generateBookPages();
+    generateBlogPages();
+    generateIndexPages();
+    console.log('All pre-render pages generated successfully!');
+  } catch (error) {
+    console.error('Error generating pre-render pages:', error);
+    process.exit(1);
+  }
 };
 
 // Execute the script

@@ -60,12 +60,20 @@ jobs:
           mkdir -p ./dist/prerender/blog
       - name: Copy pre-rendered pages to dist
         run: |
-          cp -r ./public/books-pr/* ./dist/prerender/books/
-          cp -r ./public/blog-pr/* ./dist/prerender/blog/
+          # Check if directories exist and contain files before copying
+          if [ -d "./public/books-pr" ] && [ "$(ls -A ./public/books-pr)" ]; then
+            cp -r ./public/books-pr/* ./dist/prerender/books/ || true
+            cp -r ./public/books-pr/* ./dist/ || true
+          else
+            echo "Warning: books-pr directory missing or empty"
+          fi
           
-          # Also copy them to the root for backward compatibility
-          cp -r ./public/books-pr/* ./dist/
-          cp -r ./public/blog-pr/* ./dist/
+          if [ -d "./public/blog-pr" ] && [ "$(ls -A ./public/blog-pr)" ]; then
+            cp -r ./public/blog-pr/* ./dist/prerender/blog/ || true
+            cp -r ./public/blog-pr/* ./dist/ || true
+          else
+            echo "Warning: blog-pr directory missing or empty"
+          fi
       - name: Make sure blog images are copied
         run: |
           mkdir -p ./dist/img/blog
