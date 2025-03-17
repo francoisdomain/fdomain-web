@@ -38,6 +38,10 @@ jobs:
           mkdir -p ./dist/blog/license-to-lead
           mkdir -p ./dist/blog/lead-vs-inspire
           mkdir -p ./dist/blog/everyone-leader
+          mkdir -p ./dist/books
+          mkdir -p ./dist/books/above-the-waterline
+          mkdir -p ./dist/books/close-enough
+          mkdir -p ./dist/books/la-glissade
       - name: Create blog HTML files for SEO
         run: |
           cp ./dist/index.html ./dist/blog/index.html
@@ -45,10 +49,23 @@ jobs:
           cp ./dist/index.html ./dist/blog/license-to-lead/index.html
           cp ./dist/index.html ./dist/blog/lead-vs-inspire/index.html
           cp ./dist/index.html ./dist/blog/everyone-leader/index.html
+          cp ./dist/index.html ./dist/books/index.html
+          cp ./dist/index.html ./dist/books/above-the-waterline/index.html
+          cp ./dist/index.html ./dist/books/close-enough/index.html
+          cp ./dist/index.html ./dist/books/la-glissade/index.html
+      - name: Create dedicated directories for prerendered pages
+        run: |
+          mkdir -p ./dist/prerender
+          mkdir -p ./dist/prerender/books
+          mkdir -p ./dist/prerender/blog
       - name: Copy pre-rendered pages to dist
         run: |
-          cp -r ./public/books-pr ./dist/
-          cp -r ./public/blog-pr ./dist/
+          cp -r ./public/books-pr/* ./dist/prerender/books/
+          cp -r ./public/blog-pr/* ./dist/prerender/blog/
+          
+          # Also copy them to the root for backward compatibility
+          cp -r ./public/books-pr/* ./dist/
+          cp -r ./public/blog-pr/* ./dist/
       - name: Make sure blog images are copied
         run: |
           mkdir -p ./dist/img/blog

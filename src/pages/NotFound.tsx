@@ -36,13 +36,16 @@ const NotFound = () => {
   // Check if this might be a crawler/bot
   const isBot = typeof navigator !== 'undefined' && /bot|googlebot|crawler|spider|robot|crawling|facebook|twitter|linkedin|social/i.test(navigator.userAgent);
   
-  // If it's a bot and looking for a book or blog page, suggest the pre-rendered version
+  // If it's a bot and looking for a book or blog page, redirect to the pre-rendered version
   useEffect(() => {
     if (isBot) {
+      console.log("Bot detected, attempting to redirect");
       if (book && isBookPage) {
-        window.location.href = `/books-pr/${slug}.html`;
+        console.log(`Redirecting bot to prerender/books/${slug}.html`);
+        window.location.href = `/prerender/books/${slug}.html`;
       } else if (blogArticle && isBlogPage) {
-        window.location.href = `/blog-pr/${slug}.html`;
+        console.log(`Redirecting bot to prerender/blog/${slug}.html`);
+        window.location.href = `/prerender/blog/${slug}.html`;
       }
     }
   }, [isBot, book, blogArticle, isBookPage, isBlogPage, slug]);

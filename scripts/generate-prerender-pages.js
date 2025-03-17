@@ -103,6 +103,8 @@ const createHtmlTemplate = (title, description, imageUrl, canonicalUrl, type) =>
   <meta property="og:title" content="${title} | François Domain - Author">
   <meta property="og:description" content="${description}">
   <meta property="og:image" content="https://francoisdomain.com${imageUrl}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
