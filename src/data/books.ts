@@ -210,12 +210,12 @@ export const books: Record<string, BookData> = {
     coverImage: {
       "en-US": "../img/Above_2025_cover.webp",
       "en-UK": "../img/Above_2025_cover.webp",
-      "fr-FR": "../img/LaGlissade_Cover.webp"
+      "fr-FR": "../img/LaGlissade_2025_Cover_ebook.webp"
     },
     amazonLink: {
       "en-US": "https://urlgeni.us/amazon/Waterline_PO_W",
       "en-UK": "https://urlgeni.us/amazon/AWT_wb_UK",
-      "fr-FR": "#"
+      "fr-FR": "https://www.amazon.fr/dp/B0F1KVF9TL"
     },
     amazonLinkText: {
       "en-US": "Preorder on Amazon",
