@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -160,8 +159,8 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <div className="text-warm-gray-800">
-                    <ReactMarkdown className="whitespace-pre-line">
+                  <div className="text-warm-gray-800 whitespace-pre-line">
+                    <ReactMarkdown>
                       {book.summary[locale]}
                     </ReactMarkdown>
                   </div>
