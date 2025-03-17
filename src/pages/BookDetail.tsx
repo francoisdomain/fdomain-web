@@ -9,6 +9,7 @@ import { SEO } from "@/components/SEO";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 const BookDetail = () => {
   const { slug } = useParams();
@@ -159,7 +160,11 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <p className="text-warm-gray-800">{book.summary[locale]}</p>
+                  <div className="text-warm-gray-800">
+                    <ReactMarkdown className="whitespace-pre-line">
+                      {book.summary[locale]}
+                    </ReactMarkdown>
+                  </div>
                 </section>
 
                 <div className="mt-6">
