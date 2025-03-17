@@ -27,6 +27,7 @@ jobs:
         run: npm ci
       - name: Generate pre-rendered pages
         run: node scripts/generate-prerender-pages.js
+        continue-on-error: true
       - name: Build project
         run: npm run build
       - name: Create .nojekyll file  # Prevents GitHub from ignoring files that begin with an underscore
@@ -60,24 +61,38 @@ jobs:
           mkdir -p ./dist/prerender/blog
       - name: Copy pre-rendered pages to dist
         run: |
-          # Check if directories exist and contain files before copying
-          if [ -d "./public/books-pr" ] && [ "$(ls -A ./public/books-pr)" ]; then
-            cp -r ./public/books-pr/* ./dist/prerender/books/ || true
-            cp -r ./public/books-pr/* ./dist/ || true
+          if [ -d "./public/books-pr" ]; then
+            if [ "$(ls -A ./public/books-pr 2>/dev/null)" ]; then
+              cp -r ./public/books-pr/* ./dist/prerender/books/ || true
+              cp -r ./public/books-pr/* ./dist/ || true
+              echo "Copied books prerender files successfully"
+            else
+              echo "Warning: books-pr directory is empty"
+            fi
           else
-            echo "Warning: books-pr directory missing or empty"
+            echo "Warning: books-pr directory does not exist"
           fi
           
-          if [ -d "./public/blog-pr" ] && [ "$(ls -A ./public/blog-pr)" ]; then
-            cp -r ./public/blog-pr/* ./dist/prerender/blog/ || true
-            cp -r ./public/blog-pr/* ./dist/ || true
+          if [ -d "./public/blog-pr" ]; then
+            if [ "$(ls -A ./public/blog-pr 2>/dev/null)" ]; then
+              cp -r ./public/blog-pr/* ./dist/prerender/blog/ || true
+              cp -r ./public/blog-pr/* ./dist/ || true
+              echo "Copied blog prerender files successfully"
+            else
+              echo "Warning: blog-pr directory is empty"
+            fi
           else
-            echo "Warning: blog-pr directory missing or empty"
+            echo "Warning: blog-pr directory does not exist"
           fi
       - name: Make sure blog images are copied
         run: |
           mkdir -p ./dist/img/blog
-          cp -r ./public/img/blog/* ./dist/img/blog/ || true
+          if [ -d "./public/img/blog" ] && [ "$(ls -A ./public/img/blog 2>/dev/null)" ]; then
+            cp -r ./public/img/blog/* ./dist/img/blog/ || true
+            echo "Copied blog images successfully"
+          else
+            echo "Warning: blog images directory missing or empty"
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

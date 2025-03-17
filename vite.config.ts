@@ -37,6 +37,8 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: undefined
       }
-    }
+    },
+    // Add option to copy public directory to build
+    copyPublicDir: true
   }
 }))

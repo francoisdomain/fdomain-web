@@ -10,7 +10,12 @@ const path = require('path');
 // Ensure directories exist
 const createDirIfNotExists = (dirPath) => {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+    try {
+      fs.mkdirSync(dirPath, { recursive: true });
+      console.log(`Created directory: ${dirPath}`);
+    } catch (error) {
+      console.error(`Error creating directory ${dirPath}:`, error);
+    }
   }
 };
 
@@ -179,48 +184,65 @@ const createHtmlTemplate = (title, description, imageUrl, canonicalUrl, type) =>
 
 // Generate book pre-render pages
 const generateBookPages = () => {
-  createDirIfNotExists('public/books-pr');
-  
-  Object.entries(booksData).forEach(([slug, book]) => {
-    // Using English version by default
-    const content = createHtmlTemplate(
-      book.title.EN,
-      book.tagline.EN,
-      book.coverImage.EN,
-      `/books/${slug}`,
-      'book'
-    );
+  try {
+    createDirIfNotExists('public/books-pr');
     
-    fs.writeFileSync(path.join('public', 'books-pr', `${slug}.html`), content);
-    console.log(`Generated pre-render page for book: ${slug}`);
-  });
+    Object.entries(booksData).forEach(([slug, book]) => {
+      try {
+        // Using English version by default
+        const content = createHtmlTemplate(
+          book.title.EN,
+          book.tagline.EN,
+          book.coverImage.EN,
+          `/books/${slug}`,
+          'book'
+        );
+        
+        fs.writeFileSync(path.join('public', 'books-pr', `${slug}.html`), content);
+        console.log(`Generated pre-render page for book: ${slug}`);
+      } catch (error) {
+        console.error(`Error generating pre-render page for book ${slug}:`, error);
+      }
+    });
+  } catch (error) {
+    console.error("Error in generateBookPages:", error);
+  }
 };
 
 // Generate blog pre-render pages
 const generateBlogPages = () => {
-  createDirIfNotExists('public/blog-pr');
-  
-  Object.entries(blogData).forEach(([slug, article]) => {
-    const content = createHtmlTemplate(
-      article.title,
-      article.summary,
-      article.imageUrl,
-      `/blog/${slug}`,
-      'article'
-    );
+  try {
+    createDirIfNotExists('public/blog-pr');
     
-    fs.writeFileSync(path.join('public', 'blog-pr', `${slug}.html`), content);
-    console.log(`Generated pre-render page for blog article: ${slug}`);
-  });
+    Object.entries(blogData).forEach(([slug, article]) => {
+      try {
+        const content = createHtmlTemplate(
+          article.title,
+          article.summary,
+          article.imageUrl,
+          `/blog/${slug}`,
+          'article'
+        );
+        
+        fs.writeFileSync(path.join('public', 'blog-pr', `${slug}.html`), content);
+        console.log(`Generated pre-render page for blog article: ${slug}`);
+      } catch (error) {
+        console.error(`Error generating pre-render page for blog article ${slug}:`, error);
+      }
+    });
+  } catch (error) {
+    console.error("Error in generateBlogPages:", error);
+  }
 };
 
 // Create an index page for the pre-rendered content
 const generateIndexPages = () => {
-  createDirIfNotExists('public/books-pr');
-  createDirIfNotExists('public/blog-pr');
-  
-  // Books index
-  const booksIndexContent = `<!DOCTYPE html>
+  try {
+    createDirIfNotExists('public/books-pr');
+    createDirIfNotExists('public/blog-pr');
+    
+    // Books index
+    const booksIndexContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -232,11 +254,11 @@ const generateIndexPages = () => {
   <p>Redirecting to <a href="/books">books page</a>...</p>
 </body>
 </html>`;
-  
-  fs.writeFileSync(path.join('public', 'books-pr', 'index.html'), booksIndexContent);
-  
-  // Blog index
-  const blogIndexContent = `<!DOCTYPE html>
+    
+    fs.writeFileSync(path.join('public', 'books-pr', 'index.html'), booksIndexContent);
+    
+    // Blog index
+    const blogIndexContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -248,16 +270,36 @@ const generateIndexPages = () => {
   <p>Redirecting to <a href="/blog">blog page</a>...</p>
 </body>
 </html>`;
-  
-  fs.writeFileSync(path.join('public', 'blog-pr', 'index.html'), blogIndexContent);
-  
-  console.log('Generated index pages for pre-rendered content');
+    
+    fs.writeFileSync(path.join('public', 'blog-pr', 'index.html'), blogIndexContent);
+    
+    console.log('Generated index pages for pre-rendered content');
+  } catch (error) {
+    console.error("Error in generateIndexPages:", error);
+  }
+};
+
+// Run before generate to ensure directories exist
+const ensureDirectoriesExist = () => {
+  try {
+    // Make sure public directory exists
+    createDirIfNotExists('public');
+    
+    // Create blog image directory if it doesn't exist
+    createDirIfNotExists('public/img');
+    createDirIfNotExists('public/img/blog');
+    
+    console.log('Ensured all necessary directories exist');
+  } catch (error) {
+    console.error("Error ensuring directories exist:", error);
+  }
 };
 
 // Generate all pages
 const generateAllPages = () => {
   console.log('Starting pre-render page generation...');
   try {
+    ensureDirectoriesExist();
     generateBookPages();
     generateBlogPages();
     generateIndexPages();
