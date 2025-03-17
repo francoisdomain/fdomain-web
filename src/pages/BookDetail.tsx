@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -8,7 +9,6 @@ import { SEO } from "@/components/SEO";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
 
 const BookDetail = () => {
   const { slug } = useParams();
@@ -121,6 +121,7 @@ const BookDetail = () => {
                           height={1200}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           decoding="async"
+                          fetchPriority="high"
                         />
                       </picture>
                     </>
@@ -158,13 +159,7 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <div className="text-warm-gray-800">
-                    <ReactMarkdown components={{
-                      p: ({node, ...props}) => <p style={{whiteSpace: 'pre-line', marginBottom: '1rem'}} {...props} />
-                    }}>
-                      {book.summary[locale]}
-                    </ReactMarkdown>
-                  </div>
+                  <p className="text-warm-gray-800">{book.summary[locale]}</p>
                 </section>
 
                 <div className="mt-6">
@@ -197,13 +192,9 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <div className="text-warm-gray-800 leading-relaxed">
-                      <ReactMarkdown components={{
-                        p: ({node, ...props}) => <p style={{whiteSpace: 'pre-line', textIndent: '0', marginBottom: '1rem'}} {...props} />
-                      }}>
-                        {book.prologue[locale]}
-                      </ReactMarkdown>
-                    </div>
+                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line [&>*:first-child]:text-indent-0 [&>*]:text-indent-8">
+                      {book.prologue[locale]}
+                    </p>
                   </blockquote>
                 </div>
               </div>
