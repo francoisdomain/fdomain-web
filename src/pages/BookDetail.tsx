@@ -159,7 +159,7 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <div className="text-warm-gray-800 whitespace-pre-line">
+                  <div className="text-warm-gray-800" style={{ whiteSpace: 'pre-line' }}>
                     <ReactMarkdown>
                       {book.summary[locale]}
                     </ReactMarkdown>
@@ -196,7 +196,7 @@ const BookDetail = () => {
                 
                 <div className="prose prose-lg mx-auto">
                   <blockquote className="bg-cream-50 p-8 rounded-xl">
-                    <p className="text-warm-gray-800 leading-relaxed whitespace-pre-line [&>*:first-child]:text-indent-0 [&>*]:text-indent-8">
+                    <p className="text-warm-gray-800 leading-relaxed" style={{ whiteSpace: 'pre-line', textIndent: '0' }}>
                       {book.prologue[locale]}
                     </p>
                   </blockquote>
