@@ -82,6 +82,26 @@ const BookDetail = () => {
     setImageLoaded(true);
   };
 
+  const handleAmazonClick = () => {
+    // Google Ads conversion tracking
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-11459037958/sQiQCKrxz_oYEK211pEq',
+        'transaction_id': ''
+      });
+      console.log('GoogleAds conversion tracked for book purchase click');
+    }
+    
+    // Facebook Pixel event
+    if (window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        content_name: book.title[locale],
+        content_ids: [book.isbn[locale]],
+        content_type: 'product'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -175,6 +195,7 @@ const BookDetail = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-6 py-3 bg-[#FF9900] hover:bg-[#FF9900]/90 text-white rounded-lg transition-colors"
                     aria-label={`Buy ${book.title[locale]} on Amazon`}
+                    onClick={handleAmazonClick}
                   >
                     <ShoppingCart className="w-5 h-5 mr-2" aria-hidden="true" />
                     {book.amazonLinkText[locale]}
