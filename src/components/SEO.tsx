@@ -38,10 +38,10 @@ export const SEO = ({
       // Log what we're sending to help debug
       console.log("GA4 Sending pageview for:", currentPath);
       
-      // Send to Google Analytics 4
+      // Send to Google Analytics 4 with just the page title (not the full title with site name)
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'page_view', {
-          page_title: title || defaultTitle,
+          page_title: title || "Home", // Use just the page title or "Home" for the index page
           page_location: window.location.href,
           page_path: currentPath,
         });
@@ -137,4 +137,3 @@ export const SEO = ({
     </Helmet>
   )
 };
-
