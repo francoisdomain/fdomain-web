@@ -161,7 +161,7 @@ const BookDetail = () => {
                 
                 <section className="prose prose-lg mt-6">
                   <h2 className="text-2xl font-serif font-medium mb-4">Summary</h2>
-                  <p className="text-warm-gray-800" leading-relaxed whitespace-pre-line >
+                  <p className="text-warm-gray-800" leading-relaxed whitespace-pre-line style={{ whiteSpace: 'pre-line' }} >
                     <ReactMarkdown>
                       {book.summary[locale]}
                     </ReactMarkdown>
