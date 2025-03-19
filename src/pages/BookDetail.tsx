@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -80,19 +81,38 @@ const BookDetail = () => {
     setImageLoaded(true);
   };
 
-  const handleAmazonClick = () => {
-    console.log('Amazon button clicked - attempting to trigger conversion tracking');
+  // Function for Google Ads conversion tracking
+  const gtag_report_conversion = (url?: string) => {
+    console.log('Running gtag_report_conversion with URL:', url);
     
-    // Google Ads conversion tracking
+    const callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    };
+    
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        'send_to': 'AW-11459037958/sQiQCKrxz_oYEK211pEq',
-        'transaction_id': ''
+        'send_to': 'AW-16870357564/jaPKCO35xKwaELz0tOw-',
+        'event_callback': callback
       });
-      console.log('✅ GoogleAds conversion tracked for book purchase click');
+      console.log('✅ GoogleAds conversion tracked with new conversion ID');
     } else {
       console.log('❌ window.gtag is not available - Google Ads conversion not tracked');
+      if (url) {
+        window.location.href = url;
+      }
     }
+    
+    return false;
+  };
+
+  const handleAmazonClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    console.log('Amazon button clicked - triggering new conversion tracking');
+    
+    // Google Ads conversion tracking with the new function
+    gtag_report_conversion(book.amazonLink[locale]);
     
     // Facebook Pixel event
     if (window.fbq) {
