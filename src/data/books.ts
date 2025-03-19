@@ -79,14 +79,11 @@ export const books: Record<string, BookData> = {
     year: "2025",
     summary: {
       "en-US": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other's orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they're more than friends. 
-      Even they aren't always sure.`,
+      /nEveryone assumes they're more than friends. /nEven they aren't always sure.`,
       "en-UK": `Meet François and Marvin—inseparable, reckless, and trapped in an endless tug-of-war. One thrives on chaos, the other clings to control—yet neither can pull away. Locked in each other's orbit—always too close, never colliding. From London to Mykonos, their friendship blurs between inside jokes, drunken nights, and boundaries that were never meant to last.
-      Everyone assumes they're more than friends. 
-      Even they aren't always sure.`,
+      /nEveryone assumes they're more than friends. /nEven they aren't always sure.`,
       "fr-FR": `Rencontrez François et Marvin — inséparables, imprévisibles, tour à tout le chat puis la souris d'une course poursuite qui n'en finit pas. L'un ne vit que pour le chaos, l'autre s'accroche à des illusions, mais aucun des deux n'arrive à s'éloigner. Proches, trop proches, mais sans jamais se percuter, leur amitié navigue entre les bureaux de la City et les bars de Shoreditch, où les limites n'attendent que d'être franchies.
-      Tout le monde est persuadé qu'ils sont plus que des amis.
-      Même eux n'en sont pas toujours sûrs.`,
+      \nTout le monde est persuadé qu'ils sont plus que des amis.\n**Même eux n'en sont pas toujours sûrs.**`,
     },
     prologue: {
       "en-US": `When I finally knocked on the glass door, hoping someone inside would bother letting me in, it was he who turned around.
@@ -224,23 +221,21 @@ export const books: Record<string, BookData> = {
     },
     year: "2025",
     summary: {
-      "en-US": `**Edward's life has been quietly unraveling for years**—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. 
-      But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+      "en-US": `**Edward's life has been quietly unraveling for years**—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. /nBut he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
         
-      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—*it's the man he's become*.`,
-      "en-UK": `Edward's life has been quietly unraveling for years—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+      /nBelieving time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—*it's the man he's become*.`,
+      "en-UK": `**Edward's life has been quietly unraveling for years**—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. /nBut he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+        
+      /nBelieving time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—*it's the man he's become*.`,
+      "fr-FR": `**Eddie n’avait pas prévu que tout parte en vrille**. En tout cas, pas comme ça.
       
-      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—it's the man he's become.`,
-      "fr-FR": `Eddie n’avait pas prévu que tout parte en vrille. En tout cas, pas comme ça.
+      /nCe divorce, il aurait pu le voir venir. Mais comme toujours, il a préféré ignorer les signes. Vingt ans de mariage, deux beaux garçons, et tout qui s’effondre sur une conversation à la table de cuisine, un jour comme un autre.
       
-      Ce divorce, il aurait pu le voir venir. Mais comme toujours, il a préféré ignorer les signes. Vingt ans de mariage, deux beaux garçons, et tout qui s’effondre sur une conversation à la table de cuisine, un jour comme un autre.
+      /nIl part s’éblouir de soleil, s’enivrer d’ouzo et nager, nager, nager dans les eaux cristallines de la mer Égée – dans lesquelles c’est son propre reflet qu’il va devoir affronter. Faire le point. Comprendre. Se retrouver. Mais se retrouver implique d’abord de savoir qui l’on cherche.
       
-      Il part s’éblouir de soleil, s’enivrer d’ouzo et nager, nager, nager dans les eaux cristallines de la mer Égée – dans lesquelles c’est son propre reflet qu’il va devoir affronter. Faire le point. Comprendre. Se retrouver. Mais se retrouver implique d’abord de savoir qui l’on cherche.
+      /nEt puis il y a Sven. Pas un guide spirituel, pas une révélation mystique. Juste un gamin insouciant qui débarque sans prévenir, bouscule ses repères, met le doigt là où ça fait mal. Eddie s’accroche à ses certitudes, joue les adultes blasés. Mais à quoi bon, quand tout ce qu’il pensait être s’effrite sous ses propres contradictions ?
       
-      Et puis il y a Sven. Pas un guide spirituel, pas une révélation mystique. Juste un gamin insouciant qui débarque sans prévenir, bouscule ses repères, met le doigt là où ça fait mal. Eddie s’accroche à ses certitudes, joue les adultes blasés. Mais à quoi bon, quand tout ce qu’il pensait être s’effrite sous ses propres contradictions ?
-      
-      C’est le problème des rencontres imprévues. Elles ne demandent pas la permission. Elles ne préviennent pas qu’elles vont tout foutre en l’air.
-      Et parfois, elles arrivent trop tard.`
+      /nC’est le problème des rencontres imprévues. Elles ne demandent pas la permission. Elles ne préviennent pas qu’elles vont tout foutre en l’air. /n**Et parfois, elles arrivent trop tard.**`
     },
     prologue: {
       "en-US": `So, this is how it ends.  
