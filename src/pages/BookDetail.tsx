@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Book, ShoppingCart } from "lucide-react";
@@ -10,7 +9,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
 import ReactMarkdown from 'react-markdown';
-
 
 const BookDetail = () => {
   const { slug } = useParams();
@@ -83,13 +81,17 @@ const BookDetail = () => {
   };
 
   const handleAmazonClick = () => {
+    console.log('Amazon button clicked - attempting to trigger conversion tracking');
+    
     // Google Ads conversion tracking
     if (window.gtag) {
       window.gtag('event', 'conversion', {
         'send_to': 'AW-11459037958/sQiQCKrxz_oYEK211pEq',
         'transaction_id': ''
       });
-      console.log('GoogleAds conversion tracked for book purchase click');
+      console.log('✅ GoogleAds conversion tracked for book purchase click');
+    } else {
+      console.log('❌ window.gtag is not available - Google Ads conversion not tracked');
     }
     
     // Facebook Pixel event
@@ -99,6 +101,9 @@ const BookDetail = () => {
         content_ids: [book.isbn[locale]],
         content_type: 'product'
       });
+      console.log('✅ Facebook Pixel event tracked for book purchase click');
+    } else {
+      console.log('❌ window.fbq is not available - Facebook Pixel event not tracked');
     }
   };
 
