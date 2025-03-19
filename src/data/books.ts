@@ -235,7 +235,7 @@ export const books: Record<string, BookData> = {
       
       \nEt puis il y a Sven. Pas un guide spirituel, pas une révélation mystique. Juste un gamin insouciant qui débarque sans prévenir, bouscule ses repères, met le doigt là où ça fait mal. Eddie s’accroche à ses certitudes, joue les adultes blasés. Mais à quoi bon, quand tout ce qu’il pensait être s’effrite sous ses propres contradictions ?
       
-      \nC’est le problème des rencontres imprévues. Elles ne demandent pas la permission. Elles ne préviennent pas qu’elles vont tout foutre en l’air. /n**Et parfois, elles arrivent trop tard.**`
+      \nC’est le problème des rencontres imprévues. Elles ne demandent pas la permission. Elles ne préviennent pas qu’elles vont tout foutre en l’air. \n**Et parfois, elles arrivent trop tard.**`
     },
     prologue: {
       "en-US": `So, this is how it ends.  
