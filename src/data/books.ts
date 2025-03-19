@@ -225,9 +225,9 @@ export const books: Record<string, BookData> = {
     year: "2025",
     summary: {
       "en-US": `**Edward's life has been quietly unraveling for years**—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. 
-      \nBut he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
-      \n  
-      \nBelieving time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—*it's the man he's become*.`,
+      But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
+        
+      Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—*it's the man he's become*.`,
       "en-UK": `Edward's life has been quietly unraveling for years—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
       
       Believing time and distance will fix everything, he flees to a remote Greek island, convinced Mathilda just needs space to come back to her senses. But the island, with its haunting beauty and unexpected encounters, has other plans. Memories of love, ambition, and all the unspoken words he's buried begin to resurface, forcing Edward to confront an uncomfortable truth: the man he's been running from isn't someone he left behind—it's the man he's become.`,
