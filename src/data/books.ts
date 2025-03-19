@@ -225,14 +225,12 @@ export const books: Record<string, BookData> = {
     year: "2025",
     summary: {
       "en-US": `**Edward's life has been quietly unraveling for years**—a midlife crisis he can't quite name, a marriage slowly eroding, a sense that something essential has slipped through his fingers. But he's been too busy—or perhaps too scared—to notice. So when his wife of twenty years abruptly announces she wants a divorce, Edward is left stunned, numb, and clinging to his lifelong defense: avoidance.
-      
-      So, this is how it ends.  
-      \n
-      A quick chat at the corner of the kitchen table, wedged between the main and dessert, like we were just discussing Aunt Adelaide's cataract surgery. Only this time, it was my guts getting sliced open.  
+      \nSo, this is how it ends.  
+      \nA quick chat at the corner of the kitchen table, wedged between the main and dessert, like we were just discussing Aunt Adelaide's cataract surgery. Only this time, it was my guts getting sliced open.  
       At least you spared me the old "It's not you, it's me" cliché. That's not your style. You're more the type to say it's always my fault. On principle. If you could, you'd probably pin Aunt Adelaide's cataracts on me, too.  
       We made it past seven years—everyone told us that was the tough one.
-
-      Believing time and distance will fix everything.
+      /n
+      /nBelieving time and distance will fix everything.
 
       He fleeds.
       
