@@ -67,14 +67,14 @@ export const books: Record<string, BookData> = {
       "fr-FR": "../img/PresqueVrai_2025_cover.webp"
     },
     amazonLink: {
-      "en-US": "https://urlgeni.us/amazon/CloseEnough",
-      "en-UK": "https://urlgeni.us/amazon/CloseEnoughUK",
-      "fr-FR": "#"
+      "en-US": "https://a.co/d/1v87Y2K",
+      "en-UK": "https://amzn.eu/d/aPKAy1r",
+      "fr-FR": "https://amzn.eu/d/9VBFJsi"
     },
     amazonLinkText: {
       "en-US": "Available now on Amazon",
       "en-UK": "Available now on Amazon",
-      "fr-FR": "Nouvelle édition Juin 2025"
+      "fr-FR": "Disponible sur Amazon"
     },
     year: "2025",
     summary: {
@@ -210,14 +210,14 @@ export const books: Record<string, BookData> = {
       "fr-FR": "../img/LaGlissade_2025_Cover_ebook.webp"
     },
     amazonLink: {
-      "en-US": "https://urlgeni.us/amazon/Waterline_PO_W",
-      "en-UK": "https://urlgeni.us/amazon/AWT_wb_UK",
-      "fr-FR": "https://www.amazon.fr/dp/B0F1KVF9TL"
+      "en-US": "https://a.co/d/6k831dP",
+      "en-UK": "https://amzn.eu/d/67nssVK",
+      "fr-FR": "https://amzn.eu/d/8eORFvq"
     },
     amazonLinkText: {
-      "en-US": "Preorder on Amazon",
-      "en-UK": "Preorder on Amazon",
-      "fr-FR": "Nouvelle édition Avril 2025"
+      "en-US": "Buy on Amazon",
+      "en-UK": "Buy on Amazon",
+      "fr-FR": "Disponsible sur Amazon"
     },
     year: "2025",
     summary: {
