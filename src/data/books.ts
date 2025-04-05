@@ -187,7 +187,7 @@ export const books: Record<string, BookData> = {
       "en-UK": "978-1-0685758-0-8",
       "fr-FR": "978-1-0685758-2-2"
     },
-    pages: 280,
+    pages: 225,
     publisher: "François Domain",
     slug: "close-enough"
   },
@@ -386,7 +386,7 @@ export const books: Record<string, BookData> = {
       "en-UK": "978-1-0685758-1-5",
       "fr-FR": "978-1-0685758-3-9"
     },
-    pages: 411,
+    pages: 232,
     publisher: "François Domain",
     slug: "above-waterline"
   }
