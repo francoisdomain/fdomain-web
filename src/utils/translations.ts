@@ -96,7 +96,7 @@ export const translations: TranslationType = {
       "aboutTitle": "About the Author",
       "aboutText": "Raw and visceral, Domain’s body of work navigates the two-way mirrors through which we shape ourselves and the intangible borders where we seek refuge. He explores ambiguous connections, challenges identity, certainties, and illusions—ultimately confronting the most complex human relationship of all: the one with oneself.",
       "contactTitle": "Get in Touch",
-      "contactText": "François Domain is represented by the Agency Editio Dialog."
+      "contactText": "François Domain is represented by Editio Dialog Literary Agency."
     },
     "buttons": {
       "learnMore": "Learn More",
