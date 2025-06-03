@@ -96,7 +96,7 @@ export const translations: TranslationType = {
       "aboutTitle": "About the Author",
       "aboutText": "Raw and visceral, Domain’s body of work navigates the two-way mirrors through which we shape ourselves and the intangible borders where we seek refuge. He explores ambiguous connections, challenges identity, certainties, and illusions—ultimately confronting the most complex human relationship of all: the one with oneself.",
       "contactTitle": "Get in Touch",
-      "contactText": "For speaking engagements, book signings, or just to say hello."
+      "contactText": "François Domain is represented by Editio Dialog."
     },
     "buttons": {
       "learnMore": "Learn More",
@@ -177,7 +177,7 @@ export const translations: TranslationType = {
       "aboutTitle": "L'auteur",
       "aboutText": "Dans des textes à fleur de peau, Domain ausculte et navigue ces miroirs sans tain à travers lesquels on se construit, ces frontières hypothétiques où l'on s'abrite. Sans filtre et sans concession, les romans de François Domain traquent l'ambiguité, questionnent l'identité, dissèquent les relations humaines — en particulier celle de l'homme face à lui-même.",
       "contactTitle": "Contacter François Domain",
-      "contactText": "Pour plus d'information,"
+      "contactText": "Francois Domain est représenté par l'agence Editio Dialog,"
     },
     "buttons": {
       "learnMore": "En savoir plus",
