@@ -139,7 +139,7 @@ export const translations: TranslationType = {
     },
     "contact": {
       "title": "Get in Touch",
-      "subtitle": "For speaking engagements, book signings, or just to share your thoughts about my books.",
+      "subtitle": "François Domain is represented by the Agence Editio Dialog.",
       "nameLabel": "Name",
       "namePlaceholder": "Your name",
       "emailLabel": "Email",
@@ -220,7 +220,7 @@ export const translations: TranslationType = {
     },
     "contact": {
       "title": "Contacter François Domain",
-      "subtitle": "Pour les conférences, les séances de dédicaces, ou simplement pour partager vos impressions sur mes livres.",
+      "subtitle": "François Domain est représenté par l'agence Editio Dialog.",
       "nameLabel": "Nom",
       "namePlaceholder": "Votre nom",
       "emailLabel": "Email",
