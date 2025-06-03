@@ -99,12 +99,14 @@ const Index = () => {
             <p className="text-lg text-warm-gray-800 mb-8">
               {t("sections.contactText")}
             </p>
-            <Link
-              to="/contact"
+            <a
+              href="https://www.editio-dialog.com/fr/domain-francois.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-6 py-3 border-2 border-warm-gray-900 text-warm-gray-900 rounded-lg hover:bg-warm-gray-900 hover:text-white transition-colors"
             >
               {t("buttons.contactMe")}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
